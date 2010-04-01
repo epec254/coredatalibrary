@@ -1,0 +1,18 @@
+#summary MORootViewController Overview
+
+= Introduction =
+
+Add your content here.
+
+
+= Configuration Options =
+
+*entityName: *
+*entityFriendlyName: *
+*sortKeyPaths: *
+*sectionKeyPath: *
+*sectionIndexTitlesEnabled: *
+*sectionIndexTitlesAlphabetical: *
+*cellTextLabelKeyPath: *
+*cellDetailTextLabelKeyPath: *
+*detailViewPropertyListFile: *
