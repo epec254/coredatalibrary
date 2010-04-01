@@ -7,12 +7,34 @@ Add your content here.
 
 = Configuration Options =
 
-*entityName: *
-*entityFriendlyName: *
-*sortKeyPaths: *
-*sectionKeyPath: *
+=== Required ===
+
+*entityName: * The name of the Entity to be displayed in the controller as a string
+
+*controllerTitle: * Text to display as navigationItem.title and on the tabBarItem as follows:
+
+{{{ self.navigationItem.title = self.controllerTitle; }}}
+
+{{{ UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:self.controllerTitle image:nil tag:0];
+			self.tabBarItem = theItem;
+			[theItem release]; }}}
+
+*sortKeyPaths: * Array of keys or keyPaths to sort the entities by.  At least 1 is required.
+  These are converted into NSSortDescriptors using:
+
+{{{ NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:YES selector:@selector(caseInsensitiveCompare:)]; }}}
+
+
 *sectionIndexTitlesEnabled: *
+
 *sectionIndexTitlesAlphabetical: *
+
 *cellTextLabelKeyPath: *
+
 *cellDetailTextLabelKeyPath: *
+
 *detailViewPropertyListFile: *
+
+=== Optional ===
+
+*sectionKeyPath: * key or keyPath to use to create sections in the tableView
