@@ -13,16 +13,22 @@ Add your content here.
 
 *controllerTitle: * Text to display as navigationItem.title and on the tabBarItem as follows:
 
-{{{ self.navigationItem.title = self.controllerTitle; }}}
+{{{ 
+self.navigationItem.title = self.controllerTitle; 
+}}}
 
-{{{ UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:self.controllerTitle image:nil tag:0];
+{{{ 
+UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:self.controllerTitle image:nil tag:0];
 			self.tabBarItem = theItem;
-			[theItem release]; }}}
+			[theItem release]; 
+}}}
 
 *sortKeyPaths: * Array of keys or keyPaths to sort the entities by.  At least 1 is required.
   These are converted into NSSortDescriptors using:
 
-{{{ NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:YES selector:@selector(caseInsensitiveCompare:)]; }}}
+{{{ 
+NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:YES selector:@selector(caseInsensitiveCompare:)]; 
+}}}
 
 
 *sectionIndexTitlesEnabled: *
