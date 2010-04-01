@@ -1,0 +1,104 @@
+#summary Row Controller Types
+
+= Introduction =
+
+The enum MOTableRowType defined in MOTableRowController.h defines the 9 available row types.
+
+*_The first three types are recommended (and only support) for attributes of the type NSString, NSDate or NSNumber.  If you want to display a NSDate value, you must provide a dateFormatterStyle and/or a timeFormatterStyle._* 
+
+* _These three types make use of the MOTextFieldEditController or MODateFieldEditController, which displays a single-line UITextField based cell and a keyboard for NSStrings or NSNumbers and a date picker wheel for NSDates._*
+
+*SingleLineValueSmallLabel*
+
+    * Use this type when you want to display a right-aligned label in a blue font on the left-hand side and a left-aligned attribute value in a smaller black font on the right-hand side.  Makes use of UITableViewCellStyleValue2, found in the contacts application.
+  * *attributeKeyPath:* must be a valid key of a NSDate, NSString or NSNumber attribute in the Managed Object.
+  * *dateFormatterStyle & timeFormatterStyle:* one or both required if attributeKeyPath represents a date attribute.  Must be of type NSDateFormatterStyle. See Apple documentation for [http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html NSDateFormatter] class
+
+http://imgur.com/t59IJ.png
+
+*SingleLineValueNoLabel*
+
+    * Use this type when you want only the attribute value to display in the cell. 
+  * *attributeKeyPath:* must be a valid key of a NSDate, NSString or NSNumber attribute in the Managed Object.
+  * *dateFormatterStyle & timeFormatterStyle:* one or both required if attributeKeyPath represents a date attribute.  Must be of type NSDateFormatterStyle. See Apple documentation for [http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html NSDateFormatter] class
+
+http://imgur.com/SQAGN.png
+
+*SingleLineValueLargeLabel*
+
+    * Use this type when you want to display a left-aligned label in a black font font and a right-aligned attribute value value in a smaller blue font.  Makes use of UITableViewCellStyleValue1, which is found in the settings application.
+  * *attributeKeyPath:* must be a valid key of a NSDate, NSString or NSNumber attribute in the Managed Object.
+  * *dateFormatterStyle & timeFormatterStyle:* one or both required if attributeKeyPath represents a date attribute.  Must be of type NSDateFormatterStyle. See Apple documentation for [http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html NSDateFormatter] class
+
+http://imgur.com/q2B3D.png
+
+*_The next two types are recommended for NSStrings that can be longer than one line.  These rows will auto-expand to fit the text content.  Both require that attributeKeyPath is a key, not a keyPath._*
+
+* _These types make use of the MOMultiLineTextFieldEditController, which displays a multi-line UITextView based call and a keyboard._*
+
+*MultiLineValueNoLabel*
+  * Similar to SingleLineValueNoLabel, except expands vertically to fit the content.
+  * *attributeKeyPath:* must be a valid key of a NSString attribute in the Managed Object.
+
+http://imgur.com/KFr4i.png
+
+*MultiLineValueSmallLabel*
+  * Similar to SingleLineValueSmallLabel, except expands vertically to fit the content.
+  * *attributeKeyPath:* must be a valid key of a NSString attribute in the Managed Object.
+
+http://imgur.com/iq96l.png
+
+*_The following two types are used to represent relationship attributes._*
+
+*Relationship*
+  * Use this type to represent a to-one relationship.  Makes use of SingleLineValueSmallLabel to display the relationship value.
+  * For editing, presents a tableview based list of all objects that are potential candidates for the relationship.
+  * *attributeKeyPath:* must be a valid keyPath to a NSString, NSDate or NSNumber attribute (or it must implement -(NSString `*`) description) in the related Managed Object. (nameOfRelationship.displayAttribute)
+
+http://imgur.com/VMRoy.png
+
+*ToManyOrderedRelationship*
+  * Use this type to represent an order to-many relationship.  Presents each related object in a SingleLineValueNoLabel type row and shows an Add row in editing mode.
+  * For adding, presents a tableview based list of all objects that are potential candidates for the relationship.
+  * For this row type to work, you need to have an intermediary entity with an _order_ property.  For example, in the detail for the entity Widget which has an ordered relationship of Things, you need a WidgetToManufacturingProcess entity with an order property.  Widget `<-->` WidgetToManufacturingProcess `<-->` ManufacturingProcess.
+
+http://imgur.com/JFb5S.png
+
+  * *attributeKeyPath:* must be a valid keyPath to a the display property of the related entity through the intermediate entity.  For the example above, manufacturingProcesses.manufacturingProcess.name.
+ * *relationshipEntityName:* set to the name of the ordered, related object.  In the example above, ManufacturingProcess.
+ * *relationshipIntermediateEntityName:* set the name of the intermediate entity.  In the example above, WidgetToManufacturingProcess.
+
+http://imgur.com/KzQhd.png
+
+*_Other Types_*
+
+*BooleanSwitch*
+
+  * Similar to SingleLineValueLargeLabel, except displays a UISwitch in the cell.  
+  * There is no Edit controller for this row, changing the value is done within the cell.
+  * *attributeKeyPath:* must be a valid key of a Boolean attribute (encapsulated in a NSNumber) in the Managed Object.
+
+http://imgur.com/hp1xq.png
+
+*Custom*
+
+  * Allows you to specify a custom row controller class that implements the protocol MOTableRowControllerProtocol.
+  * *rowCustomControllerClass:* must be set to a valid Class.
+
+
+
+= The Enum Definition =
+
+{{{
+typedef enum _MOTableRowType {
+	MOTableRowTypeSingleLineValueNoLabel = 0, //cell displays the attribute value only (uses UITableViewCellStyleDefault)
+	MOTableRowTypeSingleLineValueLargeLabel, //cell displays a left-aligned label in a black font font and a right-aligned attribute value value in a smaller blue font (uses UITableViewCellStyleValue1 - settings application)
+	MOTableRowTypeSingleLineValueSmallLabel, //cell displays a right-aligned label in a blue font on the left-hand side and a left-aligned attribute value in a smaller black font on the right-hand side (uses UITableViewCellStyleValue2 - contacts application)
+	MOTableRowTypeMultiLineValueNoLabel, //similar to SingleLineNoLabel, except the cell will expand vertically as the text value becomes longer.
+	MOTableRowTypeMultiLineValueSmallLabel, //similar to SingleLineLabelInCellSmall, except the cell will expand vertically as the text value becomes longer.
+	MOTableRowTypeBooleanSwitch, //similar to SingleLineLargeLabelInCell but has a UISwitch instead of text label
+	MOTableRowTypeRelationship, //represents a relationship, will use MOTableRowCellTypeSingleLineValueLargeLabel for a toOne relationship or MOTableRowCellTypeSingleLineValueNoLabel for toMany relationships (one row per value)
+	MOTableRowTypeToManyOrderedRelationship, 
+	MOTableRowTypeCustom //provide a custom implementation of the MOTableRowControllerProtocol
+} MOTableRowType;
+}}}
