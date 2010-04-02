@@ -14,11 +14,11 @@ Add your content here.
 *controllerTitle: * Text to display as navigationItem.title and on the tabBarItem as follows:
 
 {{{ 
-self.navigationItem.title = self.controllerTitle; 
+self.navigationItem.title = controllerTitle; 
 }}}
 
 {{{ 
-UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:self.controllerTitle image:nil tag:0];
+UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:controllerTitle image:nil tag:0];
 			self.tabBarItem = theItem;
 			[theItem release]; 
 }}}
@@ -30,17 +30,20 @@ UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:self.controllerTitle
 NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:YES selector:@selector(caseInsensitiveCompare:)]; 
 }}}
 
-
-*sectionIndexTitlesEnabled: *
-
-*sectionIndexTitlesAlphabetical: *
-
 *cellTextLabelKeyPath: *
 
-*cellDetailTextLabelKeyPath: *
+*detailViewPropertyListFile: * Set the name of the property list file describing the detail view to be shown when a row is selected.  If the file is "SomeDetailView.plist", set to "SomeDetailView."  Loaded using:
 
-*detailViewPropertyListFile: *
+{{{ 
+[[NSBundle mainBundle] pathForResource:self.detailViewPropertyListFile ofType:@"plist"]
+}}}
 
 === Optional ===
 
 *sectionKeyPath: * key or keyPath to use to create sections in the tableView
+
+*sectionIndexTitlesEnabled: * If sectionKeyPath
+
+*sectionIndexTitlesAlphabetical: *
+
+*cellDetailTextLabelKeyPath: *
