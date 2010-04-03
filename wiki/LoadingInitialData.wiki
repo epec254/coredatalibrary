@@ -17,9 +17,30 @@ Follow these steps if your application needs to load initial data.
 	WidgetType *type2 = (WidgetType *)[MANAGED_OBJECT_CONTEXT insertNewObjectForEntityForName:@"WidgetType"];
 	type2.name = @"Type 2";
 	type2.details = @"Some details blah blah";
-...
-...
+        ...
+        ...
+        ...
+        [[DataController sharedDataController] saveFromSource:@"Initial Data Creation"];	
 }
+}}}
+ # Close the application in the iPhone simulator.
+ # Browse to the following directory on your computer, replace <USERNAME> with your login name: /Users/<USERNAME>/Library/Application Support/iPhone Simulator/User/Applications.
+http://imgur.com/FOk3E.png
+ # Open the most recently modified folder.  Verify the name of your application is listed.
+http://imgur.com/ZGEAF.png
+ # Inside the Documents directory, you will see a sqlite file.  Copy this to a temporary location.
+http://imgur.com/8v8f5.png
+ # Within your XCode project, open the DataController.m file (found in CoreDataLibrary/Data Classes)
+ # Around line 79, there will be sample code that looks similar to the following.  Uncomment it.
+{{{
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	// If the expected store doesn't exist, copy the default store.
+	if (![fileManager fileExistsAtPath:storePath]) {
+		NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@_InitialData", SQL_DATABASE_NAME] ofType:@"sqlite"];
+		if (defaultStorePath) {
+			[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+		}
+	}
 }}}
 
 = Details =
