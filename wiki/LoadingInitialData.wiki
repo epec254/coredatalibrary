@@ -25,11 +25,11 @@ Follow these steps if your application needs to load initial data.
 }}}
  # Close the application in the iPhone simulator.
  # Browse to the following directory on your computer, replace `<USERNAME>` with your login name: `/Users/<USERNAME>/Library/Application Support/iPhone Simulator/User/Applications`. 
- * http://imgur.com/FOk3E.png
- # Open the most recently modified folder.  Verify the name of your application is listed. 
- * http://imgur.com/ZGEAF.png
+  * http://imgur.com/FOk3E.png
+ # Open the most recently modified folder.  Verify the name of your application is listed.
+  * http://imgur.com/ZGEAF.png
  # Inside the Documents directory, you will see a sqlite file.  Copy this to a temporary location. 
- * http://imgur.com/8v8f5.png
+  * http://imgur.com/8v8f5.png
  # Within your XCode project, open the DataController.m file (found in CoreDataLibrary/Data Classes)
  # Around line 79, there will be sample code that looks similar to the following.  Uncomment it.
 {{{
