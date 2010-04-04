@@ -24,9 +24,12 @@ Follow these steps if your application needs to load initial data.
 }
 }}}
  # Close the application in the iPhone simulator.
- # Browse to the following directory on your computer, replace `<USERNAME>` with your login name: /Users/`<USERNAME>`/Library/Application Support/iPhone Simulator/User/Applications. http://imgur.com/FOk3E.png
- # Open the most recently modified folder.  Verify the name of your application is listed. http://imgur.com/ZGEAF.png
- # Inside the Documents directory, you will see a sqlite file.  Copy this to a temporary location. http://imgur.com/8v8f5.png
+ # Browse to the following directory on your computer, replace `<USERNAME>` with your login name: `/Users/<USERNAME>/Library/Application Support/iPhone Simulator/User/Applications`. 
+ * http://imgur.com/FOk3E.png
+ # Open the most recently modified folder.  Verify the name of your application is listed. 
+ * http://imgur.com/ZGEAF.png
+ # Inside the Documents directory, you will see a sqlite file.  Copy this to a temporary location. 
+ * http://imgur.com/8v8f5.png
  # Within your XCode project, open the DataController.m file (found in CoreDataLibrary/Data Classes)
  # Around line 79, there will be sample code that looks similar to the following.  Uncomment it.
 {{{
@@ -39,16 +42,9 @@ Follow these steps if your application needs to load initial data.
 		}
 	}
 }}}
- # Rename the sqlite file you copied to "NameOfProject_InitialData.sqlite," where NameOfProject is the value for SQL_DATABASE_NAME in DataController.h.  By default, this will be set to the name of your XCode project.
+ # Rename the sqlite file you copied to "NameOfProject_InitialData.sqlite," where NameOfProject is the value for SQL_DATABASE_NAME defined in DataController.h.  By default, this will be set to the name of your XCode project.
  # Copy the sqlite file into your project's resources directory, ensuring the "Copy files to project (if needed)" option is checked.
 
 When your application is launched for the first time on any device, the NameOfProject_InitialData.sqlite file will be copied to the local Documents directory, providing you with initial data.
 
 *NOTE: If you change your Core Data model, you will need to REDO these steps.*
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
