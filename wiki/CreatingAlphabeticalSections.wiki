@@ -1,0 +1,10 @@
+#summary Describes the process of creating alphabetical section index titles.
+
+= Introduction =
+
+This document describes how to mirror the alphabetical section index titles found in the Address Book application.  We will start with the XCode Project template and make the necessary changes and additions to display a separate section for each letter of the alphabet, along with an alphabetical index along the right side.
+
+= Details =
+
+ # Create a new XCode project with the CoreDataLibrary template.  For this example, we simply call our project `AlphaEvents`
+ #
