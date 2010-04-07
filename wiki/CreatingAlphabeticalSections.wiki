@@ -96,3 +96,5 @@ Bugs in Apple's code also require some workaround code, which is presented below
    * sectionIndexTitlesAlphabetical* -> Boolean YES
 
 * Build and go!  Note that the index titles on the right side will not display until you have at least 6 items.*
+
+Download this sample project from: http://coredatalibrary.googlecode.com/files/AlphaEvents.zip
