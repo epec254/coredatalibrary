@@ -7,4 +7,6 @@ This document describes how to mirror the alphabetical section index titles foun
 = Details =
 
  # Create a new XCode project with the CoreDataLibrary template.  For this example, we simply call our project `AlphaEvents`
- #
+ # Open the Core Data model (in this example, `AlphaEvents.xcdatamodel`) and add a transient, optional, string property called nameFirstLetter.
+   * In this example, we are using the `name` property as the index.  You can choose any non-optional string attribute you wish.
+   * http://imgur.com/GyqdL.png
