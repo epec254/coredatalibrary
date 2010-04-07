@@ -16,11 +16,38 @@ Bugs in Apple's code also require some workaround code, which is additionally pr
    * http://imgur.com/GyqdL.png
  # We now need to update the Event classes to reflect this change.  
    * If you find it easier, you could simply regenerate the Event classes from scratch.
- # From within the Core Data model, ensure the `nameFirstLetter` property is selected and choose _Copy Objective-C 2.0 Method Declarations to Clipboard: 
+ # From within the Core Data model, ensure the `nameFirstLetter` property is selected and choose _Copy Objective-C 2.0 Method Declarations to Clipboard_: 
    * http://imgur.com/YVB3h.png
  # Paste the clipboard to a temporary location and paste the following code in the interface section of your Event.h file:
 {{{
 @property (nonatomic, retain) NSString * nameFirstLetter;
+}}}
+ # Open the Event.m file and paste the following code into the implementation.  If you are not using `name` as your index, change this code as appropriate.
+{{{
+
+/**
+ return the first letter of the name property for use as a sectionKey in the UITableView
+ */
+- (NSString *)nameFirstLetter 
+{
+    NSString *tmpValue = nil;
+    
+    [self willAccessValueForKey:@"nameFirstLetter"];
+	
+	if ([self.name length] > 0) {
+		tmpValue = [[[self name] substringToIndex:1] uppercaseString];
+		if ([[NSScanner scannerWithString:tmpValue] scanInt:NULL]) { //return # if its a number
+			tmpValue = @"#";
+		}
+	} else {
+		tmpValue = @"";
+	}
+
+    
+    [self didAccessValueForKey:@"nameFirstLetter"];
+    
+    return tmpValue;
+}
 }}}
  # (NEXT STEPS FIX APPLE BUG - http://developer.apple.com/iphone/library/releasenotes/iPhone/NSFetchedResultsChangeMoveReportedAsNSFetchedResultsChangeUpdate/index.html) Repeat step 4, except choose _Copy Objective-C 2.0 Method Implementations to Clipboard_.
  # Paste the clipboard to a temporary location and paste the following code at the end of your Event.h file:
@@ -42,4 +69,21 @@ Bugs in Apple's code also require some workaround code, which is additionally pr
 #import "CDLSectionBugFixProtocol.h"
 
 @interface Event :  NSManagedObject  <CDLSectionBugFixProtocol> 
+}}}
+ # Now, in the Event.m file, paste the following line inside your implementation:
+{{{
+@synthesize changedSection = _changedSection;
+}}}
+ # Add the following method.  If you are using a property other than `name` for the index, change the code as appropriate.
+{{{
+- (void)setName:(NSString *)value 
+{
+    if (![value isEqualToString:self.name]) {
+		self.changedSection = YES;
+	}
+	
+    [self willChangeValueForKey:@"name"];
+    [self setPrimitiveName:value];
+    [self didChangeValueForKey:@"name"];
+}
 }}}
