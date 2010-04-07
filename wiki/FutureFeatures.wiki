@@ -3,4 +3,4 @@
 = Introduction =
 
  * allow rootview to have custom cell types
- * toMany non-ordered
+ * toMany create new objects rather than being forced to select objects
