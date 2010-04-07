@@ -15,5 +15,7 @@ CoreDataLibrary's toManyOrderedRelationship currently only supports relating alr
  # Create your entities as shown below.  VIP's `name` property is a string and EventToVIP's order property is an integer 32.  *Note that the `order` property must exist and be named order.  Future versions of the library will remove this limitation.*
    * http://imgur.com/eERXR.png
  # Now, create the relationships between the entities as shown in the diagram below.  The delete relationships are important to ensure the integrity of your database.
-  * http://imgur.com/iKqwj.png
-  * 
+  * http://imgur.com/b5kIq.png
+ # Create Class files for all entities.  _NOTE: This step will overwrite your existing entity class files.  If you changed code in the entity Class files, we suggest just adding the new properties and synthesizers to any existing class files._
+ # Select all entities in the managed object editor.  Select File -> New File and choose _Managed Object Class_ from the choices.  Accept all defaults.
+  * http://imgur.com/Z0qd1.png
