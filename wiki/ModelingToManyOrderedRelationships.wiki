@@ -15,5 +15,5 @@ CoreDataLibrary's toManyOrderedRelationship currently only supports relating alr
  # Create your entities as shown below.  VIP's `name` property is a string and EventToVIP's order property is an integer 32.  *Note that the `order` property must exist and be named order.  Future versions of the library will remove this limitation.*
    * http://imgur.com/eERXR.png
  # Now, create the relationships between the entities as shown in the diagram below.  The delete relationships are important to ensure the integrity of your database.
-  * http://imgur.com/Mxm4j.png
+  * http://imgur.com/iKqwj.png
   * 
