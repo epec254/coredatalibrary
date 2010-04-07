@@ -14,7 +14,17 @@ This document describes how to mirror the alphabetical section index titles foun
    * If you find it easier, you could simply regenerate the Event classes from scratch.
  # From within the Core Data model, ensure the `nameFirstLetter` property is selected and choose _Copy Objective-C 2.0 Method Declarations to Clipboard: 
    * http://imgur.com/YVB3h.png
- # Paste the clipboard to a temporary location and paste the following code into your Event.h file:
+ # Paste the clipboard to a temporary location and paste the following code in the Interface section of your Event.h file:
 {{{
 @property (nonatomic, retain) NSString * nameFirstLetter;
+}}}
+ # Repeat step 4, except choose _Copy Objective-C 2.0 Method Implementations to Clipboard_.
+ # Paste the clipboard to a temporary location and paste the following code at the end of your Event.h file:
+{{{
+@interface Event (CoreDataGeneratedPrimitiveAccessors)
+
+- (NSString *)primitiveNameFirstLetter;
+- (void)setPrimitiveNameFirstLetter:(NSString *)value;
+
+@end
 }}}
