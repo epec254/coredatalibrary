@@ -18,4 +18,10 @@ CoreDataLibrary's toManyOrderedRelationship currently only supports adding exist
   * http://imgur.com/b5kIq.png
  # Create Class files for all entities.  Select all entities in the managed object editor.  Select File -> New File and choose _Managed Object Class_ from the choices.  Accept all defaults. _NOTE: This step will overwrite your existing entity class files.  If you changed code in the entity Class files, we suggest just adding the new properties and synthesizers to any existing class files._ 
   * http://imgur.com/Z0qd1.png
- # 
+ # Now, we need to update the Property List describing the DetailView.  Open `ToManyEventsDetailView.plist`.
+ # Add a new section to the root array, setting a sectionTitle if desired. 
+ # Create a single Dictionary in the rowInformation key and add the following key -> value pairs.
+  * *attributeKeyPath* -> vips.vip.name (the full key path to the display property of the related object, in this case, VIP)
+  * *rowType* -> CDLTableRowTypeToManyOrderedRelationship
+  * *rowLabel* -> VIP
+  * http://imgur.com/RaXWt.png
