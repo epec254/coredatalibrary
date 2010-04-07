@@ -10,3 +10,11 @@ This document describes how to mirror the alphabetical section index titles foun
  # Open the Core Data model (in this example, `AlphaEvents.xcdatamodel`) and add a transient, optional, string property called nameFirstLetter.
    * In this example, we are using the `name` property as the index.  You can choose any non-optional string attribute you wish.
    * http://imgur.com/GyqdL.png
+ # We now need to update the Event classes to reflect this change.  
+   * If you find it easier, you could simply regenerate the Event classes from scratch.
+ # From within the Core Data model, ensure the `nameFirstLetter` property is selected and choose _Copy Objective-C 2.0 Method Declarations to Clipboard: 
+   * http://imgur.com/YVB3h.png
+ # Paste the clipboard to a temporary location and paste the following code into your Event.h file:
+{{{
+@property (nonatomic, retain) NSString * nameFirstLetter;
+}}}
