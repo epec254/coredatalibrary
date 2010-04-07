@@ -24,6 +24,7 @@ Bugs in Apple's code also require some workaround code, which is additionally pr
 }}}
  # Open the Event.m file and paste the following code into the implementation.  If you are not using `name` as your index, change this code as appropriate.
 {{{
+@dynamic nameFirstLetter;
 
 /**
  return the first letter of the name property for use as a sectionKey in the UITableView
