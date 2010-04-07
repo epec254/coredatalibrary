@@ -78,9 +78,9 @@ Bugs in Apple's code also require some workaround code, which is additionally pr
 - (void)setName:(NSString *)value 
 {
     if (![value isEqualToString:self.name]) {
-		self.changedSection = YES;
-	}
-	
+         self.changedSection = YES;
+    }
+
     [self willChangeValueForKey:@"name"];
     [self setPrimitiveName:value];
     [self didChangeValueForKey:@"name"];
