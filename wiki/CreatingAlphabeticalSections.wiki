@@ -4,6 +4,10 @@
 
 This document describes how to mirror the alphabetical section index titles found in the Address Book application.  We will start with the XCode Project template and make the necessary changes and additions to display a separate section for each letter of the alphabet, along with an alphabetical index along the right side.
 
+These steps walk you through the process of creating a transient attribute that represents the first character of a string property.  This property is used by the NSFetchedResultsController to create sections.
+
+Bugs in Apple's code also require some workaround code, which is additionally presented below.
+
 = Details =
 
  # Create a new XCode project with the CoreDataLibrary template.  For this example, we simply call our project `AlphaEvents`
@@ -14,11 +18,11 @@ This document describes how to mirror the alphabetical section index titles foun
    * If you find it easier, you could simply regenerate the Event classes from scratch.
  # From within the Core Data model, ensure the `nameFirstLetter` property is selected and choose _Copy Objective-C 2.0 Method Declarations to Clipboard: 
    * http://imgur.com/YVB3h.png
- # Paste the clipboard to a temporary location and paste the following code in the Interface section of your Event.h file:
+ # Paste the clipboard to a temporary location and paste the following code in the interface section of your Event.h file:
 {{{
 @property (nonatomic, retain) NSString * nameFirstLetter;
 }}}
- # Repeat step 4, except choose _Copy Objective-C 2.0 Method Implementations to Clipboard_.
+ # (NEXT STEPS FIX APPLE BUG - http://developer.apple.com/iphone/library/releasenotes/iPhone/NSFetchedResultsChangeMoveReportedAsNSFetchedResultsChangeUpdate/index.html) Repeat step 4, except choose _Copy Objective-C 2.0 Method Implementations to Clipboard_.
  # Paste the clipboard to a temporary location and paste the following code at the end of your Event.h file:
 {{{
 @interface Event (CoreDataGeneratedPrimitiveAccessors)
@@ -27,4 +31,15 @@ This document describes how to mirror the alphabetical section index titles foun
 - (void)setPrimitiveNameFirstLetter:(NSString *)value;
 
 @end
+}}}
+ # Now, paste the following code into the interface section of your Event.h file:
+{{{
+@private
+	BOOL		_changedSection;
+}}}
+ # Additionally, paste the following line into your Event.h file and ensure the Event class implements this protocol:
+{{{
+#import "CDLSectionBugFixProtocol.h"
+
+@interface Event :  NSManagedObject  <CDLSectionBugFixProtocol> 
 }}}
