@@ -39,17 +39,16 @@ Bugs in Apple's code also require some workaround code, which is additionally pr
 		if ([[NSScanner scannerWithString:tmpValue] scanInt:NULL]) { //return # if its a number
 			tmpValue = @"#";
 		}
-	} else {
+	} else { //sanity in case the attribute is not set.
 		tmpValue = @"";
 	}
-
     
     [self didAccessValueForKey:@"nameFirstLetter"];
     
     return tmpValue;
 }
 }}}
- # (NEXT STEPS FIX APPLE BUG - http://developer.apple.com/iphone/library/releasenotes/iPhone/NSFetchedResultsChangeMoveReportedAsNSFetchedResultsChangeUpdate/index.html) Repeat step 4, except choose _Copy Objective-C 2.0 Method Implementations to Clipboard_.
+ # *NOTE: The remaining steps workaround the Apple bug described [http://developer.apple.com/iphone/library/releasenotes/iPhone/NSFetchedResultsChangeMoveReportedAsNSFetchedResultsChangeUpdate/index.html here].  Hopefully they will be unnecessary in iPhone 3.2 and above* Repeat step 4, except choose _Copy Objective-C 2.0 Method Implementations to Clipboard_.
  # Paste the clipboard to a temporary location and paste the following code at the end of your Event.h file:
 {{{
 @interface Event (CoreDataGeneratedPrimitiveAccessors)
