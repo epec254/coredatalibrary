@@ -12,8 +12,8 @@ CoreDataLibrary's toManyOrderedRelationship currently only supports relating alr
 
  # Begin by creating a new XCode project using the CoreDataLibrary template.  For this example, we simply call our project `ToManyEvents`.
  # Decide on which entities will be related.  In this example, `Event` has a to many relationship with `VIP`.  We will create the ordered relationship with an intermediate entity called `EventToVIP`.
- # Create your entities as shown below.  VIP's `name` property is a string and EventToVIP's order property is an integer 32.  *Note that the `order` property must exist and be named order.  Future versions of the library will remove this limitation.*
-   * http://imgur.com/eERXR.png
+ # Create your entities as shown below.  VIP's `name` property is a string and EventToVIP's order property is an integer 32.  The properties of the Event entity are identical to the template. *Note that the `order` property must exist and be named order.  Future versions of the library will remove this limitation.*
+   * http://imgur.com/6GhCL.png
  # Now, create the relationships between the entities as shown in the diagram below.  The delete relationships are important to ensure the integrity of your database.
   * http://imgur.com/b5kIq.png
  # Create Class files for all entities.  _NOTE: This step will overwrite your existing entity class files.  If you changed code in the entity Class files, we suggest just adding the new properties and synthesizers to any existing class files._
