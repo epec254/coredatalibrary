@@ -49,7 +49,7 @@ Bugs in Apple's code also require some workaround code, which is additionally pr
     return tmpValue;
 }
 }}}
- # *NOTE: The remaining steps workaround the Apple bug described [http://developer.apple.com/iphone/library/releasenotes/iPhone/NSFetchedResultsChangeMoveReportedAsNSFetchedResultsChangeUpdate/index.html here].  Hopefully they will be unnecessary in iPhone 3.2 and above* Repeat step 4, except select the `name` property and instead choose _Copy Objective-C 2.0 Method Implementations to Clipboard_ from the menu.
+ # *NOTE: Steps 7-12 workaround the Apple bug described [http://developer.apple.com/iphone/library/releasenotes/iPhone/NSFetchedResultsChangeMoveReportedAsNSFetchedResultsChangeUpdate/index.html here].  Hopefully they will be unnecessary in iPhone 3.2 and above.* Repeat step 4, except select the `name` property and instead choose _Copy Objective-C 2.0 Method Implementations to Clipboard_ from the menu.
  # Paste the clipboard to a temporary location and paste the following code at the end of your Event.h file:
 {{{
 @interface Event (CoreDataGeneratedPrimitiveAccessors)
@@ -87,3 +87,10 @@ Bugs in Apple's code also require some workaround code, which is additionally pr
     [self didChangeValueForKey:@"name"];
 }
 }}}
+ # Now, we need to update the Property List used to describe the RootView.  Open `AlphaEventsRootView.plist`.
+ # Add the following key -> value pairs:
+   * *sectionNameKeyPath* -> nameFirstLetter
+   * *sectionIndexTitlesEnabled* -> Boolean YES
+   * sectionIndexTitlesAlphabetical* -> Boolean YES
+
+* Build and go!  Note that the index titles on the right side will not display until you have at least 6 items.*
