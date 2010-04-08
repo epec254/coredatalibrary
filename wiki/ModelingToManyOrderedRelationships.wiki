@@ -6,7 +6,7 @@ This document walks you through the process of modeling an ordered toMany relati
 
 By default, Core Data does not provide support for ordered toMany relationships.  (There is much discussion to the reasons behind this and several additional workarounds that can be revealed through a quick [http://www.google.com/search?hl=en&q=ordered+to+many+relationship+core+data Google search].)  To create an ordered relationship, we make use of an intermediate entity that stores an `order` attribute and a relationship to both objects.  If you wish to make use of the CoreDataLibrary's toManyOrderedRelationship cell type, you must follow these steps to model your property in a similar manner.
 
-CoreDataLibrary's toManyOrderedRelationship currently only supports adding existing objects to a relationship.  That is, the CoreDataLibrary provided add view will only allow you to related an already created VIP to an Event.  It will not present a f you have an Event entity that has a to-many relationship to a VIP entity, you will need to create the VIP objects 
+*CoreDataLibrary's toManyOrderedRelationship currently only supports adding existing objects to a relationship.  That is, the CoreDataLibrary provided add view will only allow you to related an already created VIP to an Event.* 
 
 = Details =
 
