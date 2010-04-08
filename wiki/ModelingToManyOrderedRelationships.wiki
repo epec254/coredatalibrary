@@ -1,4 +1,5 @@
 #summary How to create toMany ordered relationships
+#labels HowTo-Guide
 
 = Introduction =
 
