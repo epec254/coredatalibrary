@@ -1,0 +1,15 @@
+(
+	{
+		sectionTitle = "Manufacturing Process";
+		rowInformation = (
+			{
+				rowLabel = Process;
+				attributeKeyPath = "manufacturingProcesses.manufacturingProcess.name";
+				rowType = "CDLTableRowTypeToManyOrderedRelationship";
+				drillDownKeyPath = "manufacturingProcess.type.name";
+				"relationshipEntityName" = ManufacturingProcess;
+				"relationshipIntermediateEntityName" = "WidgetManufacturingProcess";
+			},
+		);
+	},
+)

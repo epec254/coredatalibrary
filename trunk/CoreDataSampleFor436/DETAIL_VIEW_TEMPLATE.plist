@@ -1,0 +1,28 @@
+(
+	{
+		sectionTitle = "";
+		rowInformation = (
+			{
+				rowLabel = "";
+				attributeKeyPath = "";
+				rowType = "";
+				"rowCustomControllerClass" = optional;
+				dateFormatterStyle = optional;
+				timeFormatterStyle = optional;
+				"relationshipEntityName" = "";
+				"relationshipIntermediateEntityName" = "";
+			},
+		);
+	},
+	{
+		sectionTitle = "";
+		rowInformation = (
+			{
+				rowLabel = "";
+				attributeKeyPath = "";
+				rowType = "";
+				"rowCustomControllerClass" = optional;
+			},
+		);
+	},
+)

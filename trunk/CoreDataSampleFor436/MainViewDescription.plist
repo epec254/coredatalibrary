@@ -1,0 +1,15 @@
+(
+	{
+		entityName = "";
+		entityFriendlyName = "";
+		sortKeyPaths = (
+			"",
+			"",
+		);
+		sectionKeyPath = "";
+		filterPredicate = "";
+		"detailViewControllerClass" = "";
+		allSectionTitles = ();
+		"New item" = "";
+	},
+)

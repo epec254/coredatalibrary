@@ -1,0 +1,14 @@
+{
+	entityName = Widget;
+	controllerTitle = Widgets;
+	sortKeyPaths = (
+		name,
+	);
+	sectionNameKeyPath = nameFirstLetter;
+	"sectionIndexTitlesAlphabetical" = YES;
+	"sectionIndexTitlesEnabled" = asdfdsf;
+	cellTextLabelKeyPath = name;
+	"cellDetailTextLabelKeyPath" = detail;
+	"detailViewPropertyListFile" = WidgetDetailView;
+	createTabBarItem = YES;
+}
