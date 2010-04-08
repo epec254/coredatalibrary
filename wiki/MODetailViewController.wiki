@@ -1,0 +1,26 @@
+#summary MODetailViewController documentation
+
+== Introduction ==
+
+MODetailViewController extends [http://developer.apple.com/iphone/library/DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html UITableViewController to provide a fully customizable view for displaying and editing an Entity.
+
+DetailViews are loaded from the RootView when a row is selected.
+
+= Details =
+
+The base class of the property list must be an array, and each element in the array is a dictionary representing a section of the table view.
+
+Inside each dictionary, there should be at most two keys:
+ * *sectionTitle* - (optional) the name to display in the table view as the section title
+ * *rowInformation* - (required) an array of dictionaries for each row in the section (described below).
+
+Inside each row dictionary, you should have:
+
+Required
+ * *rowLabel* 
+ * *attributeKeyPath*
+ * *rowType*
+showAddNewObject
+showAddExistingObjects
+addNewObjectPropertyListFile
+rowCustomControllerClass
