@@ -1,4 +1,5 @@
 #summary Row Controller Types
+#labels Type-Documentation
 
 = Introduction =
 
