@@ -1,4 +1,5 @@
 #summary MORootViewController Overview
+#labels Type-Documentation
 
 = Introduction =
 
