@@ -28,4 +28,4 @@ By default, Core Data does not provide support for ordered toMany relationships.
 
 Build and go!  Note that unless you create VIP objects in code and provide another way to create VIPs, you will be presented with an empty list when you select the Add VIP row.
 
-Download the sample code here.
+Download the sample code: http://coredatalibrary.googlecode.com/files/ToManyEvents.zip
