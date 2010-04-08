@@ -1,0 +1,15 @@
+{
+	entityName = "";
+	controllerTitle = "";
+	sortKeyPaths = (
+		"",
+	);
+	sectionNameKeyPath = "";
+	"sectionIndexTitlesEnabled" = NO;
+	"sectionIndexTitlesAlphabetical" = NO;
+	cellTextLabelKeyPath = "";
+	"cellDetailTextLabelKeyPath" = "";
+	createTabBarItem = NO;
+	tabBarImage = "imageName.png - optional";
+	tabBarTitle = "";
+}

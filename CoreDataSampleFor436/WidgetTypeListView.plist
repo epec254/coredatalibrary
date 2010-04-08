@@ -1,0 +1,11 @@
+{
+	entityName = WidgetType;
+	controllerTitle = "Widget Types";
+	sortKeyPaths = (
+		name,
+	);
+	cellTextLabelKeyPath = name;
+	"cellDetailTextLabelKeyPath" = details;
+	"detailViewPropertyListFile" = WidgetTypeDetailView;
+	createTabBarItem = YES;
+}
