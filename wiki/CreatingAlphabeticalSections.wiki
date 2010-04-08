@@ -1,10 +1,11 @@
 #summary Describes the process of creating alphabetical section index titles.
+#labels Type-HowToGuide
 
 = Introduction =
 
 This document describes how to mirror the alphabetical section index titles found in the Address Book application.  We will start with the XCode Project template and make the necessary changes and additions to display a separate section for each letter of the alphabet, along with an alphabetical index along the right side.
 
-http://imgur.com/1NrWW.png
+*See below for a screenshot.*
 
 These steps walk you through the process of creating a transient attribute that represents the first character of a string property.  This property is used by the NSFetchedResultsController to create sections.
 
@@ -98,3 +99,7 @@ Bugs in Apple's code also require some workaround code, which is presented below
 * Build and go!  Note that the index titles on the right side will not display until you have at least 6 items.*
 
 Download this sample project from: http://coredatalibrary.googlecode.com/files/AlphaEvents.zip
+
+==== Screenshot ====
+
+http://imgur.com/1NrWW.png
