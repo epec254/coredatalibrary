@@ -1,6 +1,7 @@
 #summary One-sentence summary of this page.
+#labels Type-Other
 
 = Introduction =
 
  * allow rootview to have custom cell types
- * toMany create new objects rather than being forced to select objects
+ * toMany ordered relation create new objects rather than being forced to select objects
