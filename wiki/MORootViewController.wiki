@@ -1,12 +1,16 @@
-#summary MORootViewController Overview
+#summary MORootViewController Class
 #labels Type-Documentation
 
 = Introduction =
 
-Add your content here.
+MORootViewController extends [http://developer.apple.com/iphone/library/DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html UITableViewController], making use of a [http://developer.apple.com/iphone/library/documentation/CoreData/Reference/NSFetchedResultsController_Class/Reference/Reference.html NSFetchedResultsController] to display all Entities of a given type.
+
+{{{
+CDLRootViewController *rootViewController = [[CDLRootViewController alloc] initForListViewControllerStructure: [[NSBundle mainBundle] pathForResource:@"WidgetTypeListView" ofType:@"plist"]];
+}}}
 
 
-= Configuration Options =
+== Configuration Options ==
 
 === Required ===
 
