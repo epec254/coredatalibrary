@@ -1,4 +1,5 @@
 #summary Information about the Field Edit Controllers
+#labels Type-Documentation
 
 = Overview =
 
