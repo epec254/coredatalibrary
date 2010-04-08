@@ -1,7 +1,7 @@
 #summary How to create toMany ordered relationships
 #labels Type-HowToGuide
 
-= Introduction =
+== Introduction ==
 
 This document walks you through the process of modeling an ordered toMany relationship in Core Data and creating the corresponding GUI with CoreDataLibrary.  We will start with the XCode Project template and make the necessary changes and additions to create a toMany ordered relationship.
 
@@ -11,7 +11,7 @@ _See bottom of page for screenshots._
 
 *CoreDataLibrary's toManyOrderedRelationship currently only supports adding existing objects to a relationship.  That is, the CoreDataLibrary provided add view will only allow you to related an already created VIP to an Event.* 
 
-= Details =
+== Details ==
 
  # Begin by creating a new XCode project using the CoreDataLibrary template.  For this example, we simply call our project `ToManyEvents`.
  # Decide on which entities will be related.  In this example, `Event` has a to many relationship with `VIP`.  We will create the ordered relationship with an intermediate entity called `EventToVIP`.
@@ -33,6 +33,6 @@ Build and go!  Note that unless you create VIP objects in code and provide anoth
 
 Download the sample code: http://coredatalibrary.googlecode.com/files/ToManyEvents.zip
 
-==== Screenshots ====
+=== Screenshots ===
 
 http://imgur.com/v0fXe.png http://imgur.com/JgulU.png
