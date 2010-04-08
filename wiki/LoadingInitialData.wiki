@@ -1,9 +1,11 @@
-#summary How to load initial data
+#summary Describes the process of loading initial data for your application.
+#labels Type-HowToGuide
 
-= Introduction =
+== Introduction ==
 
-Follow these steps if your application needs to load initial data.
+Follow these steps if your application needs to load initial data, that is, you want certain data to appear in your application upon first launch.
 
+== Details ==
 
  # Build and run the application in the iPhone simulator and create any initial data.  If you have a lot of data or do not want to create it all through the GUI, create a method inside the app delegate similar to below that creates all the data you need.  This example is from the CoreData436 sample application.
   * It is recommended you delete the application from the simulator before starting this process to start with a "clean slate."
