@@ -22,13 +22,30 @@ typedef enum _CDLTableRowType {
 
 = The Types =
 
-== For Core Data attributes ==
+* [RowControllerTypes#Core_Data_attributes]
+  * Single Line Attributes (dates, strings, numbers)
+    * [RowControllerTypes#SingleLineValueNoLabel]
+    * [RowControllerTypes#SingleLineValueSmallLabel]
+    * [RowControllerTypes#SingleLineValueLargeLabel]
+  * Multi Line Attributes (strings)
+    * [RowControllerTypes#MultiLineValueNoLabel]
+    * [RowControllerTypes#MultiLineValueSmallLabel]
+
+== Core Data attributes ==
 
 The following types are designed to display an attribute of a Core Data Entity.  
 
 _The first three types are recommended (and only support) for attributes of the type NSString, NSDate or NSNumber.  If you want to display a NSDate value, you must provide a dateFormatterStyle and/or a timeFormatterStyle._
 
 _These three types make use of the MOTextFieldEditController or MODateFieldEditController, which displays a single-line UITextField based cell and a keyboard for NSStrings or NSNumbers and a date picker wheel for NSDates._
+
+=== SingleLineValueNoLabel ===
+
+    * Use this type when you want only the attribute value to display in the cell. 
+  * *attributeKeyPath:* must be a valid key of a NSDate, NSString or NSNumber attribute in the Managed Object.
+  * *dateFormatterStyle & timeFormatterStyle:* one or both required if attributeKeyPath represents a date attribute.  Must be of type NSDateFormatterStyle. See Apple documentation for [http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html NSDateFormatter] class
+
+http://imgur.com/SQAGN.png
 
 === SingleLineValueSmallLabel ===
 
@@ -38,14 +55,6 @@ _These three types make use of the MOTextFieldEditController or MODateFieldEditC
   * *dateFormatterStyle & timeFormatterStyle:* one or both required if attributeKeyPath represents a date attribute.  Must be of type NSDateFormatterStyle. See Apple documentation for [http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html NSDateFormatter] class
 
 http://imgur.com/t59IJ.png
-
-=== SingleLineValueNoLabel ===
-
-    * Use this type when you want only the attribute value to display in the cell. 
-  * *attributeKeyPath:* must be a valid key of a NSDate, NSString or NSNumber attribute in the Managed Object.
-  * *dateFormatterStyle & timeFormatterStyle:* one or both required if attributeKeyPath represents a date attribute.  Must be of type NSDateFormatterStyle. See Apple documentation for [http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html NSDateFormatter] class
-
-http://imgur.com/SQAGN.png
 
 === SingleLineValueLargeLabel ===
 
