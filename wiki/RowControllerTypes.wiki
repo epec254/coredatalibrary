@@ -5,6 +5,22 @@
 
 The enum MOTableRowType defined in MOTableRowController.h defines the 9 available row types.
 
+typedef enum _CDLTableRowType {
+	CDLTableRowTypeSingleLineValueNoLabel = 0, //cell displays the attribute value only (uses UITableViewCellStyleDefault)
+	CDLTableRowTypeSingleLineValueLargeLabel, //cell displays a left-aligned label in a black font font and a right-aligned attribute value value in a smaller blue font (uses UITableViewCellStyleValue1 - settings application)
+	CDLTableRowTypeSingleLineValueSmallLabel, //cell displays a right-aligned label in a blue font on the left-hand side and a left-aligned attribute value in a smaller black font on the right-hand side (uses UITableViewCellStyleValue2 - contacts application)
+	CDLTableRowTypeMultiLineValueNoLabel, //similar to SingleLineNoLabel, except the cell will expand vertically as the text value becomes longer.
+	CDLTableRowTypeMultiLineValueSmallLabel, //similar to SingleLineLabelInCellSmall, except the cell will expand vertically as the text value becomes longer.
+	CDLTableRowTypeBooleanSwitch, //similar to SingleLineLargeLabelInCell but has a UISwitch instead of text label
+	CDLTableRowTypeRelationship, //represents a relationship, will use CDLTableRowCellTypeSingleLineValueLargeLabel for a toOne relationship or CDLTableRowCellTypeSingleLineValueNoLabel for toMany relationships (one row per value)
+	CDLTableRowTypeToManyOrderedRelationship, 
+	CDLTableRowTypeToManyRelationship,
+	CDLTableRowTypeCustom //provide a custom implementation of the CDLTableRowControllerProtocol
+} CDLTableRowType;
+}}}
+
+= The Types =
+
 *_The first three types are recommended (and only support) for attributes of the type NSString, NSDate or NSNumber.  If you want to display a NSDate value, you must provide a dateFormatterStyle and/or a timeFormatterStyle._* 
 
 * _These three types make use of the MOTextFieldEditController or MODateFieldEditController, which displays a single-line UITextField based cell and a keyboard for NSStrings or NSNumbers and a date picker wheel for NSDates._*
@@ -93,19 +109,3 @@ http://imgur.com/hp1xq.png
   * *rowCustomControllerClass:* must be set to a valid Class.
 
 
-
-= The Enum Definition =
-
-{{{
-typedef enum _MOTableRowType {
-	MOTableRowTypeSingleLineValueNoLabel = 0, //cell displays the attribute value only (uses UITableViewCellStyleDefault)
-	MOTableRowTypeSingleLineValueLargeLabel, //cell displays a left-aligned label in a black font font and a right-aligned attribute value value in a smaller blue font (uses UITableViewCellStyleValue1 - settings application)
-	MOTableRowTypeSingleLineValueSmallLabel, //cell displays a right-aligned label in a blue font on the left-hand side and a left-aligned attribute value in a smaller black font on the right-hand side (uses UITableViewCellStyleValue2 - contacts application)
-	MOTableRowTypeMultiLineValueNoLabel, //similar to SingleLineNoLabel, except the cell will expand vertically as the text value becomes longer.
-	MOTableRowTypeMultiLineValueSmallLabel, //similar to SingleLineLabelInCellSmall, except the cell will expand vertically as the text value becomes longer.
-	MOTableRowTypeBooleanSwitch, //similar to SingleLineLargeLabelInCell but has a UISwitch instead of text label
-	MOTableRowTypeRelationship, //represents a relationship, will use MOTableRowCellTypeSingleLineValueLargeLabel for a toOne relationship or MOTableRowCellTypeSingleLineValueNoLabel for toMany relationships (one row per value)
-	MOTableRowTypeToManyOrderedRelationship, 
-	MOTableRowTypeCustom //provide a custom implementation of the MOTableRowControllerProtocol
-} MOTableRowType;
-}}}
