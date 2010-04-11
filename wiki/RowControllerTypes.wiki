@@ -29,12 +29,13 @@ typedef enum _CDLTableRowType {
 == SingleLineValueSmallLabel ==
 
     * Use this type when you want to display a right-aligned label in a blue font on the left-hand side and a left-aligned attribute value in a smaller black font on the right-hand side.  Makes use of UITableViewCellStyleValue2, found in the contacts application.
+  * *rowLabel:* 
   * *attributeKeyPath:* must be a valid key of a NSDate, NSString or NSNumber attribute in the Managed Object.
   * *dateFormatterStyle & timeFormatterStyle:* one or both required if attributeKeyPath represents a date attribute.  Must be of type NSDateFormatterStyle. See Apple documentation for [http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/Reference/Reference.html NSDateFormatter] class
 
 http://imgur.com/t59IJ.png
 
-*SingleLineValueNoLabel*
+== SingleLineValueNoLabel ==
 
     * Use this type when you want only the attribute value to display in the cell. 
   * *attributeKeyPath:* must be a valid key of a NSDate, NSString or NSNumber attribute in the Managed Object.
