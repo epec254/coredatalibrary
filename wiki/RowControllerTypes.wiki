@@ -51,7 +51,7 @@ http://imgur.com/KFr4i.png
 
 http://imgur.com/iq96l.png
 
----- 
+----
 
 *_The following two types are used to represent relationship attributes._*
 
@@ -75,7 +75,7 @@ http://imgur.com/JFb5S.png
 
 http://imgur.com/KzQhd.png
 
----- 
+----
 
 *_Other Types_*
 
