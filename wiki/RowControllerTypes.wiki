@@ -44,6 +44,8 @@ typedef enum _CDLTableRowType {
    * *Custom row controller class*
     * [RowControllerTypes#Custom CDLTableRowTypeCustom]
 
+[FieldEditControllers Screenshots of attribute edit controllers]
+
 == Core Data Attributes Properties ==
 
 The following types are designed to display an attribute of a Core Data Entity.  
