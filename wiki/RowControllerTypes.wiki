@@ -22,7 +22,7 @@ typedef enum _CDLTableRowType {
 
 = The Types =
 
-* [RowControllerTypes#Core_Data_attributes]
+ * Core Data Attributes Properties
   * Single Line Attributes (dates, strings, numbers)
     * [RowControllerTypes#SingleLineValueNoLabel CDLTableRowTypeSingleLineValueNoLabel]
     * [RowControllerTypes#SingleLineValueSmallLabel CDLTableRowTypeSingleLineValueSmallLabel]
@@ -30,6 +30,8 @@ typedef enum _CDLTableRowType {
   * Multi Line Attributes (strings)
     * [RowControllerTypes#MultiLineValueNoLabel CDLTableRowTypeMultiLineValueNoLabel]
     * [RowControllerTypes#MultiLineValueSmallLabel CDLTableRowTypeMultiLineValueSmallLabel]
+
+ * Core Data Relationship Properties
 
 == Core Data attributes ==
 
