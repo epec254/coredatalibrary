@@ -24,12 +24,12 @@ typedef enum _CDLTableRowType {
 
 * [RowControllerTypes#Core_Data_attributes]
   * Single Line Attributes (dates, strings, numbers)
-    * [RowControllerTypes#SingleLineValueNoLabel]
-    * [RowControllerTypes#SingleLineValueSmallLabel]
-    * [RowControllerTypes#SingleLineValueLargeLabel]
+    * [RowControllerTypes#SingleLineValueNoLabel CDLTableRowTypeSingleLineValueNoLabel]
+    * [RowControllerTypes#SingleLineValueSmallLabel CDLTableRowTypeSingleLineValueSmallLabel]
+    * [RowControllerTypes#SingleLineValueLargeLabel CDLTableRowTypeSingleLineValueLargeLabel]
   * Multi Line Attributes (strings)
-    * [RowControllerTypes#MultiLineValueNoLabel]
-    * [RowControllerTypes#MultiLineValueSmallLabel]
+    * [RowControllerTypes#MultiLineValueNoLabel CDLTableRowTypeMultiLineValueNoLabel]
+    * [RowControllerTypes#MultiLineValueSmallLabel CDLTableRowTypeMultiLineValueSmallLabel]
 
 == Core Data attributes ==
 
