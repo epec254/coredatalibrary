@@ -129,12 +129,7 @@ _Configuration keys_
  * *rowLabel:* string describing the relationship.
  * *attributeKeyPath:* must be a valid keyPath to a NSString, NSDate or NSNumber attribute (or it must implement -(NSString `*`) description) in the related Managed Object. (nameOfRelationshipToIntermediate.nameOfRelationshipToRealObject.displayProperty)
 
-
 http://imgur.com/JFb5S.png
-
-  * *attributeKeyPath:* must be a valid keyPath to a the display property of the related entity through the intermediate entity.  For the example above, manufacturingProcesses.manufacturingProcess.name.
- * *relationshipEntityName:* set to the name of the ordered, related object.  In the example above, ManufacturingProcess.
- * *relationshipIntermediateEntityName:* set the name of the intermediate entity.  In the example above, WidgetToManufacturingProcess.
 
 http://imgur.com/KzQhd.png
 
@@ -147,6 +142,8 @@ _The following keys are optional, if none are set, the row behaves as if only sh
  * *showAddNewObject:* Boolean YES or NO.  If set, will show a row labeled "Add New rowLabel" in edit mode that allows the user to create a new object to add to this relationship.
  * *addNewObjectPropertyListFile:* Required if showAddNewObject is YES.  Name of a property list file describing a CDLDetailView that will be displayed to allow the user to create a new object.  The relationship must NOT be present in the detail view.
  * *showAddExistingObjects:* Boolean YES or NO.  If set, will show a row labeled "Add Existing rowLabel" in edit mode that allows the user to select existing objects to add to this relationship.
+
+http://imgur.com/nD7Vy.png
 
 ----
 
