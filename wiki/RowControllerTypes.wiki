@@ -32,8 +32,19 @@ typedef enum _CDLTableRowType {
     * [RowControllerTypes#MultiLineValueSmallLabel CDLTableRowTypeMultiLineValueSmallLabel]
 
  * Core Data Relationship Properties
+  * To One Relationships
+    * [RowControllerTypes#Relationship CDLTableRowTypeRelationship]
+  * To Many Relationships
+    * [RowControllerTypes#ToManyOrderedRelationship CDLTableRowTypeToManyOrderedRelationship]
+    * [RowControllerTypes#ToManyRelationship CDLTableRowTypeToManyRelationship]
 
-== Core Data attributes ==
+ * Other Properties
+   * Boolean choice (yes/no)
+    * [RowControllerTypes#BooleanSwitch CDLTableRowTypeBooleanSwitch]
+   * Custom row controller class
+    * [RowControllerTypes#Custom CDLTableRowTypeCustom]
+
+== Core Data Attributes Properties ==
 
 The following types are designed to display an attribute of a Core Data Entity.  
 
@@ -90,7 +101,7 @@ http://imgur.com/iq96l.png
 
 == Core Data Relationships ==
 
-*_The following two types are used to represent relationship attributes._*
+_The following two types are used to represent relationship attributes._
 
 === Relationship ===
   * Use this type to represent a to-one relationship.  Makes use of SingleLineValueSmallLabel to display the relationship value.
