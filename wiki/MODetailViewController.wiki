@@ -1,4 +1,5 @@
 #summary MODetailViewController documentation
+#labels Type-Documentation
 
 == Introduction ==
 
