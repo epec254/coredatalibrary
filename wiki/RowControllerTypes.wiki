@@ -5,6 +5,7 @@
 
 The enum MOTableRowType defined in MOTableRowController.h defines the 9 available row types.
 
+{{{
 typedef enum _CDLTableRowType {
 	CDLTableRowTypeSingleLineValueNoLabel = 0, //cell displays the attribute value only (uses UITableViewCellStyleDefault)
 	CDLTableRowTypeSingleLineValueLargeLabel, //cell displays a left-aligned label in a black font font and a right-aligned attribute value value in a smaller blue font (uses UITableViewCellStyleValue1 - settings application)
@@ -107,5 +108,3 @@ http://imgur.com/hp1xq.png
 
   * Allows you to specify a custom row controller class that implements the protocol MOTableRowControllerProtocol.
   * *rowCustomControllerClass:* must be set to a valid Class.
-
-
