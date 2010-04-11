@@ -33,6 +33,8 @@ http://imgur.com/SQAGN.png
 
 http://imgur.com/q2B3D.png
 
+----
+
 *_The next two types are recommended for NSStrings that can be longer than one line.  These rows will auto-expand to fit the text content.  Both require that attributeKeyPath is a key, not a keyPath._*
 
 * _These types make use of the MOMultiLineTextFieldEditController, which displays a multi-line UITextView based call and a keyboard._*
@@ -48,6 +50,8 @@ http://imgur.com/KFr4i.png
   * *attributeKeyPath:* must be a valid key of a NSString attribute in the Managed Object.
 
 http://imgur.com/iq96l.png
+
+---- 
 
 *_The following two types are used to represent relationship attributes._*
 
@@ -70,6 +74,8 @@ http://imgur.com/JFb5S.png
  * *relationshipIntermediateEntityName:* set the name of the intermediate entity.  In the example above, WidgetToManufacturingProcess.
 
 http://imgur.com/KzQhd.png
+
+---- 
 
 *_Other Types_*
 
