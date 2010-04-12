@@ -1,4 +1,5 @@
 #summary CDLDetailViewController documentation
+#labels Type-Documentation
 
 == Introduction ==
 
