@@ -1,0 +1,13 @@
+{
+	entityName = Event;
+	controllerTitle = Events;
+	sortKeyPaths = (
+		name,
+	);
+	sectionNameKeyPath = "";
+	"sectionIndexTitlesEnabled" = NO;
+	"sectionIndexTitlesAlphabetical" = NO;
+	cellTextLabelKeyPath = name;
+	"cellDetailTextLabelKeyPath" = timeStamp;
+	"detailViewPropertyListFile" = "GettingStartedDetailView";
+}
