@@ -1,4 +1,5 @@
 #summary CDLRootViewController Class documentation
+#labels Type-Documentation
 
 == Overview ==
 
