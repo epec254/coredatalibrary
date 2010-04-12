@@ -284,8 +284,8 @@
 			1EDCA736116C04970077F121 /* AlphaEvents */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 292385376;
-			PBXWorkspaceStateSaveDate = 292385376;
+			PBXPerProjectTemplateStateSaveDate = 292808778;
+			PBXWorkspaceStateSaveDate = 292808778;
 		};
 		sourceControlManager = 1EDCA740116C04A00077F121 /* Source Control */;
 		userBuildSettings = {
