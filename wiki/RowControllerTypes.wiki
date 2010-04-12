@@ -162,5 +162,5 @@ http://imgur.com/hp1xq.png
 
 === Custom ===
 
-  * Allows you to specify a custom row controller class that implements the protocol MOTableRowControllerProtocol.
-  * *rowCustomControllerClass:* must be set to the name of a valid Class.
+  * Allows you to specify a custom row controller class that implements the protocol `CDLTableRowControllerProtocol.`
+  * *rowCustomControllerClass:* must be set to the name of a valid Class that implements the `CDLTableRowControllerProtocol`
