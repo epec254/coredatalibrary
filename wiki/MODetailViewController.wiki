@@ -3,7 +3,7 @@
 
 == Introduction ==
 
-MODetailViewController extends [http://developer.apple.com/iphone/library/DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html UITableViewController to provide a fully customizable view for displaying and editing an Entity.
+MODetailViewController extends [http://developer.apple.com/iphone/library/DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html UITableViewController] to provide a fully customizable view for displaying and editing an Entity.
 
 DetailViews are loaded from the RootView when a row is selected.
 
