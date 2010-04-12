@@ -11,12 +11,6 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		1E2CEEB7116099B200B25F4D /* CDLAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CEEB6116099B200B25F4D /* CDLAddViewController.m */; };
-		1E2CF53A11612FCA00B25F4D /* NSManagedObject+TypeOfProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CF53911612FCA00B25F4D /* NSManagedObject+TypeOfProperty.m */; };
-		1E2CFA9711629C6900B25F4D /* UIColor+MoreColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CFA9611629C6900B25F4D /* UIColor+MoreColors.m */; };
-		1E36EA63116055D600EF4D70 /* CDLSingleLineTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E36EA62116055D600EF4D70 /* CDLSingleLineTableRowController.m */; };
-		1E36EA771160566500EF4D70 /* CDLMultiLineTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E36EA761160566500EF4D70 /* CDLMultiLineTableRowController.m */; };
-		1E36EA7A1160566E00EF4D70 /* CDLBooleanTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E36EA791160566E00EF4D70 /* CDLBooleanTableRowController.m */; };
 		1E36EE1811607C7400EF4D70 /* green_checkmark_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E36EE1611607C7400EF4D70 /* green_checkmark_off.png */; };
 		1E36EE1911607C7400EF4D70 /* green_checkmark_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E36EE1711607C7400EF4D70 /* green_checkmark_on.png */; };
 		1E4445AF1155742200E4DC6C /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4445AE1155742200E4DC6C /* DataController.m */; };
@@ -26,39 +20,44 @@
 		1E44461A11557F4100E4DC6C /* WidgetType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E44461311557F4100E4DC6C /* WidgetType.m */; };
 		1E44461B11557F4100E4DC6C /* ManufacturingProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E44461511557F4100E4DC6C /* ManufacturingProcess.m */; };
 		1E44461C11557F4100E4DC6C /* ManufacturingProcessType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E44461711557F4100E4DC6C /* ManufacturingProcessType.m */; };
-		1E4446641155839900E4DC6C /* CDLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4446631155839900E4DC6C /* CDLRootViewController.m */; };
 		1E44481B1155E14500E4DC6C /* WidgetListView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E44481A1155E14500E4DC6C /* WidgetListView.plist */; };
 		1E44486E1156044A00E4DC6C /* NSManagedObjectContext+insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E44486D1156044A00E4DC6C /* NSManagedObjectContext+insert.m */; };
-		1E6F06B2115AAAAA00C260D9 /* CDLRelationshipTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F06B1115AAAAA00C260D9 /* CDLRelationshipTableRowController.m */; };
-		1E6F092C115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */; };
-		1E6F0998115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F0997115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.m */; };
-		1E6F09C1115BEB4900C260D9 /* NSArray+Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F09C0115BEB4900C260D9 /* NSArray+Set.m */; };
-		1E6F0A15115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F0A14115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m */; };
 		1E6F0CEF115C2BE300C260D9 /* WidgetDetailView2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F0CEE115C2BE300C260D9 /* WidgetDetailView2.plist */; };
 		1E942AC11158110F00E97D4E /* DETAIL_VIEW_TEMPLATE.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E942AC01158110F00E97D4E /* DETAIL_VIEW_TEMPLATE.plist */; };
-		1E942ADE11593A4100E97D4E /* CDLAbstractFieldEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */; };
-		1E942AED11593A4A00E97D4E /* CDLDateFieldEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942AE211593A4900E97D4E /* CDLDateFieldEditController.m */; };
-		1E942AEE11593A4A00E97D4E /* CDLMultiLineTextFieldEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942AE411593A4900E97D4E /* CDLMultiLineTextFieldEditController.m */; };
-		1E942AEF11593A4A00E97D4E /* CDLToOneRelationshipEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */; };
-		1E942AF011593A4A00E97D4E /* CDLTextFieldEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */; };
-		1E942AF111593A4A00E97D4E /* CDLToManyOrderedRelationshipEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */; };
-		1E942AF211593A4A00E97D4E /* SingleStaticSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942AEC11593A4A00E97D4E /* SingleStaticSelectionListViewController.m */; };
-		1E942BE1115947A700E97D4E /* CDLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942BE0115947A700E97D4E /* CDLDetailViewController.m */; };
-		1E942C5411594E5400E97D4E /* CDLTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */; };
-		1E942D7F1159BB2900E97D4E /* CDLTableSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */; };
 		1E942E5B1159C78B00E97D4E /* WidgetDetailView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E942E5A1159C78B00E97D4E /* WidgetDetailView.plist */; };
-		1ED3F2E0116A538700E08205 /* CDLToManyRelationshipSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3F2DF116A538700E08205 /* CDLToManyRelationshipSectionController.m */; };
-		1ED3F36E116A671A00E08205 /* CDLToManyRelationshipTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3F36D116A671A00E08205 /* CDLToManyRelationshipTableRowController.m */; };
-		1ED3F371116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3F370116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m */; };
 		1ED3F4B9116AE2AC00E08205 /* WidgetTypeListView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED3F4B8116AE2AC00E08205 /* WidgetTypeListView.plist */; };
-		1ED3F5FD116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3F5FC116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.m */; };
 		1ED3F6BE116AEFC300E08205 /* WidgetTypeDetailView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED3F6BD116AEFC300E08205 /* WidgetTypeDetailView.plist */; };
 		1EDCA6CB116C01140077F121 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCA6CA116C01140077F121 /* DemoViewController.m */; };
-		1EDCAAE3116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCAAE2116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */; };
-		1EDCAB84116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCAB83116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m */; };
 		1EDCAC10116D63CF0077F121 /* WidgetAddView-FromType.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EDCAC0F116D63CF0077F121 /* WidgetAddView-FromType.plist */; };
+		1EDCB37A1173E77D0077F121 /* UIColor+MoreColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3401173E77D0077F121 /* UIColor+MoreColors.m */; };
+		1EDCB37B1173E77D0077F121 /* NSArray+Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3421173E77D0077F121 /* NSArray+Set.m */; };
+		1EDCB37C1173E77D0077F121 /* NSManagedObject+TypeOfProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3441173E77D0077F121 /* NSManagedObject+TypeOfProperty.m */; };
+		1EDCB37D1173E77D0077F121 /* CDLUtilityMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3461173E77D0077F121 /* CDLUtilityMethods.m */; };
+		1EDCB37E1173E77D0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3621173E77D0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m */; };
+		1EDCB37F1173E77D0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3631173E77D0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */; };
+		1EDCB3801173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3641173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsEditController.m */; };
+		1EDCB3811173E77D0077F121 /* CDLToManyRelationshipTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3651173E77D0077F121 /* CDLToManyRelationshipTableRowController.m */; };
+		1EDCB3821173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3661173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m */; };
+		1EDCB3831173E77D0077F121 /* CDLToManyRelationshipSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3671173E77D0077F121 /* CDLToManyRelationshipSectionController.m */; };
+		1EDCB3841173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3681173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m */; };
+		1EDCB3851173E77D0077F121 /* CDLToOneRelationshipEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3691173E77D0077F121 /* CDLToOneRelationshipEditController.m */; };
+		1EDCB3861173E77D0077F121 /* CDLDateFieldEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB36A1173E77D0077F121 /* CDLDateFieldEditController.m */; };
+		1EDCB3871173E77D0077F121 /* CDLAbstractFieldEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB36B1173E77D0077F121 /* CDLAbstractFieldEditController.m */; };
+		1EDCB3881173E77D0077F121 /* CDLTextFieldEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB36C1173E77D0077F121 /* CDLTextFieldEditController.m */; };
+		1EDCB3891173E77D0077F121 /* CDLMultiLineTextFieldEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB36D1173E77D0077F121 /* CDLMultiLineTextFieldEditController.m */; };
+		1EDCB38A1173E77D0077F121 /* CDLAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB36E1173E77D0077F121 /* CDLAddViewController.m */; };
+		1EDCB38B1173E77D0077F121 /* CDLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */; };
+		1EDCB38C1173E77D0077F121 /* CDLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */; };
+		1EDCB38D1173E77D0077F121 /* CDLSingleLineTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3711173E77D0077F121 /* CDLSingleLineTableRowController.m */; };
+		1EDCB38E1173E77D0077F121 /* CDLMultiLineTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3721173E77D0077F121 /* CDLMultiLineTableRowController.m */; };
+		1EDCB38F1173E77D0077F121 /* CDLBooleanTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3731173E77D0077F121 /* CDLBooleanTableRowController.m */; };
+		1EDCB3901173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3741173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.m */; };
+		1EDCB3911173E77D0077F121 /* CDLToManyOrderedRelationshipAddTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3751173E77D0077F121 /* CDLToManyOrderedRelationshipAddTableRowController.m */; };
+		1EDCB3921173E77D0077F121 /* CDLRelationshipTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3761173E77D0077F121 /* CDLRelationshipTableRowController.m */; };
+		1EDCB3931173E77D0077F121 /* CDLTableSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */; };
+		1EDCB3941173E77D0077F121 /* CDLTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */; };
+		1EDCB3951173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */; };
 		1EFE04CA1167F02700E03518 /* CoreDataSampleFor436_InitialData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1EFE04C91167F02700E03518 /* CoreDataSampleFor436_InitialData.sqlite */; };
-		1EFE050D11692AAB00E03518 /* CDLUtilityMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE050C11692AAB00E03518 /* CDLUtilityMethods.m */; };
 		28860B770F44E54D00985440 /* CoreDataSampleFor436.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28860B760F44E54D00985440 /* CoreDataSampleFor436.xcdatamodel */; };
 		28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
@@ -71,19 +70,7 @@
 		1D3623250D0F684500981E51 /* CoreDataSampleFor436AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataSampleFor436AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* CoreDataSampleFor436.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataSampleFor436.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		1E2CEEB5116099B200B25F4D /* CDLAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLAddViewController.h; sourceTree = "<group>"; };
-		1E2CEEB6116099B200B25F4D /* CDLAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLAddViewController.m; sourceTree = "<group>"; };
 		1E2CF1841160A5EA00B25F4D /* CDLSectionBugFixProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLSectionBugFixProtocol.h; sourceTree = "<group>"; };
-		1E2CF53811612FCA00B25F4D /* NSManagedObject+TypeOfProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+TypeOfProperty.h"; sourceTree = "<group>"; };
-		1E2CF53911612FCA00B25F4D /* NSManagedObject+TypeOfProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TypeOfProperty.m"; sourceTree = "<group>"; };
-		1E2CFA9511629C6900B25F4D /* UIColor+MoreColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MoreColors.h"; sourceTree = "<group>"; };
-		1E2CFA9611629C6900B25F4D /* UIColor+MoreColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MoreColors.m"; sourceTree = "<group>"; };
-		1E36EA61116055D600EF4D70 /* CDLSingleLineTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLSingleLineTableRowController.h; sourceTree = "<group>"; };
-		1E36EA62116055D600EF4D70 /* CDLSingleLineTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLSingleLineTableRowController.m; sourceTree = "<group>"; };
-		1E36EA751160566500EF4D70 /* CDLMultiLineTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLMultiLineTableRowController.h; sourceTree = "<group>"; };
-		1E36EA761160566500EF4D70 /* CDLMultiLineTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLMultiLineTableRowController.m; sourceTree = "<group>"; };
-		1E36EA781160566E00EF4D70 /* CDLBooleanTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLBooleanTableRowController.h; sourceTree = "<group>"; };
-		1E36EA791160566E00EF4D70 /* CDLBooleanTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLBooleanTableRowController.m; sourceTree = "<group>"; };
 		1E36EE1611607C7400EF4D70 /* green_checkmark_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_checkmark_off.png; sourceTree = "<group>"; };
 		1E36EE1711607C7400EF4D70 /* green_checkmark_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_checkmark_on.png; sourceTree = "<group>"; };
 		1E4445AC1155742200E4DC6C /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
@@ -100,64 +87,74 @@
 		1E44461511557F4100E4DC6C /* ManufacturingProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManufacturingProcess.m; sourceTree = "<group>"; };
 		1E44461611557F4100E4DC6C /* ManufacturingProcessType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManufacturingProcessType.h; sourceTree = "<group>"; };
 		1E44461711557F4100E4DC6C /* ManufacturingProcessType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManufacturingProcessType.m; sourceTree = "<group>"; };
-		1E4446621155839900E4DC6C /* CDLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLRootViewController.h; sourceTree = "<group>"; };
-		1E4446631155839900E4DC6C /* CDLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLRootViewController.m; sourceTree = "<group>"; };
 		1E44481A1155E14500E4DC6C /* WidgetListView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = WidgetListView.plist; sourceTree = "<group>"; };
 		1E44486C1156044A00E4DC6C /* NSManagedObjectContext+insert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+insert.h"; sourceTree = "<group>"; };
 		1E44486D1156044A00E4DC6C /* NSManagedObjectContext+insert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+insert.m"; sourceTree = "<group>"; };
-		1E6F06B0115AAAAA00C260D9 /* CDLRelationshipTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLRelationshipTableRowController.h; sourceTree = "<group>"; };
-		1E6F06B1115AAAAA00C260D9 /* CDLRelationshipTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLRelationshipTableRowController.m; sourceTree = "<group>"; };
-		1E6F092A115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyOrderedRelationshipSectionController.h; sourceTree = "<group>"; };
-		1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyOrderedRelationshipSectionController.m; sourceTree = "<group>"; };
-		1E6F0996115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyOrderedRelationshipAddTableRowController.h; sourceTree = "<group>"; };
-		1E6F0997115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyOrderedRelationshipAddTableRowController.m; sourceTree = "<group>"; };
-		1E6F09BF115BEB4900C260D9 /* NSArray+Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Set.h"; sourceTree = "<group>"; };
-		1E6F09C0115BEB4900C260D9 /* NSArray+Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Set.m"; sourceTree = "<group>"; };
-		1E6F0A13115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyOrderedRelationshipTableRowController.h; sourceTree = "<group>"; };
-		1E6F0A14115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyOrderedRelationshipTableRowController.m; sourceTree = "<group>"; };
 		1E6F0CEE115C2BE300C260D9 /* WidgetDetailView2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = WidgetDetailView2.plist; sourceTree = "<group>"; };
 		1E942AC01158110F00E97D4E /* DETAIL_VIEW_TEMPLATE.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = DETAIL_VIEW_TEMPLATE.plist; sourceTree = "<group>"; };
-		1E942ADA11593A4100E97D4E /* CDLAbstractFieldEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLAbstractFieldEditController.h; sourceTree = "<group>"; };
-		1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLAbstractFieldEditController.m; sourceTree = "<group>"; };
-		1E942AE111593A4900E97D4E /* CDLDateFieldEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLDateFieldEditController.h; sourceTree = "<group>"; };
-		1E942AE211593A4900E97D4E /* CDLDateFieldEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLDateFieldEditController.m; sourceTree = "<group>"; };
-		1E942AE311593A4900E97D4E /* CDLMultiLineTextFieldEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLMultiLineTextFieldEditController.h; sourceTree = "<group>"; };
-		1E942AE411593A4900E97D4E /* CDLMultiLineTextFieldEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLMultiLineTextFieldEditController.m; sourceTree = "<group>"; };
-		1E942AE511593A4900E97D4E /* CDLToOneRelationshipEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToOneRelationshipEditController.h; sourceTree = "<group>"; };
-		1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToOneRelationshipEditController.m; sourceTree = "<group>"; };
-		1E942AE711593A4900E97D4E /* CDLTextFieldEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLTextFieldEditController.h; sourceTree = "<group>"; };
-		1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLTextFieldEditController.m; sourceTree = "<group>"; };
-		1E942AE911593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyOrderedRelationshipEditController.h; sourceTree = "<group>"; };
-		1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyOrderedRelationshipEditController.m; sourceTree = "<group>"; };
-		1E942AEB11593A4900E97D4E /* SingleStaticSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleStaticSelectionListViewController.h; sourceTree = "<group>"; };
-		1E942AEC11593A4A00E97D4E /* SingleStaticSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleStaticSelectionListViewController.m; sourceTree = "<group>"; };
-		1E942BDF115947A700E97D4E /* CDLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLDetailViewController.h; sourceTree = "<group>"; };
-		1E942BE0115947A700E97D4E /* CDLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLDetailViewController.m; sourceTree = "<group>"; };
-		1E942C5211594E5400E97D4E /* CDLTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLTableRowController.h; sourceTree = "<group>"; };
-		1E942C5311594E5400E97D4E /* CDLTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLTableRowController.m; sourceTree = "<group>"; };
-		1E942D7D1159BB2900E97D4E /* CDLTableSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLTableSectionController.h; sourceTree = "<group>"; };
-		1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLTableSectionController.m; sourceTree = "<group>"; };
 		1E942E5A1159C78B00E97D4E /* WidgetDetailView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = WidgetDetailView.plist; sourceTree = "<group>"; };
-		1ED3F2DE116A538700E08205 /* CDLToManyRelationshipSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyRelationshipSectionController.h; sourceTree = "<group>"; };
-		1ED3F2DF116A538700E08205 /* CDLToManyRelationshipSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyRelationshipSectionController.m; sourceTree = "<group>"; };
-		1ED3F36C116A671A00E08205 /* CDLToManyRelationshipTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyRelationshipTableRowController.h; sourceTree = "<group>"; };
-		1ED3F36D116A671A00E08205 /* CDLToManyRelationshipTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyRelationshipTableRowController.m; sourceTree = "<group>"; };
-		1ED3F36F116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyRelationshipAddExistingObjectsTableRowController.h; sourceTree = "<group>"; };
-		1ED3F370116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyRelationshipAddExistingObjectsTableRowController.m; sourceTree = "<group>"; };
 		1ED3F4B8116AE2AC00E08205 /* WidgetTypeListView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = WidgetTypeListView.plist; sourceTree = "<group>"; };
-		1ED3F5FB116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyRelationshipAddExistingObjectsEditController.h; sourceTree = "<group>"; };
-		1ED3F5FC116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyRelationshipAddExistingObjectsEditController.m; sourceTree = "<group>"; };
 		1ED3F6BD116AEFC300E08205 /* WidgetTypeDetailView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = WidgetTypeDetailView.plist; sourceTree = "<group>"; };
 		1EDCA6C9116C01140077F121 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		1EDCA6CA116C01140077F121 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
-		1EDCAAE1116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyRelationshipAddNewObjectEditController.h; sourceTree = "<group>"; };
-		1EDCAAE2116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyRelationshipAddNewObjectEditController.m; sourceTree = "<group>"; };
-		1EDCAB82116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLToManyRelationshipAddNewObjectTableRowController.h; sourceTree = "<group>"; };
-		1EDCAB83116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLToManyRelationshipAddNewObjectTableRowController.m; sourceTree = "<group>"; };
 		1EDCAC0F116D63CF0077F121 /* WidgetAddView-FromType.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "WidgetAddView-FromType.plist"; sourceTree = "<group>"; };
+		1EDCB33B1173E77D0077F121 /* CDLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLRootViewController.h; path = "../CoreDataLibrary Application/Classes/CDLRootViewController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB33C1173E77D0077F121 /* CDLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLDetailViewController.h; path = "../CoreDataLibrary Application/Classes/CDLDetailViewController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB33D1173E77D0077F121 /* CDLAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLAddViewController.h; path = "../CoreDataLibrary Application/Classes/CDLAddViewController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB33F1173E77D0077F121 /* UIColor+MoreColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MoreColors.h"; path = "../CoreDataLibrary Application/Classes/UIColor+MoreColors.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3401173E77D0077F121 /* UIColor+MoreColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MoreColors.m"; path = "../CoreDataLibrary Application/Classes/UIColor+MoreColors.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3411173E77D0077F121 /* NSArray+Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Set.h"; path = "../CoreDataLibrary Application/Classes/NSArray+Set.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3421173E77D0077F121 /* NSArray+Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Set.m"; path = "../CoreDataLibrary Application/Classes/NSArray+Set.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3431173E77D0077F121 /* NSManagedObject+TypeOfProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+TypeOfProperty.h"; path = "../CoreDataLibrary Application/Classes/NSManagedObject+TypeOfProperty.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3441173E77D0077F121 /* NSManagedObject+TypeOfProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+TypeOfProperty.m"; path = "../CoreDataLibrary Application/Classes/NSManagedObject+TypeOfProperty.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3451173E77D0077F121 /* CDLUtilityMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLUtilityMethods.h; path = "../CoreDataLibrary Application/Classes/CDLUtilityMethods.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3461173E77D0077F121 /* CDLUtilityMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLUtilityMethods.m; path = "../CoreDataLibrary Application/Classes/CDLUtilityMethods.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3481173E77D0077F121 /* CDLTableSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLTableSectionController.h; path = "../CoreDataLibrary Application/Classes/CDLTableSectionController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3491173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyOrderedRelationshipSectionController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyOrderedRelationshipSectionController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB34A1173E77D0077F121 /* CDLToManyRelationshipSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyRelationshipSectionController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipSectionController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB34C1173E77D0077F121 /* CDLTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB34D1173E77D0077F121 /* CDLRelationshipTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLRelationshipTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLRelationshipTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB34E1173E77D0077F121 /* CDLSingleLineTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLSingleLineTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLSingleLineTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB34F1173E77D0077F121 /* CDLMultiLineTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLMultiLineTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLMultiLineTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3501173E77D0077F121 /* CDLBooleanTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLBooleanTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLBooleanTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3521173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyOrderedRelationshipTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyOrderedRelationshipTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3531173E77D0077F121 /* CDLToManyOrderedRelationshipAddTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyOrderedRelationshipAddTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyOrderedRelationshipAddTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3541173E77D0077F121 /* CDLToManyRelationshipTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyRelationshipTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3551173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyRelationshipAddExistingObjectsTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipAddExistingObjectsTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3561173E77D0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyRelationshipAddNewObjectTableRowController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipAddNewObjectTableRowController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3581173E77D0077F121 /* CDLAbstractFieldEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLAbstractFieldEditController.h; path = "../CoreDataLibrary Application/Classes/CDLAbstractFieldEditController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3591173E77D0077F121 /* CDLTextFieldEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLTextFieldEditController.h; path = "../CoreDataLibrary Application/Classes/CDLTextFieldEditController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB35A1173E77D0077F121 /* CDLMultiLineTextFieldEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLMultiLineTextFieldEditController.h; path = "../CoreDataLibrary Application/Classes/CDLMultiLineTextFieldEditController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB35B1173E77D0077F121 /* CDLDateFieldEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLDateFieldEditController.h; path = "../CoreDataLibrary Application/Classes/CDLDateFieldEditController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB35C1173E77D0077F121 /* CDLToOneRelationshipEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToOneRelationshipEditController.h; path = "../CoreDataLibrary Application/Classes/CDLToOneRelationshipEditController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB35E1173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyOrderedRelationshipEditController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyOrderedRelationshipEditController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB35F1173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyRelationshipAddExistingObjectsEditController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipAddExistingObjectsEditController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3601173E77D0077F121 /* CDLToManyRelationshipAddNewObjectEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLToManyRelationshipAddNewObjectEditController.h; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipAddNewObjectEditController.h"; sourceTree = SOURCE_ROOT; };
+		1EDCB3621173E77D0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyRelationshipAddNewObjectTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipAddNewObjectTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3631173E77D0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyRelationshipAddNewObjectEditController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipAddNewObjectEditController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3641173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyRelationshipAddExistingObjectsEditController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipAddExistingObjectsEditController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3651173E77D0077F121 /* CDLToManyRelationshipTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyRelationshipTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3661173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyRelationshipAddExistingObjectsTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipAddExistingObjectsTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3671173E77D0077F121 /* CDLToManyRelationshipSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyRelationshipSectionController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyRelationshipSectionController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3681173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyOrderedRelationshipEditController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyOrderedRelationshipEditController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3691173E77D0077F121 /* CDLToOneRelationshipEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToOneRelationshipEditController.m; path = "../CoreDataLibrary Application/Classes/CDLToOneRelationshipEditController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB36A1173E77D0077F121 /* CDLDateFieldEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLDateFieldEditController.m; path = "../CoreDataLibrary Application/Classes/CDLDateFieldEditController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB36B1173E77D0077F121 /* CDLAbstractFieldEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLAbstractFieldEditController.m; path = "../CoreDataLibrary Application/Classes/CDLAbstractFieldEditController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB36C1173E77D0077F121 /* CDLTextFieldEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLTextFieldEditController.m; path = "../CoreDataLibrary Application/Classes/CDLTextFieldEditController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB36D1173E77D0077F121 /* CDLMultiLineTextFieldEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLMultiLineTextFieldEditController.m; path = "../CoreDataLibrary Application/Classes/CDLMultiLineTextFieldEditController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB36E1173E77D0077F121 /* CDLAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLAddViewController.m; path = "../CoreDataLibrary Application/Classes/CDLAddViewController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLRootViewController.m; path = "../CoreDataLibrary Application/Classes/CDLRootViewController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLDetailViewController.m; path = "../CoreDataLibrary Application/Classes/CDLDetailViewController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3711173E77D0077F121 /* CDLSingleLineTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLSingleLineTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLSingleLineTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3721173E77D0077F121 /* CDLMultiLineTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLMultiLineTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLMultiLineTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3731173E77D0077F121 /* CDLBooleanTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLBooleanTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLBooleanTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3741173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyOrderedRelationshipTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyOrderedRelationshipTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3751173E77D0077F121 /* CDLToManyOrderedRelationshipAddTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyOrderedRelationshipAddTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyOrderedRelationshipAddTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3761173E77D0077F121 /* CDLRelationshipTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLRelationshipTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLRelationshipTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLTableSectionController.m; path = "../CoreDataLibrary Application/Classes/CDLTableSectionController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3781173E77D0077F121 /* CDLTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLTableRowController.m; path = "../CoreDataLibrary Application/Classes/CDLTableRowController.m"; sourceTree = SOURCE_ROOT; };
+		1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDLToManyOrderedRelationshipSectionController.m; path = "../CoreDataLibrary Application/Classes/CDLToManyOrderedRelationshipSectionController.m"; sourceTree = SOURCE_ROOT; };
 		1EFE04C91167F02700E03518 /* CoreDataSampleFor436_InitialData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataSampleFor436_InitialData.sqlite; sourceTree = "<group>"; };
-		1EFE050B11692AAB00E03518 /* CDLUtilityMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLUtilityMethods.h; sourceTree = "<group>"; };
-		1EFE050C11692AAB00E03518 /* CDLUtilityMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLUtilityMethods.m; sourceTree = "<group>"; };
 		28860B760F44E54D00985440 /* CoreDataSampleFor436.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataSampleFor436.xcdatamodel; sourceTree = "<group>"; };
 		28860BE40F44EE6400985440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -244,131 +241,121 @@
 		1E4446601155837F00E4DC6C /* CoreDataLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				1E942AF711593A6F00E97D4E /* Utility Classes */,
+				1EDCB3611173E77D0077F121 /* Code */,
+				1EDCB3571173E77D0077F121 /* Field Edit Controllers */,
+				1EDCB34B1173E77D0077F121 /* Row Controllers */,
+				1EDCB3471173E77D0077F121 /* Section Controllers */,
+				1EDCB33E1173E77D0077F121 /* Utility Classes */,
+				1EDCB33B1173E77D0077F121 /* CDLRootViewController.h */,
+				1EDCB33C1173E77D0077F121 /* CDLDetailViewController.h */,
+				1EDCB33D1173E77D0077F121 /* CDLAddViewController.h */,
 				1E4445A81155740600E4DC6C /* Data Classes */,
-				1E4446621155839900E4DC6C /* CDLRootViewController.h */,
-				1E942BDF115947A700E97D4E /* CDLDetailViewController.h */,
-				1E2CEEB5116099B200B25F4D /* CDLAddViewController.h */,
-				1E942AD911593A3900E97D4E /* Field Edit Controllers */,
-				1E6F09ED115BF3DD00C260D9 /* Row Controllers */,
-				1E6F09EE115BF3E200C260D9 /* Section Controllers */,
-				1E6F02BC1159F2E400C260D9 /* Code */,
 			);
 			name = CoreDataLibrary;
 			sourceTree = "<group>";
 		};
-		1E6F02BC1159F2E400C260D9 /* Code */ = {
+		1EDCB33E1173E77D0077F121 /* Utility Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1EDCAB83116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m */,
-				1EDCAAE2116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */,
-				1ED3F5FC116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.m */,
-				1ED3F36D116A671A00E08205 /* CDLToManyRelationshipTableRowController.m */,
-				1ED3F370116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m */,
-				1ED3F2DF116A538700E08205 /* CDLToManyRelationshipSectionController.m */,
-				1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */,
-				1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */,
-				1E942AE211593A4900E97D4E /* CDLDateFieldEditController.m */,
-				1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */,
-				1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */,
-				1E942AE411593A4900E97D4E /* CDLMultiLineTextFieldEditController.m */,
-				1E2CEEB6116099B200B25F4D /* CDLAddViewController.m */,
-				1E4446631155839900E4DC6C /* CDLRootViewController.m */,
-				1E942BE0115947A700E97D4E /* CDLDetailViewController.m */,
-				1E36EA62116055D600EF4D70 /* CDLSingleLineTableRowController.m */,
-				1E36EA761160566500EF4D70 /* CDLMultiLineTableRowController.m */,
-				1E36EA791160566E00EF4D70 /* CDLBooleanTableRowController.m */,
-				1E6F0A14115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m */,
-				1E6F0997115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.m */,
-				1E6F06B1115AAAAA00C260D9 /* CDLRelationshipTableRowController.m */,
-				1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */,
-				1E942C5311594E5400E97D4E /* CDLTableRowController.m */,
-				1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */,
-			);
-			name = Code;
-			sourceTree = "<group>";
-		};
-		1E6F09ED115BF3DD00C260D9 /* Row Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1EDCAC9F116D6A500077F121 /* toMany */,
-				1E942C5211594E5400E97D4E /* CDLTableRowController.h */,
-				1E6F06B0115AAAAA00C260D9 /* CDLRelationshipTableRowController.h */,
-				1E36EA61116055D600EF4D70 /* CDLSingleLineTableRowController.h */,
-				1E36EA751160566500EF4D70 /* CDLMultiLineTableRowController.h */,
-				1E36EA781160566E00EF4D70 /* CDLBooleanTableRowController.h */,
-			);
-			name = "Row Controllers";
-			sourceTree = "<group>";
-		};
-		1E6F09EE115BF3E200C260D9 /* Section Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1E942D7D1159BB2900E97D4E /* CDLTableSectionController.h */,
-				1E6F092A115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.h */,
-				1ED3F2DE116A538700E08205 /* CDLToManyRelationshipSectionController.h */,
-			);
-			name = "Section Controllers";
-			sourceTree = "<group>";
-		};
-		1E942AD911593A3900E97D4E /* Field Edit Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1EDCACA0116D6A6B0077F121 /* toMany */,
-				1E942ADA11593A4100E97D4E /* CDLAbstractFieldEditController.h */,
-				1E942AE711593A4900E97D4E /* CDLTextFieldEditController.h */,
-				1E942AE311593A4900E97D4E /* CDLMultiLineTextFieldEditController.h */,
-				1E942AE111593A4900E97D4E /* CDLDateFieldEditController.h */,
-				1E942AE511593A4900E97D4E /* CDLToOneRelationshipEditController.h */,
-				1E942AE011593A4900E97D4E /* Field Editing Views */,
-			);
-			name = "Field Edit Controllers";
-			sourceTree = "<group>";
-		};
-		1E942AE011593A4900E97D4E /* Field Editing Views */ = {
-			isa = PBXGroup;
-			children = (
-				1E942AEB11593A4900E97D4E /* SingleStaticSelectionListViewController.h */,
-				1E942AEC11593A4A00E97D4E /* SingleStaticSelectionListViewController.m */,
-			);
-			name = "Field Editing Views";
-			sourceTree = "<group>";
-		};
-		1E942AF711593A6F00E97D4E /* Utility Classes */ = {
-			isa = PBXGroup;
-			children = (
-				1E2CFA9511629C6900B25F4D /* UIColor+MoreColors.h */,
-				1E2CFA9611629C6900B25F4D /* UIColor+MoreColors.m */,
-				1E6F09BF115BEB4900C260D9 /* NSArray+Set.h */,
-				1E6F09C0115BEB4900C260D9 /* NSArray+Set.m */,
-				1E2CF53811612FCA00B25F4D /* NSManagedObject+TypeOfProperty.h */,
-				1E2CF53911612FCA00B25F4D /* NSManagedObject+TypeOfProperty.m */,
-				1EFE050B11692AAB00E03518 /* CDLUtilityMethods.h */,
-				1EFE050C11692AAB00E03518 /* CDLUtilityMethods.m */,
+				1EDCB33F1173E77D0077F121 /* UIColor+MoreColors.h */,
+				1EDCB3401173E77D0077F121 /* UIColor+MoreColors.m */,
+				1EDCB3411173E77D0077F121 /* NSArray+Set.h */,
+				1EDCB3421173E77D0077F121 /* NSArray+Set.m */,
+				1EDCB3431173E77D0077F121 /* NSManagedObject+TypeOfProperty.h */,
+				1EDCB3441173E77D0077F121 /* NSManagedObject+TypeOfProperty.m */,
+				1EDCB3451173E77D0077F121 /* CDLUtilityMethods.h */,
+				1EDCB3461173E77D0077F121 /* CDLUtilityMethods.m */,
 			);
 			name = "Utility Classes";
 			sourceTree = "<group>";
 		};
-		1EDCAC9F116D6A500077F121 /* toMany */ = {
+		1EDCB3471173E77D0077F121 /* Section Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1E6F0A13115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.h */,
-				1E6F0996115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.h */,
-				1ED3F36C116A671A00E08205 /* CDLToManyRelationshipTableRowController.h */,
-				1ED3F36F116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.h */,
-				1EDCAB82116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.h */,
+				1EDCB3481173E77D0077F121 /* CDLTableSectionController.h */,
+				1EDCB3491173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.h */,
+				1EDCB34A1173E77D0077F121 /* CDLToManyRelationshipSectionController.h */,
+			);
+			name = "Section Controllers";
+			sourceTree = "<group>";
+		};
+		1EDCB34B1173E77D0077F121 /* Row Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EDCB3511173E77D0077F121 /* toMany */,
+				1EDCB34C1173E77D0077F121 /* CDLTableRowController.h */,
+				1EDCB34D1173E77D0077F121 /* CDLRelationshipTableRowController.h */,
+				1EDCB34E1173E77D0077F121 /* CDLSingleLineTableRowController.h */,
+				1EDCB34F1173E77D0077F121 /* CDLMultiLineTableRowController.h */,
+				1EDCB3501173E77D0077F121 /* CDLBooleanTableRowController.h */,
+			);
+			name = "Row Controllers";
+			sourceTree = "<group>";
+		};
+		1EDCB3511173E77D0077F121 /* toMany */ = {
+			isa = PBXGroup;
+			children = (
+				1EDCB3521173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.h */,
+				1EDCB3531173E77D0077F121 /* CDLToManyOrderedRelationshipAddTableRowController.h */,
+				1EDCB3541173E77D0077F121 /* CDLToManyRelationshipTableRowController.h */,
+				1EDCB3551173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsTableRowController.h */,
+				1EDCB3561173E77D0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.h */,
 			);
 			name = toMany;
 			sourceTree = "<group>";
 		};
-		1EDCACA0116D6A6B0077F121 /* toMany */ = {
+		1EDCB3571173E77D0077F121 /* Field Edit Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1E942AE911593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.h */,
-				1ED3F5FB116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.h */,
-				1EDCAAE1116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.h */,
+				1EDCB35D1173E77D0077F121 /* toMany */,
+				1EDCB3581173E77D0077F121 /* CDLAbstractFieldEditController.h */,
+				1EDCB3591173E77D0077F121 /* CDLTextFieldEditController.h */,
+				1EDCB35A1173E77D0077F121 /* CDLMultiLineTextFieldEditController.h */,
+				1EDCB35B1173E77D0077F121 /* CDLDateFieldEditController.h */,
+				1EDCB35C1173E77D0077F121 /* CDLToOneRelationshipEditController.h */,
+			);
+			name = "Field Edit Controllers";
+			sourceTree = "<group>";
+		};
+		1EDCB35D1173E77D0077F121 /* toMany */ = {
+			isa = PBXGroup;
+			children = (
+				1EDCB35E1173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.h */,
+				1EDCB35F1173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsEditController.h */,
+				1EDCB3601173E77D0077F121 /* CDLToManyRelationshipAddNewObjectEditController.h */,
 			);
 			name = toMany;
+			sourceTree = "<group>";
+		};
+		1EDCB3611173E77D0077F121 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				1EDCB3621173E77D0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m */,
+				1EDCB3631173E77D0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */,
+				1EDCB3641173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsEditController.m */,
+				1EDCB3651173E77D0077F121 /* CDLToManyRelationshipTableRowController.m */,
+				1EDCB3661173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m */,
+				1EDCB3671173E77D0077F121 /* CDLToManyRelationshipSectionController.m */,
+				1EDCB3681173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m */,
+				1EDCB3691173E77D0077F121 /* CDLToOneRelationshipEditController.m */,
+				1EDCB36A1173E77D0077F121 /* CDLDateFieldEditController.m */,
+				1EDCB36B1173E77D0077F121 /* CDLAbstractFieldEditController.m */,
+				1EDCB36C1173E77D0077F121 /* CDLTextFieldEditController.m */,
+				1EDCB36D1173E77D0077F121 /* CDLMultiLineTextFieldEditController.m */,
+				1EDCB36E1173E77D0077F121 /* CDLAddViewController.m */,
+				1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */,
+				1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */,
+				1EDCB3711173E77D0077F121 /* CDLSingleLineTableRowController.m */,
+				1EDCB3721173E77D0077F121 /* CDLMultiLineTableRowController.m */,
+				1EDCB3731173E77D0077F121 /* CDLBooleanTableRowController.m */,
+				1EDCB3741173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.m */,
+				1EDCB3751173E77D0077F121 /* CDLToManyOrderedRelationshipAddTableRowController.m */,
+				1EDCB3761173E77D0077F121 /* CDLRelationshipTableRowController.m */,
+				1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */,
+				1EDCB3781173E77D0077F121 /* CDLTableRowController.m */,
+				1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */,
+			);
+			name = Code;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
@@ -504,37 +491,36 @@
 				1E44461A11557F4100E4DC6C /* WidgetType.m in Sources */,
 				1E44461B11557F4100E4DC6C /* ManufacturingProcess.m in Sources */,
 				1E44461C11557F4100E4DC6C /* ManufacturingProcessType.m in Sources */,
-				1E4446641155839900E4DC6C /* CDLRootViewController.m in Sources */,
 				1E44486E1156044A00E4DC6C /* NSManagedObjectContext+insert.m in Sources */,
-				1E942ADE11593A4100E97D4E /* CDLAbstractFieldEditController.m in Sources */,
-				1E942AED11593A4A00E97D4E /* CDLDateFieldEditController.m in Sources */,
-				1E942AEE11593A4A00E97D4E /* CDLMultiLineTextFieldEditController.m in Sources */,
-				1E942AEF11593A4A00E97D4E /* CDLToOneRelationshipEditController.m in Sources */,
-				1E942AF011593A4A00E97D4E /* CDLTextFieldEditController.m in Sources */,
-				1E942AF111593A4A00E97D4E /* CDLToManyOrderedRelationshipEditController.m in Sources */,
-				1E942AF211593A4A00E97D4E /* SingleStaticSelectionListViewController.m in Sources */,
-				1E942BE1115947A700E97D4E /* CDLDetailViewController.m in Sources */,
-				1E942C5411594E5400E97D4E /* CDLTableRowController.m in Sources */,
-				1E942D7F1159BB2900E97D4E /* CDLTableSectionController.m in Sources */,
-				1E6F06B2115AAAAA00C260D9 /* CDLRelationshipTableRowController.m in Sources */,
-				1E6F092C115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m in Sources */,
-				1E6F0998115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.m in Sources */,
-				1E6F09C1115BEB4900C260D9 /* NSArray+Set.m in Sources */,
-				1E6F0A15115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m in Sources */,
-				1E36EA63116055D600EF4D70 /* CDLSingleLineTableRowController.m in Sources */,
-				1E36EA771160566500EF4D70 /* CDLMultiLineTableRowController.m in Sources */,
-				1E36EA7A1160566E00EF4D70 /* CDLBooleanTableRowController.m in Sources */,
-				1E2CEEB7116099B200B25F4D /* CDLAddViewController.m in Sources */,
-				1E2CF53A11612FCA00B25F4D /* NSManagedObject+TypeOfProperty.m in Sources */,
-				1E2CFA9711629C6900B25F4D /* UIColor+MoreColors.m in Sources */,
-				1EFE050D11692AAB00E03518 /* CDLUtilityMethods.m in Sources */,
-				1ED3F2E0116A538700E08205 /* CDLToManyRelationshipSectionController.m in Sources */,
-				1ED3F36E116A671A00E08205 /* CDLToManyRelationshipTableRowController.m in Sources */,
-				1ED3F371116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m in Sources */,
-				1ED3F5FD116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.m in Sources */,
 				1EDCA6CB116C01140077F121 /* DemoViewController.m in Sources */,
-				1EDCAAE3116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m in Sources */,
-				1EDCAB84116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m in Sources */,
+				1EDCB37A1173E77D0077F121 /* UIColor+MoreColors.m in Sources */,
+				1EDCB37B1173E77D0077F121 /* NSArray+Set.m in Sources */,
+				1EDCB37C1173E77D0077F121 /* NSManagedObject+TypeOfProperty.m in Sources */,
+				1EDCB37D1173E77D0077F121 /* CDLUtilityMethods.m in Sources */,
+				1EDCB37E1173E77D0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m in Sources */,
+				1EDCB37F1173E77D0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m in Sources */,
+				1EDCB3801173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsEditController.m in Sources */,
+				1EDCB3811173E77D0077F121 /* CDLToManyRelationshipTableRowController.m in Sources */,
+				1EDCB3821173E77D0077F121 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m in Sources */,
+				1EDCB3831173E77D0077F121 /* CDLToManyRelationshipSectionController.m in Sources */,
+				1EDCB3841173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m in Sources */,
+				1EDCB3851173E77D0077F121 /* CDLToOneRelationshipEditController.m in Sources */,
+				1EDCB3861173E77D0077F121 /* CDLDateFieldEditController.m in Sources */,
+				1EDCB3871173E77D0077F121 /* CDLAbstractFieldEditController.m in Sources */,
+				1EDCB3881173E77D0077F121 /* CDLTextFieldEditController.m in Sources */,
+				1EDCB3891173E77D0077F121 /* CDLMultiLineTextFieldEditController.m in Sources */,
+				1EDCB38A1173E77D0077F121 /* CDLAddViewController.m in Sources */,
+				1EDCB38B1173E77D0077F121 /* CDLRootViewController.m in Sources */,
+				1EDCB38C1173E77D0077F121 /* CDLDetailViewController.m in Sources */,
+				1EDCB38D1173E77D0077F121 /* CDLSingleLineTableRowController.m in Sources */,
+				1EDCB38E1173E77D0077F121 /* CDLMultiLineTableRowController.m in Sources */,
+				1EDCB38F1173E77D0077F121 /* CDLBooleanTableRowController.m in Sources */,
+				1EDCB3901173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.m in Sources */,
+				1EDCB3911173E77D0077F121 /* CDLToManyOrderedRelationshipAddTableRowController.m in Sources */,
+				1EDCB3921173E77D0077F121 /* CDLRelationshipTableRowController.m in Sources */,
+				1EDCB3931173E77D0077F121 /* CDLTableSectionController.m in Sources */,
+				1EDCB3941173E77D0077F121 /* CDLTableRowController.m in Sources */,
+				1EDCB3951173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
