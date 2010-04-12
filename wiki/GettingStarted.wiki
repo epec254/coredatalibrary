@@ -33,3 +33,28 @@ This guide walks you through the basic steps necessary to create an application 
   * http://imgur.com/xbocM.png
  # Now, create a new Dictionary in the root array and configure it as the screenshot below.  This is for the `detail` property.
   * http://imgur.com/xIkD9.png
+
+== Creating a custom row ==
+
+ # We will now create a custom row to present a Delete button within the detail view (similar to the address book application).
+ # Import the delete.png and delete_selected.png files into the project's resources folder.
+ # Create a new subclass of NSObject, called `DeleteRowController.m`
+ # Add the following code to the `DeleteRowController.h` file.  _NOTE: The requirement of a delegate property will be removed in a future version of the library._
+{{{
+#import "CDLTableRowController.h"
+
+@interface DeleteRowController : NSObject <CDLTableRowControllerProtocol> {
+
+}
+
+/** Initialize the RowController with the given dictionary */
+- (id) initForDictionary:(NSDictionary *) rowInformation;
+
+/** Provide a UITableViewCell for this row. */
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/** Provide action if the UITableViewCell for this row is selected. */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+}}}
