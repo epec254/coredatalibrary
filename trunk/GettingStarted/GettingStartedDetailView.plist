@@ -1,0 +1,47 @@
+(
+	{
+		sectionTitle = "Event Overview";
+		rowInformation = (
+			{
+				rowLabel = Name;
+				attributeKeyPath = name;
+				rowType = "CDLTableRowTypeSingleLineValueSmallLabel";
+			},
+			{
+				rowLabel = Date;
+				attributeKeyPath = timeStamp;
+				rowType = "CDLTableRowTypeSingleLineValueSmallLabel";
+				dateFormatterStyle = "NSDateFormatterMediumStyle";
+				timeFormatterStyle = "NSDateFormatterMediumStyle";
+			},
+			{
+				rowLabel = "Open to the public?";
+				attributeKeyPath = publicEvent;
+				rowType = "CDLTableRowTypeBooleanSwitch";
+			},
+			{
+				rowLabel = Type;
+				attributeKeyPath = "type.name";
+				rowType = "CDLTableRowTypeRelationship";
+			},
+		);
+	},
+	{
+		sectionTitle = "Event Details";
+		rowInformation = (
+			{
+				rowLabel = Detail;
+				attributeKeyPath = detail;
+				rowType = "CDLTableRowTypeMultiLineValueNoLabel";
+			},
+		);
+	},
+	{
+		rowInformation = (
+			{
+				rowType = "CDLTableRowTypeCustom";
+				"rowCustomControllerClass" = DeleteRowController;
+			},
+		);
+	},
+)
