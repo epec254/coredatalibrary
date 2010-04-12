@@ -1,13 +1,21 @@
-#summary One-sentence summary of this page.
+#summary Getting started with CoreDataLibrary
 
 = Introduction =
 
-Add your content here.
+This guide walks you through the basic steps necessary to create an application with the CoreDataLibrary.  It assumes familiarity with Core Data, iPhone programming and XCode.
+
+== Prerequisites == 
+
+ * Ensure the CoreDataLibrary template is installed (see the [Installation installation guide]).
+ * This is untested on anything lower than iPhone OS 3.1.3 and XCode 3.2.1
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ # Create a new XCode project using the `CoreDataLibrary Application` template.  We called our project `GettingStarted.`
+   * http://imgur.com/2gSBN.png
+ # By default, the template includes an entity named `Event` with two attributes, `name` and `timeStamp.`  The CDLRootViewController is configured to not have sections or section index titles.  If you make no changes to the project and run in the simulator, you will see a screen similar to below.
+   * http://imgur.com/IzfGX.png
+ # In this guide, we will add several attributes (a string called `detail` and a boolean called `publicEvent`and to-one relationship called `type`).  To begin, open the `GettingStarted.xcdatamodel` file under Resources.
+ # You will be presented with the Core Data model editor.  Configure the model as shown below (click image for a bigger version)
+  * [http://imgur.com/nvZXd.png http://imgur.com/nvZXdl.jpg]
