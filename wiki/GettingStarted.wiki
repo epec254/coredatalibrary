@@ -37,7 +37,7 @@ This guide walks you through the basic steps necessary to create an application 
 == Creating a custom row ==
 
  # We will now create a custom row to present a Delete button within the detail view (similar to the address book application).
- # Import the delete.png and delete_selected.png files into the project's resources folder.
+ # Import the delete.png and delete_selected.png files into the project's resources folder. (Copies of the images can be found at http://coredatalibrary.googlecode.com/files/delete_images.zip)
  # Create a new subclass of NSObject, called `DeleteRowController.m`
  # Add the following code to the `DeleteRowController.h` file.  _NOTE: The requirement of a delegate property will be removed in a future version of the library._
 {{{
