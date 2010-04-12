@@ -159,3 +159,46 @@ This guide walks you through the basic steps necessary to create an application 
 
 @end
 }}}
+
+== Creating Event Types ==
+
+ # Now that the code is complete, we need to create several sample EventTypes for users to select.  To accomplish this, we will create a temporary method in the AppDelegate.  For a real application, we suggest following the steps in the LoadingInitialData how to guide rather than keeping this method around.
+
+ # Add the following line to the top of the `GettingStartedAppDelegate.m` file.
+{{{
+#import "EventType.h"
+}}}
+
+# Inside the implementation for the AppDelegate, add the following lines that will create 4 event types.
+{{{
+- (void) createEventTypes
+{
+	//create a few sample types
+	
+	EventType *aType = (EventType *)[MANAGED_OBJECT_CONTEXT insertNewObjectForEntityForName:@"EventType"];
+	aType.name = @"PR";
+	
+	aType = (EventType *)[MANAGED_OBJECT_CONTEXT insertNewObjectForEntityForName:@"EventType"];
+	aType.name = @"Fundraising";
+	
+	aType = (EventType *)[MANAGED_OBJECT_CONTEXT insertNewObjectForEntityForName:@"EventType"];
+	aType.name = @"TV Promotion";
+	
+	aType = (EventType *)[MANAGED_OBJECT_CONTEXT insertNewObjectForEntityForName:@"EventType"];
+	aType.name = @"Lecture";
+	
+	[[DataController sharedDataController] saveFromSource:@"Create sample data"];
+}
+}}}
+
+# Now, inside the applicationDidFinishLaunching method, add the following code to call this method:
+{{{
+- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+    
+    // Override point for customization after app launch    
+	
+	[self createEventTypes];
+...
+}}}
+
+# Run the application once to create the data.  Before running it again, make sure you comment out the line you added in the previous step, or you will create duplicate event types each time the application launches.
