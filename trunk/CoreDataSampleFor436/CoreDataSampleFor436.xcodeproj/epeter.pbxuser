@@ -41,15 +41,13 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1E2CEEB5116099B200B25F4D /* CDLAddViewController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 628}}";
-			sepNavSelRange = "{0, 169}";
-			sepNavVisRange = "{0, 277}";
-			sepNavWindowFrame = "{{15, 132}, {934, 741}}";
-		};
-	};
 	1E2CEEB6116099B200B25F4D /* CDLAddViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLAddViewController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLAddViewController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1379, 1014}}";
 			sepNavSelRange = "{2301, 0}";
@@ -83,22 +81,6 @@
 			sepNavWindowFrame = "{{576, 158}, {640, 688}}";
 		};
 	};
-	1E2CF53811612FCA00B25F4D /* NSManagedObject+TypeOfProperty.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {978, 715}}";
-			sepNavSelRange = "{192, 15}";
-			sepNavVisRange = "{0, 273}";
-			sepNavWindowFrame = "{{15, 101}, {1037, 772}}";
-		};
-	};
-	1E2CF53911612FCA00B25F4D /* NSManagedObject+TypeOfProperty.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {978, 715}}";
-			sepNavSelRange = "{231, 43}";
-			sepNavVisRange = "{0, 1196}";
-			sepNavWindowFrame = "{{331, 76}, {1037, 772}}";
-		};
-	};
 	1E2CF5FD116141AA00B25F4D /* CDLToManyOrderedRelationshipSectionController.m:176 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -113,7 +95,7 @@
 		ignoreCount = 0;
 		lineNumber = 176;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.176499;
+		modificationTime = 292382620.1764989;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -189,21 +171,6 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1E2CFA9511629C6900B25F4D /* UIColor+MoreColors.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 4199}}";
-			sepNavSelRange = "{73, 0}";
-			sepNavVisRange = "{0, 662}";
-			sepNavWindowFrame = "{{38, 268}, {788, 584}}";
-		};
-	};
-	1E2CFA9611629C6900B25F4D /* UIColor+MoreColors.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {696, 4290}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 105}";
-		};
-	};
 	1E2CFB691162C76E00B25F4D /* CDLTextFieldEditController.m:9 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -254,7 +221,7 @@
 		ignoreCount = 0;
 		lineNumber = 60;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.176951;
+		modificationTime = 292382620.1769511;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -290,7 +257,7 @@
 		ignoreCount = 0;
 		lineNumber = 9;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.175188;
+		modificationTime = 292382620.1751879;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -330,52 +297,18 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1E36EA61116055D600EF4D70 /* CDLSingleLineTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {557, 696}}";
-			sepNavSelRange = "{2, 0}";
-			sepNavVisRange = "{0, 773}";
-			sepNavWindowFrame = "{{46, 69}, {616, 809}}";
-		};
-	};
 	1E36EA62116055D600EF4D70 /* CDLSingleLineTableRowController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLSingleLineTableRowController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLSingleLineTableRowController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {557, 2730}}";
 			sepNavSelRange = "{828, 0}";
 			sepNavVisRange = "{0, 1503}";
 			sepNavWindowFrame = "{{46, 69}, {616, 809}}";
-		};
-	};
-	1E36EA751160566500EF4D70 /* CDLMultiLineTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {804, 696}}";
-			sepNavSelRange = "{0, 179}";
-			sepNavVisRange = "{0, 294}";
-			sepNavWindowFrame = "{{555, 69}, {863, 809}}";
-		};
-	};
-	1E36EA761160566500EF4D70 /* CDLMultiLineTableRowController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1157, 2626}}";
-			sepNavSelRange = "{1932, 0}";
-			sepNavVisRange = "{1367, 603}";
-			sepNavWindowFrame = "{{-27, 69}, {863, 809}}";
-		};
-	};
-	1E36EA781160566E00EF4D70 /* CDLBooleanTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {557, 696}}";
-			sepNavSelRange = "{0, 177}";
-			sepNavVisRange = "{0, 390}";
-			sepNavWindowFrame = "{{681, 69}, {616, 809}}";
-		};
-	};
-	1E36EA791160566E00EF4D70 /* CDLBooleanTableRowController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {557, 2067}}";
-			sepNavSelRange = "{615, 0}";
-			sepNavVisRange = "{38, 1292}";
-			sepNavWindowFrame = "{{681, 68}, {616, 809}}";
 		};
 	};
 	1E36EB0711605FEF00EF4D70 /* CDLTableRowController.m:56 */ = {
@@ -428,7 +361,7 @@
 		ignoreCount = 0;
 		lineNumber = 54;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.175564;
+		modificationTime = 292382620.1755639;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -679,15 +612,13 @@
 			sepNavWindowFrame = "{{695, 77}, {740, 790}}";
 		};
 	};
-	1E4446621155839900E4DC6C /* CDLRootViewController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {966, 871}}";
-			sepNavSelRange = "{1215, 26}";
-			sepNavVisRange = "{446, 1687}";
-			sepNavWindowFrame = "{{273, 133}, {1025, 735}}";
-		};
-	};
 	1E4446631155839900E4DC6C /* CDLRootViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLRootViewController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLRootViewController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {966, 8333}}";
 			sepNavSelRange = "{7819, 87}";
@@ -730,7 +661,7 @@
 		ignoreCount = 0;
 		lineNumber = 25;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.159944;
+		modificationTime = 292382620.1599439;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -892,7 +823,7 @@
 		ignoreCount = 0;
 		lineNumber = 25;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.162637;
+		modificationTime = 292382620.1626371;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1073,7 +1004,7 @@
 		ignoreCount = 0;
 		lineNumber = 9;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.165389;
+		modificationTime = 292382620.1653889;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1091,7 +1022,7 @@
 		ignoreCount = 0;
 		lineNumber = 31;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.16542;
+		modificationTime = 292382620.1654201;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1167,15 +1098,13 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1E6F06B0115AAAAA00C260D9 /* CDLRelationshipTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {776, 670}}";
-			sepNavSelRange = "{496, 0}";
-			sepNavVisRange = "{0, 850}";
-			sepNavWindowFrame = "{{38, 69}, {835, 783}}";
-		};
-	};
 	1E6F06B1115AAAAA00C260D9 /* CDLRelationshipTableRowController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLRelationshipTableRowController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLRelationshipTableRowController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {776, 1820}}";
 			sepNavSelRange = "{683, 0}";
@@ -1183,15 +1112,13 @@
 			sepNavWindowFrame = "{{38, 69}, {835, 783}}";
 		};
 	};
-	1E6F092A115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {728, 625}}";
-			sepNavSelRange = "{195, 0}";
-			sepNavVisRange = "{0, 688}";
-			sepNavWindowFrame = "{{651, 140}, {787, 738}}";
-		};
-	};
 	1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLToManyOrderedRelationshipSectionController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyOrderedRelationshipSectionController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {696, 4589}}";
 			sepNavSelRange = "{1219, 15}";
@@ -1199,47 +1126,13 @@
 			sepNavWindowFrame = "{{651, 140}, {787, 738}}";
 		};
 	};
-	1E6F0996115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {940, 663}}";
-			sepNavSelRange = "{207, 45}";
-			sepNavVisRange = "{0, 920}";
-			sepNavWindowFrame = "{{139, 89}, {999, 776}}";
-		};
-	};
-	1E6F0997115BE61A00C260D9 /* CDLToManyOrderedRelationshipAddTableRowController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {484, 1755}}";
-			sepNavSelRange = "{2795, 0}";
-			sepNavVisRange = "{2395, 732}";
-			sepNavWindowFrame = "{{51, 98}, {692, 780}}";
-		};
-	};
-	1E6F09BF115BEB4900C260D9 /* NSArray+Set.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {776, 703}}";
-			sepNavSelRange = "{96, 18}";
-			sepNavVisRange = "{0, 181}";
-			sepNavWindowFrame = "{{600, 69}, {835, 783}}";
-		};
-	};
-	1E6F09C0115BEB4900C260D9 /* NSArray+Set.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {776, 670}}";
-			sepNavSelRange = "{511, 0}";
-			sepNavVisRange = "{0, 511}";
-			sepNavWindowFrame = "{{15, 90}, {835, 783}}";
-		};
-	};
-	1E6F0A13115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {940, 663}}";
-			sepNavSelRange = "{356, 0}";
-			sepNavVisRange = "{0, 362}";
-			sepNavWindowFrame = "{{69, 77}, {999, 776}}";
-		};
-	};
 	1E6F0A14115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLToManyOrderedRelationshipTableRowController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyOrderedRelationshipTableRowController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {940, 1261}}";
 			sepNavSelRange = "{2334, 0}";
@@ -1387,7 +1280,7 @@
 		ignoreCount = 0;
 		lineNumber = 25;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.172395;
+		modificationTime = 292382620.1723951;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1536,7 +1429,7 @@
 		ignoreCount = 0;
 		lineNumber = 9;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.173486;
+		modificationTime = 292382620.1734861;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1590,7 +1483,7 @@
 		ignoreCount = 0;
 		lineNumber = 184;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.17367;
+		modificationTime = 292382620.1736701;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1644,7 +1537,7 @@
 		ignoreCount = 0;
 		lineNumber = 24;
 		location = CoreDataSampleFor436;
-		modificationTime = 292382620.173872;
+		modificationTime = 292382620.1738719;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1707,15 +1600,13 @@
 			sepNavWindowFrame = "{{762, 116}, {560, 713}}";
 		};
 	};
-	1E942ADA11593A4100E97D4E /* CDLAbstractFieldEditController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {855, 910}}";
-			sepNavSelRange = "{649, 47}";
-			sepNavVisRange = "{0, 1645}";
-			sepNavWindowFrame = "{{486, 87}, {914, 791}}";
-		};
-	};
 	1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLAbstractFieldEditController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLAbstractFieldEditController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {855, 2314}}";
 			sepNavSelRange = "{825, 0}";
@@ -1723,47 +1614,13 @@
 			sepNavWindowFrame = "{{78, 87}, {914, 791}}";
 		};
 	};
-	1E942AE111593A4900E97D4E /* CDLDateFieldEditController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {606, 682}}";
-			sepNavSelRange = "{595, 0}";
-			sepNavVisRange = "{0, 1218}";
-			sepNavWindowFrame = "{{15, 78}, {665, 795}}";
-		};
-	};
-	1E942AE211593A4900E97D4E /* CDLDateFieldEditController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {606, 2574}}";
-			sepNavSelRange = "{719, 0}";
-			sepNavVisRange = "{0, 1508}";
-			sepNavWindowFrame = "{{15, 78}, {665, 795}}";
-		};
-	};
-	1E942AE311593A4900E97D4E /* CDLMultiLineTextFieldEditController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 628}}";
-			sepNavSelRange = "{0, 290}";
-			sepNavVisRange = "{0, 506}";
-			sepNavWindowFrame = "{{38, 111}, {934, 741}}";
-		};
-	};
-	1E942AE411593A4900E97D4E /* CDLMultiLineTextFieldEditController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {875, 1508}}";
-			sepNavSelRange = "{524, 0}";
-			sepNavVisRange = "{0, 1157}";
-			sepNavWindowFrame = "{{38, 111}, {934, 741}}";
-		};
-	};
-	1E942AE511593A4900E97D4E /* CDLToOneRelationshipEditController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {730, 681}}";
-			sepNavSelRange = "{928, 0}";
-			sepNavVisRange = "{0, 1425}";
-			sepNavWindowFrame = "{{51, 69}, {789, 794}}";
-		};
-	};
 	1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLToOneRelationshipEditController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToOneRelationshipEditController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {730, 2899}}";
 			sepNavSelRange = "{998, 0}";
@@ -1771,15 +1628,13 @@
 			sepNavWindowFrame = "{{51, 69}, {789, 794}}";
 		};
 	};
-	1E942AE711593A4900E97D4E /* CDLTextFieldEditController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {606, 682}}";
-			sepNavSelRange = "{2, 0}";
-			sepNavVisRange = "{0, 588}";
-			sepNavWindowFrame = "{{190, 69}, {665, 795}}";
-		};
-	};
 	1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLTextFieldEditController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLTextFieldEditController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {606, 1976}}";
 			sepNavSelRange = "{307, 12}";
@@ -1787,15 +1642,13 @@
 			sepNavWindowFrame = "{{689, 60}, {665, 795}}";
 		};
 	};
-	1E942AE911593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {681, 690}}";
-			sepNavSelRange = "{238, 0}";
-			sepNavVisRange = "{0, 819}";
-			sepNavWindowFrame = "{{40, 72}, {740, 803}}";
-		};
-	};
 	1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLToManyOrderedRelationshipEditController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyOrderedRelationshipEditController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {681, 1521}}";
 			sepNavSelRange = "{806, 0}";
@@ -1803,31 +1656,13 @@
 			sepNavWindowFrame = "{{40, 72}, {740, 803}}";
 		};
 	};
-	1E942AEB11593A4900E97D4E /* SingleStaticSelectionListViewController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {686, 681}}";
-			sepNavSelRange = "{0, 445}";
-			sepNavVisRange = "{0, 445}";
-			sepNavWindowFrame = "{{38, 114}, {745, 738}}";
-		};
-	};
-	1E942AEC11593A4A00E97D4E /* SingleStaticSelectionListViewController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1157, 975}}";
-			sepNavSelRange = "{634, 34}";
-			sepNavVisRange = "{245, 586}";
-			sepNavWindowFrame = "{{38, 114}, {745, 738}}";
-		};
-	};
-	1E942BDF115947A700E97D4E /* CDLDetailViewController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {835, 676}}";
-			sepNavSelRange = "{1048, 0}";
-			sepNavVisRange = "{0, 1048}";
-			sepNavWindowFrame = "{{491, 88}, {894, 789}}";
-		};
-	};
 	1E942BE0115947A700E97D4E /* CDLDetailViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLDetailViewController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLDetailViewController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {835, 2964}}";
 			sepNavSelRange = "{600, 0}";
@@ -1835,15 +1670,13 @@
 			sepNavWindowFrame = "{{582, 89}, {894, 789}}";
 		};
 	};
-	1E942C5211594E5400E97D4E /* CDLTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {751, 1859}}";
-			sepNavSelRange = "{1489, 33}";
-			sepNavVisRange = "{3138, 1392}";
-			sepNavWindowFrame = "{{214, 83}, {810, 790}}";
-		};
-	};
 	1E942C5311594E5400E97D4E /* CDLTableRowController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLTableRowController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLTableRowController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1157, 2665}}";
 			sepNavSelRange = "{63, 27}";
@@ -1851,15 +1684,13 @@
 			sepNavWindowFrame = "{{214, 83}, {810, 790}}";
 		};
 	};
-	1E942D7D1159BB2900E97D4E /* CDLTableSectionController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {725, 1417}}";
-			sepNavSelRange = "{0, 173}";
-			sepNavVisRange = "{2045, 1906}";
-			sepNavWindowFrame = "{{575, 109}, {784, 769}}";
-		};
-	};
 	1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLTableSectionController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLTableSectionController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {725, 4121}}";
 			sepNavSelRange = "{1128, 0}";
@@ -1888,52 +1719,18 @@
 		state = 1;
 		symbolName = objc_exception_throw;
 	};
-	1ED3F2DE116A538700E08205 /* CDLToManyRelationshipSectionController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {774, 975}}";
-			sepNavSelRange = "{850, 28}";
-			sepNavVisRange = "{0, 1277}";
-			sepNavWindowFrame = "{{478, 129}, {833, 743}}";
-		};
-	};
 	1ED3F2DF116A538700E08205 /* CDLToManyRelationshipSectionController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLToManyRelationshipSectionController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyRelationshipSectionController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {696, 5694}}";
 			sepNavSelRange = "{14368, 0}";
 			sepNavVisRange = "{10016, 318}";
 			sepNavWindowFrame = "{{708, 91}, {833, 743}}";
-		};
-	};
-	1ED3F36C116A671A00E08205 /* CDLToManyRelationshipTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {535, 692}}";
-			sepNavSelRange = "{0, 190}";
-			sepNavVisRange = "{0, 613}";
-			sepNavWindowFrame = "{{15, 69}, {594, 805}}";
-		};
-	};
-	1ED3F36D116A671A00E08205 /* CDLToManyRelationshipTableRowController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {535, 1287}}";
-			sepNavSelRange = "{357, 15}";
-			sepNavVisRange = "{0, 1232}";
-			sepNavWindowFrame = "{{15, 69}, {594, 805}}";
-		};
-	};
-	1ED3F36F116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {535, 692}}";
-			sepNavSelRange = "{51, 0}";
-			sepNavVisRange = "{0, 697}";
-			sepNavWindowFrame = "{{15, 69}, {594, 805}}";
-		};
-	};
-	1ED3F370116A674B00E08205 /* CDLToManyRelationshipAddExistingObjectsTableRowController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {535, 1638}}";
-			sepNavSelRange = "{1960, 723}";
-			sepNavVisRange = "{0, 1063}";
-			sepNavWindowFrame = "{{756, 73}, {594, 805}}";
 		};
 	};
 	1ED3F41D116ACD8D00E08205 /* CDLToManyOrderedRelationshipSectionController.m:136 */ = {
@@ -2030,22 +1827,6 @@
 		modificationTime = 292382620.180196;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
-	};
-	1ED3F5FB116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {633, 667}}";
-			sepNavSelRange = "{0, 186}";
-			sepNavVisRange = "{0, 659}";
-			sepNavWindowFrame = "{{680, 69}, {692, 780}}";
-		};
-	};
-	1ED3F5FC116AE7FB00E08205 /* CDLToManyRelationshipAddExistingObjectsEditController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {633, 2392}}";
-			sepNavSelRange = "{1739, 1009}";
-			sepNavVisRange = "{1362, 1663}";
-			sepNavWindowFrame = "{{731, 98}, {692, 780}}";
-		};
 	};
 	1ED3F6BD116AEFC300E08205 /* WidgetTypeDetailView.plist */ = {
 		uiCtxt = {
@@ -2154,35 +1935,18 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	1EDCAAE1116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {774, 630}}";
-			sepNavSelRange = "{0, 191}";
-			sepNavVisRange = "{0, 1422}";
-			sepNavWindowFrame = "{{475, 69}, {833, 743}}";
-		};
-	};
 	1EDCAAE2116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLToManyRelationshipAddNewObjectEditController.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyRelationshipAddNewObjectEditController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1083, 1612}}";
 			sepNavSelRange = "{4837, 0}";
 			sepNavVisRange = "{3185, 770}";
 			sepNavWindowFrame = "{{487, 135}, {833, 743}}";
-		};
-	};
-	1EDCAB82116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1157, 260}}";
-			sepNavSelRange = "{202, 0}";
-			sepNavVisRange = "{0, 405}";
-		};
-	};
-	1EDCAB83116D5E6A0077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {651, 624}}";
-			sepNavSelRange = "{60, 0}";
-			sepNavVisRange = "{0, 1527}";
-			sepNavWindowFrame = "{{493, 171}, {710, 670}}";
 		};
 	};
 	1EDCAC0F116D63CF0077F121 /* WidgetAddView-FromType.plist */ = {
@@ -2262,15 +2026,13 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1EFE050B11692AAB00E03518 /* CDLUtilityMethods.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {730, 630}}";
-			sepNavSelRange = "{599, 0}";
-			sepNavVisRange = "{0, 683}";
-			sepNavWindowFrame = "{{0, 126}, {789, 743}}";
-		};
-	};
 	1EFE050C11692AAB00E03518 /* CDLUtilityMethods.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CDLUtilityMethods.m;
+		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLUtilityMethods.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {484, 1144}}";
 			sepNavSelRange = "{2053, 0}";
@@ -2653,8 +2415,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 292295765;
-			PBXWorkspaceStateSaveDate = 292295765;
+			PBXPerProjectTemplateStateSaveDate = 292808472;
+			PBXWorkspaceStateSaveDate = 292808472;
 		};
 		sourceControlManager = 1E4445A91155740600E4DC6C /* Source Control */;
 		userBuildSettings = {

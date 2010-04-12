@@ -438,8 +438,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>1EDCA99A116C14570077F121</string>
-				<string>1EDCA99B116C14570077F121</string>
+				<string>1EDCB3301173E71B0077F121</string>
+				<string>1EDCB3311173E71B0077F121</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -476,15 +476,8 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>1EDCAC57116D67970077F121</string>
-		<string>1EDCABC1116D60AD0077F121</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>1E2CF5F111613F8800B25F4D</string>
-		<string>1E4447411155937500E4DC6C</string>
-		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>/Users/epeter/Dropbox/iPhone Projects/436 core data/CoreDataSampleFor436/CoreDataSampleFor436.xcodeproj</string>
+		<string>/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/CoreDataSampleFor436.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>16 244 662 622 0 0 1440 878 </string>
@@ -701,7 +694,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>1EDCA99D116C14570077F121</string>
+				<string>1EDCB3321173E71B0077F121</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
