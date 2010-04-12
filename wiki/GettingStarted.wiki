@@ -168,8 +168,7 @@ This guide walks you through the basic steps necessary to create an application 
 {{{
 #import "EventType.h"
 }}}
-
-# Inside the implementation for the AppDelegate, add the following lines that will create 4 event types.
+ # Inside the implementation for the AppDelegate, add the following lines that will create 4 event types.
 {{{
 - (void) createEventTypes
 {
@@ -190,8 +189,7 @@ This guide walks you through the basic steps necessary to create an application 
 	[[DataController sharedDataController] saveFromSource:@"Create sample data"];
 }
 }}}
-
-# Now, inside the applicationDidFinishLaunching method, add the following code to call this method:
+ # Now, inside the applicationDidFinishLaunching method, add the following code to call this method:
 {{{
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
@@ -200,5 +198,4 @@ This guide walks you through the basic steps necessary to create an application 
 	[self createEventTypes];
 ...
 }}}
-
-# Run the application once to create the data.  Before running it again, make sure you comment out the line you added in the previous step, or you will create duplicate event types each time the application launches.
+ # Run the application once to create the data.  Before running it again, make sure you comment out the line you added in the previous step, or you will create duplicate event types each time the application launches.
