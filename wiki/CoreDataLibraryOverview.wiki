@@ -1,17 +1,6 @@
 #summary Overview of CoreDataUI
 #labels Type-Overview
 
-= Introduction =
-
-CoreDataUI is an XCode template that helps you quickly create a tableview-based UI for a Core Data iPhone application.  Creating a UI consists of the following general steps:
-
-  # Create a project using the XCode template
-  # Create a CoreData model and the corresponding objects using XCode
-  # Define the views through a set of Property List (plist) files.
-  # Customize as needed.
-
-The template will give you a customizable Plain-Style TableView that displays all entities of a given type.  Each row of this table, upon selection, will display a customizable Grouped-Style TableView for the object at the row. Upon selecting a row, you will be presented with a view that allows you to make changes to the value.
-
 = Implementation Details =
 
 A *MORootViewController* displays all ManagedObjects of a given type.  Selecting a cell will load a MODetailViewController for that corresponding row.
