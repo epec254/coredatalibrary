@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* AlphaEventsAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {816, 273}}";
+			sepNavSelRange = "{506, 0}";
+			sepNavVisRange = "{75, 438}";
+		};
+	};
+	1D3623250D0F684500981E51 /* AlphaEventsAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {852, 806}}";
+			sepNavSelRange = "{313, 0}";
+			sepNavVisRange = "{0, 1341}";
+			sepNavWindowFrame = "{{516, 197}, {911, 681}}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* AlphaEvents */ = {
+		activeExec = 0;
+		executables = (
+			1EDCA736116C04970077F121 /* AlphaEvents */,
+		);
+	};
+	1EDCA736116C04970077F121 /* AlphaEvents */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = AlphaEvents;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	1EDCA740116C04A00077F121 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	1EDCA741116C04A00077F121 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1EDCA867116C07FF0077F121 /* AlphaEventsRootView.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{529, 69}, {911, 681}}";
+		};
+	};
+	1EDCA868116C07FF0077F121 /* AlphaEventsDetailView.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{289, 95}, {911, 681}}";
+		};
+	};
+	1EDCA870116C082E0077F121 /* Event.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {852, 568}}";
+			sepNavSelRange = "{603, 0}";
+			sepNavVisRange = "{0, 604}";
+			sepNavWindowFrame = "{{61, 150}, {911, 681}}";
+		};
+	};
+	1EDCA871116C082E0077F121 /* Event.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {816, 754}}";
+			sepNavSelRange = "{1018, 0}";
+			sepNavVisRange = "{225, 297}";
+			sepNavWindowFrame = "{{497, 56}, {911, 681}}";
+		};
+	};
+	1EDCAD7A116D72750077F121 /* DataController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {651, 650}}";
+			sepNavSelRange = "{411, 0}";
+			sepNavVisRange = "{122, 1317}";
+		};
+	};
+	1EDCAD7B116D72750077F121 /* DataController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {651, 2275}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{2041, 1509}";
+			sepNavWindowFrame = "{{153, 77}, {710, 670}}";
+		};
+	};
+	28860B760F44E54D00985440 /* AlphaEvents.xcdatamodel */ = {
+		uiCtxt = {
+			"Xdesign Model Editor Bookmark Key" = {
+				UIContextForDetailArea = {
+					_indexOfSelectedPane = 0;
+					_indexOfSelectedView = 1;
+				};
+				UIContextForEntityArea = {
+					_indexOfSelectedView = 0;
+					chosenTableColumnns = (
+						"ET Entity",
+						"ET Abstract",
+						"ET Class",
+					);
+					chosenTableColumnns_sortDirections = (
+						YES,
+					);
+					chosenTableColumnns_sortKeys = (
+						name,
+					);
+					chosenTableColumnns_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableWidths = (
+						103.000000,
+						22.000000,
+						45.080078,
+					);
+				};
+				UIContextForLayoutManager = {
+					detailSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {594, 218}}",
+							"{{599, 0}, {312, 218}}",
+						);
+					};
+					diagramSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {911, 220}}",
+							"{{0, 225}, {911, 343}}",
+						);
+					};
+					tableSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {195, 218}}",
+							"{{200, 0}, {392, 218}}",
+						);
+					};
+				};
+				UIContextForPropertyArea = {
+					_indexOfSelectedView = 0;
+					chosenTableColumnnFRTs = (
+						"FT Fetch Request",
+						"FT Predicate",
+					);
+					chosenTableColumnnFRTs_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnFRTs_sortKeys = (
+						name,
+					);
+					chosenTableColumnnFRTs_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableColumnnsAT = (
+						"AT Attribute",
+						"AT Type",
+					);
+					chosenTableColumnnsAT_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnsAT_sortKeys = (
+						name,
+					);
+					chosenTableColumnnsAT_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableColumnnsFPT = (
+						"FP FetchedProperty",
+						"FP Destination",
+						"FP Predicate",
+					);
+					chosenTableColumnnsFPT_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnsFPT_sortKeys = (
+						name,
+					);
+					chosenTableColumnnsFPT_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableColumnnsPT = (
+						"PT Property",
+						"PT Kind",
+						"PT SharedKeyOne",
+					);
+					chosenTableColumnnsPT_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnsPT_sortKeys = (
+						name,
+					);
+					chosenTableColumnnsPT_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableColumnnsRT = (
+						"RT Relationship",
+						"RT Destination",
+					);
+					chosenTableColumnnsRT_sortDirections = (
+						YES,
+					);
+					chosenTableColumnnsRT_sortKeys = (
+						name,
+					);
+					chosenTableColumnnsRT_sortSelectors = (
+						"_xdcaseInsensitiveNumericCompare:",
+					);
+					chosenTableWidthsAT = (
+						128.000000,
+						64.000000,
+					);
+					chosenTableWidthsFPT = (
+						128.000000,
+						64.000000,
+						144.764160,
+					);
+					chosenTableWidthsFRT = (
+						128.000000,
+						249.764160,
+					);
+					chosenTableWidthsPT = (
+						128.000000,
+						108.110840,
+						129.570801,
+					);
+					chosenTableWidthsRT = (
+						128.000000,
+						64.000000,
+					);
+				};
+				"xdesign model browser state key - shown/hidden" = 1;
+				"xdesign model diagram view visible rect key" = "{{-124, 0}, {896, 328}}";
+			};
+			sepNavWindowFrame = "{{365, 176}, {911, 681}}";
+		};
+	};
+	28A0AAE50D9B0CCF005BE974 /* AlphaEvents_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {852, 568}}";
+			sepNavSelRange = "{369, 0}";
+			sepNavVisRange = "{0, 406}";
+			sepNavWindowFrame = "{{107, 108}, {911, 681}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1EDCA736116C04970077F121 /* AlphaEvents */;
+		activeSDKPreference = iphonesimulator3.1.3;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* AlphaEvents */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* AlphaEvents */,
+		);
+		codeSenseManager = 1EDCA741116C04A00077F121 /* Code sense */;
+		executables = (
+			1EDCA736116C04970077F121 /* AlphaEvents */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 292385376;
+			PBXWorkspaceStateSaveDate = 292385376;
+		};
+		sourceControlManager = 1EDCA740116C04A00077F121 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+}

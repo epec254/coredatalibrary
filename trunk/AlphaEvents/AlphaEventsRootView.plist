@@ -1,0 +1,13 @@
+{
+	entityName = Event;
+	controllerTitle = Events;
+	sortKeyPaths = (
+		name,
+	);
+	sectionNameKeyPath = nameFirstLetter;
+	"sectionIndexTitlesEnabled" = YES;
+	"sectionIndexTitlesAlphabetical" = YES;
+	cellTextLabelKeyPath = name;
+	"cellDetailTextLabelKeyPath" = timeStamp;
+	"detailViewPropertyListFile" = "AlphaEventsDetailView";
+}
