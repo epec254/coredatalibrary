@@ -9,8 +9,7 @@ This guide walks you through the basic steps necessary to create an application 
  * Ensure the CoreDataLibrary template is installed (see the [Installation installation guide]).
  * This is untested on anything lower than iPhone OS 3.1.3 and XCode 3.2.1
 
-
-= Details =
+== Creating the project and updating the Core Data Model ==
 
  # Create a new XCode project using the `CoreDataLibrary Application` template.  We called our project `GettingStarted.`
    * http://imgur.com/2gSBN.png
@@ -24,4 +23,13 @@ This guide walks you through the basic steps necessary to create an application 
   * http://imgur.com/KBTrH.png
  # From the New File dialog, select *Cocoa Touch Class* from beneath iPhone OS.  Then, select *Managed Object Class* from the list of choices.
   * http://imgur.com/rHPNK.png
- # Complete the New File wizard, accepting all defaults.
+ # Complete the New File wizard, accepting all defaults.  You will now have 4 new files, `Event.[m|h]` and `EventType.[m|h]`.
+
+== Updating the DetailView property list ==
+
+ # We will now update the DetailView to include the new attributes and relationship.  Open the `GettingStartedDetailView.plist` file.
+  * We are going add the `publicEvent` and `type` properties to the existing section and create a new section for the `detail` property.
+ # Create two new members of type Dictionary in the existing rowInformation array. Configure them as the screenshot below.  This is for the `publicEvent` and `type` properties. 
+  * http://imgur.com/xbocM.png
+ # Now, create a new Dictionary in the root array and configure it as the screenshot below.  This is for the `detail` property.
+  * http://imgur.com/xIkD9.png
