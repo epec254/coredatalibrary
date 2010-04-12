@@ -199,3 +199,13 @@ This guide walks you through the basic steps necessary to create an application 
 ...
 }}}
  # Run the application once to create the data.  Before running it again, make sure you comment out the line you added in the previous step, or you will create duplicate event types each time the application launches.
+
+== All done! ==
+
+You now have a working application.  See the screenshots below or download the code from this guide here: http://coredatalibrary.googlecode.com/files/GettingStarted.zip
+
+A more complex (and rather undocumented) sample application can be found [http://coredatalibrary.googlecode.com/files/CoreDataSampleFor436.zip here].  This is the code that was used during development and we are aware of the fact that you can not go back to the initial selection view after you choose a type of object.
+
+== Screenshots ==
+
+http://imgur.com/lKRMx.png http://imgur.com/e9C9V.png
