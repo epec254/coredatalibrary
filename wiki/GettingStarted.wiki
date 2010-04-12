@@ -19,3 +19,9 @@ This guide walks you through the basic steps necessary to create an application 
  # In this guide, we will add several attributes (a string called `detail` and a boolean called `publicEvent`and to-one relationship called `type`).  To begin, open the `GettingStarted.xcdatamodel` file under Resources.
  # You will be presented with the Core Data model editor.  Configure the model as shown below (click image for a bigger version)
   * [http://imgur.com/nvZXd.png http://imgur.com/nvZXdl.jpg]
+ # Remove the `Event.h` and `Event.m` files from the project.
+ # Select the `Event` and `EventType` entities in the Core Data model and select File -> *New File*.
+  * http://imgur.com/KBTrH.png
+ # From the New File dialog, select *Cocoa Touch Class* from beneath iPhone OS.  Then, select *Managed Object Class* from the list of choices.
+  * http://imgur.com/rHPNK.png
+ # Complete the New File wizard, accepting all defaults.
