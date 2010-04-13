@@ -38,7 +38,7 @@ Bugs in Apple's code also require some workaround code, which is presented below
     
     [self willAccessValueForKey:@"nameFirstLetter"];
 	
-	if ([self.name length] > 0) {
+	if ([[self name] length] > 0) {
 		tmpValue = [[[self name] substringToIndex:1] uppercaseString];
 		if ([[NSScanner scannerWithString:tmpValue] scanInt:NULL]) { //return # if its a number
 			tmpValue = @"#";
