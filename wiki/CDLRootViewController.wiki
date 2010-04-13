@@ -11,6 +11,11 @@ A CDLRootViewController is instantiated as follows, replacing `SomeRootView` wit
 CDLRootViewController *rootViewController = [[CDLRootViewController alloc] initForListViewControllerStructure: [[NSBundle mainBundle] pathForResource:@"SomeRootView" ofType:@"plist"]];
 }}}
 
+A CDLRootViewController MUST be placed inside a UINavigationController:
+{{{
+UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+}}}
+
 *A sample property list file that can be used as a template can be found here: http://coredatalibrary.googlecode.com/files/LIST_VIEW_TEMPLATE.plist*
 
 == Implementation Notes ==
