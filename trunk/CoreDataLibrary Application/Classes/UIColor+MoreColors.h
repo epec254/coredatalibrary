@@ -1,5 +1,5 @@
 //
-//  UIColor-MoreColors.h
+//  UIColor+MoreColors.h
 //
 //  Created by Jeff LaMarche on 9/29/08.
 
