@@ -12,7 +12,54 @@
 #import "CDLTableRowController.h"
 #import "CDLAbstractFieldEditController.h"
 
+@protocol CDLTableSectionControllerDelegate;
+
 @protocol CDLTableSectionControllerProtocol <NSObject>
+
+
+@end
+
+
+@protocol CDLTableSectionControllerDelegate;
+
+@interface CDLTableSectionController : NSObject <CDLTableSectionControllerProtocol, CDLFieldEditControllerDelegate, UITableViewDelegate, UITableViewDataSource> {
+	
+@protected
+	BOOL	_inAddMode;
+	BOOL	_editing;
+
+@private
+	NSString *_sectionTitle;
+	NSArray *_rowControllers;	
+	id<CDLTableSectionControllerDelegate> _delegate;
+}
+
+/** Return an autoreleased TableSectionController for this sectionInformation */
++ (CDLTableSectionController *) tableSectionControllerForDictionary:(NSDictionary *) sectionInformation forDelegate:(id<CDLTableSectionControllerDelegate>) delegate;
+
+/** return whether this sectionController is being used to add a new object, rather than edit one */
+@property (nonatomic, assign, setter=setInAddMode) BOOL inAddMode;
+
+/** return whether the section is in edit mode */
+@property (nonatomic, readonly, getter=isEditing) BOOL editing;
+
+/** Title of the section to display in the tableView */
+@property (nonatomic, copy) NSString *sectionTitle;
+
+/** Array of the row controllers this section controller manages */
+@property (nonatomic, copy) NSArray *rowControllers;
+
+/** delegate */
+@property (nonatomic, assign) id<CDLTableSectionControllerDelegate> delegate;
+
+//Internally used callbacks from the row controller
+
+- (void) presentActionSheet:(UIActionSheet *) actionSheet;
+
+//From protocol
+
+//** init for the given information */
+- (id) initForRowDictionaries:(NSArray *) rowDictionaries forSectionTitle:(NSString *)sectionTitle forDelegate:(id<CDLTableSectionControllerDelegate>) delegate;
 
 /** return number of rows in this section */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -29,69 +76,59 @@
 /** Pass along to the RowControllers */
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated;
 
-/** Pass along to the RowControllers */
+///** Pass along to the RowControllers */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/** Pass along to the RowControllers */
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/** Pass along to the RowControllers */
-- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/** Pass along to the RowControllers */
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/** Pass along to the RowControllers */
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/** Pass along to the RowControllers */
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/** Pass along to the RowControllers */
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/** Pass along to the RowControllers */
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath;
-
-@optional
-/** default is to return proposedDestinationIndexPath */
-- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath;
-
-@end
+//
+///** Pass along to the RowControllers */
+//- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+///** Pass along to the RowControllers */
+//- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+///** Pass along to the RowControllers */
+//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+///** Pass along to the RowControllers */
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+///** Pass along to the RowControllers */
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+///** Pass along to the RowControllers */
+//- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+///** Pass along to the RowControllers */
+//- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath;
+//
+///** default is to return proposedDestinationIndexPath */
+//- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath;
 
 
-@protocol CDLTableSectionControllerDelegate;
+//Use if you want the sectionController to tell others about the Object it manages
+- (NSManagedObject *) managedObject;
 
-@interface CDLTableSectionController : NSObject <CDLTableSectionControllerProtocol, CDLTableRowControllerDelegate, CDLFieldEditControllerDelegate> {
-	
-@protected
-	BOOL	_inAddMode;
+//allow a row to push a view controller - should pass to DetailView
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 
-@private
-	NSString *_sectionTitle;
-	NSArray *_rowControllers;	
-	id<CDLTableSectionControllerDelegate> _delegate;
-}
-
-/** return whether this sectionController is being used to add a new object, rather than edit one */
-@property (nonatomic, assign, setter=setInAddMode) BOOL inAddMode;
-/** Title of the section to display in the tableView */
-@property (nonatomic, copy) NSString *sectionTitle;
-/** Array of the row controllers this section controller manages */
-@property (nonatomic, copy) NSArray *rowControllers;
-/** delegate */
-@property (nonatomic, assign) id<CDLTableSectionControllerDelegate> delegate;
-
-/** Return an autoreleased TableSectionController for this sectionInformation */
-+ (id<CDLTableSectionControllerProtocol>) tableSectionControllerForDictionary:(NSDictionary *) sectionInformation forDelegate:(id<CDLTableSectionControllerDelegate>) delegate;
 
 @end
 
 @protocol CDLTableSectionControllerDelegate
 
-- (Class) classOfManagedObject;
+
 - (NSManagedObject *) managedObjectForSectionController:(CDLTableSectionController *)sectionController;
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+
 - (void)reloadSectionController:(CDLTableSectionController *) sectionController withRowAnimation:(UITableViewRowAnimation) rowAnimation;
+
+@property (nonatomic, readonly) UITableView *theTableView;
+
+/** return the section of this section controller */
+ - (NSInteger)sectionOfSectionController:(id<CDLTableSectionControllerProtocol>) sectionController;
+
+/** present the given UIActionSheet.  Presents in tabbar controller if present, otherwise in view */
+- (void) presentActionSheet:(UIActionSheet *) actionSheet;
+
 @end
 

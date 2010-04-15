@@ -12,6 +12,8 @@
 #import "UIColor+MoreColors.h"
 #import "CDLToOneRelationshipEditController.h"
 
+#import "CDLTableSectionController.h"
+
 @interface CDLRelationshipTableRowController(PrivateMethods)
 @property (nonatomic, readonly) BOOL useDrillDown; //not implemented
 @end
@@ -121,12 +123,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	//Push edit controller
-	CDLToOneRelationshipEditController *fieldEditController = [[CDLToOneRelationshipEditController alloc] initForManagedObject:[self.delegate managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath];
+	CDLToOneRelationshipEditController *fieldEditController = [[CDLToOneRelationshipEditController alloc] initForManagedObject:[self.sectionController managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath];
 	
 	[fieldEditController setInAddMode:self.inAddMode];
-	fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.delegate; //we know the delegate of this class will be a CDLTableSectionController which implements this protocol
+	fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.sectionController; //we know the delegate of this class will be a CDLTableSectionController which implements this protocol
 
-	[self.delegate pushViewController:fieldEditController animated:YES];
+	[self.sectionController pushViewController:fieldEditController animated:YES];
 	
 	[fieldEditController release];
 }

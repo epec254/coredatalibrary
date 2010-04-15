@@ -138,7 +138,7 @@
 	}
 
 	CDLToManyOrderedRelationshipAddTableRowController *aAddRowController = [[CDLToManyOrderedRelationshipAddTableRowController alloc] initForDictionary:self.rowInformation];
-	aAddRowController.delegate = self;
+	//aAddRowController.delegate = self;
 	aAddRowController.sectionController = self;
 	
 	_addExistingObjectsRowController = aAddRowController;
@@ -155,12 +155,13 @@
 	}
 	
 	NSDictionary *modifiedRowDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-										   self.rowLabel, @"rowLabel", 
+										   
 										   self.userProvidedFullKeyPath, @"attributeKeyPath",  
 										   // self.drillDownKeyPath, @"drillDownKeyPath",
 										   @"CDLTableRowTypeToManyOrderedRelationship", @"rowType",
 										   self.relationshipEntityName, @"relationshipEntityName",
-										   self.relationshipIntermediateEntityName,@"relationshipIntermediateEntityName", nil];
+										   self.relationshipIntermediateEntityName,@"relationshipIntermediateEntityName", 
+										   self.rowLabel, @"rowLabel", nil];
 	
 	_rowInformation = [modifiedRowDictionary retain];
 	

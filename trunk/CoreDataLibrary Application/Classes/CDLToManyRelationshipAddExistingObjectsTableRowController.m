@@ -15,7 +15,7 @@
 
 @implementation CDLToManyRelationshipAddExistingObjectsTableRowController
 
-@synthesize sectionController = _sectionController;
+//@synthesize sectionController = _sectionController;
 
 - (void)dealloc
 {
@@ -39,7 +39,7 @@
 
 - (NSString *) relationshipEntityName
 {
-	return self.sectionController.relationshipEntityName;
+	return ((CDLToManyRelationshipSectionController *)self.sectionController).relationshipEntityName;
 }
 
 
@@ -66,11 +66,15 @@
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 	
-	cell.textLabel.text = [NSString stringWithFormat:@"Add Existing %@", self.rowLabel];
+	[self configureCell:cell atIndexPath:indexPath];
 	
 	return cell;
 }
 
+- (void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *) indexPath
+{
+	cell.textLabel.text = [NSString stringWithFormat:@"Add Existing %@", self.rowLabel];
+}
 
 //allow selection
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,13 +84,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	CDLToManyRelationshipAddExistingObjectsEditController *fieldEditController = [[CDLToManyRelationshipAddExistingObjectsEditController alloc] initForManagedObject:[self.delegate managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath forChoicesEntity:self.relationshipEntityName];
+	CDLToManyRelationshipAddExistingObjectsEditController *fieldEditController = [[CDLToManyRelationshipAddExistingObjectsEditController alloc] initForManagedObject:[self.sectionController managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath forChoicesEntity:self.relationshipEntityName];
 	
 	[fieldEditController setInAddMode:self.inAddMode];
 	
-	fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.delegate; //we know the delegate of this class will be a CDLToManyOrderedRelationshipSectionController which implements this protocol
+	fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.sectionController; //we know the delegate of this class will be a CDLToManyOrderedRelationshipSectionController which implements this protocol
 	
-	[self.delegate pushViewController:fieldEditController animated:YES];
+	[self.sectionController pushViewController:fieldEditController animated:YES];
 	[fieldEditController release];
 }
 

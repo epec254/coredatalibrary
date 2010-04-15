@@ -14,11 +14,11 @@
 
 @interface CDLToManyOrderedRelationshipAddTableRowController : CDLToManyOrderedRelationshipTableRowController {
 @private
-	CDLToManyOrderedRelationshipSectionController *_sectionController;
+	//	CDLToManyOrderedRelationshipSectionController *_sectionController;
 }
 
 /** weak reference to owning section controller */
-@property (nonatomic, assign) CDLToManyOrderedRelationshipSectionController *sectionController;
+//@property (nonatomic, assign) CDLToManyOrderedRelationshipSectionController *sectionController;
 
 /** Name of entity used to store the ordered relationship */
 @property (nonatomic, readonly) NSString *relationshipIntermediateEntityName;
