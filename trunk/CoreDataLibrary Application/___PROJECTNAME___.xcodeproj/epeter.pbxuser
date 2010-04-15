@@ -111,12 +111,159 @@
 			sepNavWindowFrame = "{{15, 79}, {705, 794}}";
 		};
 	};
+	1EDCAD05116D71B10077F121 /* CDLToManyOrderedRelationshipAddTableRowController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 681}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 925}";
+		};
+	};
+	1EDCAD08116D71B10077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 681}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 410}";
+		};
+	};
+	1EDCAD09116D71B10077F121 /* CDLTableRowController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 2158}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{3087, 1654}";
+		};
+	};
+	1EDCAD0A116D71B10077F121 /* CDLRelationshipTableRowController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 681}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 850}";
+		};
+	};
+	1EDCAD10116D71B10077F121 /* CDLToManyOrderedRelationshipSectionController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 681}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 688}";
+		};
+	};
+	1EDCAD11116D71B10077F121 /* CDLToManyRelationshipSectionController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 975}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1409}";
+		};
+	};
+	1EDCAD13116D71B10077F121 /* CDLToManyRelationshipAddNewObjectTableRowController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 715}}";
+			sepNavSelRange = "{1902, 0}";
+			sepNavVisRange = "{61, 1847}";
+			sepNavWindowFrame = "{{229, 84}, {705, 794}}";
+		};
+	};
+	1EDCAD18116D71B10077F121 /* CDLToManyRelationshipSectionController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 6448}}";
+			sepNavSelRange = "{14710, 0}";
+			sepNavVisRange = "{12038, 1993}";
+			sepNavWindowFrame = "{{716, 80}, {705, 794}}";
+		};
+	};
 	1EDCAD21116D71B10077F121 /* CDLDetailViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {816, 4745}}";
 			sepNavSelRange = "{12177, 0}";
 			sepNavVisRange = "{11531, 651}";
 		};
+	};
+	1EDCAD22116D71B10077F121 /* CDLSingleLineTableRowController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {816, 2574}}";
+			sepNavSelRange = "{1730, 0}";
+			sepNavVisRange = "{1673, 543}";
+			sepNavWindowFrame = "{{15, 79}, {705, 794}}";
+		};
+	};
+	1EDCAD23116D71B10077F121 /* CDLMultiLineTableRowController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 2678}}";
+			sepNavSelRange = "{899, 0}";
+			sepNavVisRange = "{0, 1853}";
+			sepNavWindowFrame = "{{15, 79}, {705, 794}}";
+		};
+	};
+	1EDCAD24116D71B10077F121 /* CDLBooleanTableRowController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 2132}}";
+			sepNavSelRange = "{498, 0}";
+			sepNavVisRange = "{0, 1343}";
+			sepNavWindowFrame = "{{15, 79}, {705, 794}}";
+		};
+	};
+	1EDCAD26116D71B10077F121 /* CDLToManyOrderedRelationshipAddTableRowController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 1742}}";
+			sepNavSelRange = "{3092, 308}";
+			sepNavVisRange = "{2030, 1648}";
+			sepNavWindowFrame = "{{15, 79}, {705, 794}}";
+		};
+	};
+	1EDCAD27116D71B10077F121 /* CDLRelationshipTableRowController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 2015}}";
+			sepNavSelRange = "{547, 0}";
+			sepNavVisRange = "{0, 1231}";
+			sepNavWindowFrame = "{{15, 79}, {705, 794}}";
+		};
+	};
+	1EDCAD29116D71B10077F121 /* CDLTableRowController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 2912}}";
+			sepNavSelRange = "{741, 69}";
+			sepNavVisRange = "{0, 1341}";
+			sepNavWindowFrame = "{{15, 79}, {705, 794}}";
+		};
+	};
+	1EDCAD2A116D71B10077F121 /* CDLToManyOrderedRelationshipSectionController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 4563}}";
+			sepNavSelRange = "{949, 0}";
+			sepNavVisRange = "{0, 1474}";
+			sepNavWindowFrame = "{{705, 84}, {705, 794}}";
+		};
+	};
+	1EF5540B1177BDF2009084E8 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'CDLSingleLineTableRowController' may not respond to '-_internalInitForDictionary:'";
+		fRef = 1EDCAD22116D71B10077F121 /* CDLSingleLineTableRowController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 63;
+		rType = 1;
+	};
+	1EF5540C1177BDF2009084E8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EDCAD22116D71B10077F121 /* CDLSingleLineTableRowController.m */;
+		name = "CDLSingleLineTableRowController.m: 62";
+		rLen = 0;
+		rLoc = 1730;
+		rType = 0;
+		vrLen = 491;
+		vrLoc = 1659;
+	};
+	1EF5540D1177BDF7009084E8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 1EDCAD10116D71B10077F121 /* CDLToManyOrderedRelationshipSectionController.h */;
+	};
+	1EF554101177BDFA009084E8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EDCAD10116D71B10077F121 /* CDLToManyOrderedRelationshipSectionController.h */;
+		name = "CDLToManyOrderedRelationshipSectionController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 688;
+		vrLoc = 0;
 	};
 	28860B760F44E54D00985440 /* ___PROJECTNAMEASIDENTIFIER___.xcdatamodel */ = {
 		uiCtxt = {
@@ -298,8 +445,14 @@
 			1EDCA736116C04970077F121 /* ___PROJECTNAME___ */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 293058416;
-			PBXWorkspaceStateSaveDate = 293058416;
+			PBXPerProjectTemplateStateSaveDate = 293060001;
+			PBXWorkspaceStateSaveDate = 293060001;
+		};
+		perUserProjectItems = {
+			1EF5540B1177BDF2009084E8 /* XCBuildMessageTextBookmark */ = 1EF5540B1177BDF2009084E8 /* XCBuildMessageTextBookmark */;
+			1EF5540C1177BDF2009084E8 /* PBXTextBookmark */ = 1EF5540C1177BDF2009084E8 /* PBXTextBookmark */;
+			1EF5540D1177BDF7009084E8 /* PBXBookmark */ = 1EF5540D1177BDF7009084E8 /* PBXBookmark */;
+			1EF554101177BDFA009084E8 /* PBXTextBookmark */ = 1EF554101177BDFA009084E8 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 1EDCA740116C04A00077F121 /* Source Control */;
 		userBuildSettings = {

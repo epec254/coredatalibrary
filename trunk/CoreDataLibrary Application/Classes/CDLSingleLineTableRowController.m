@@ -20,6 +20,8 @@
 
 @interface CDLSingleLineTableRowController(PrivateMethods)
 + (NSDateFormatterStyle) dateFormatterStyleFromString:(NSString *)styleString;
+- (void) _internalInitForDictionary:(NSDictionary *) rowInformation;
+
 @end
 
 @implementation CDLSingleLineTableRowController

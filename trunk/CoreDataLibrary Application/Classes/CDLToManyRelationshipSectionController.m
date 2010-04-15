@@ -372,35 +372,38 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	//	[tableView beginUpdates];
-	
-	NSInteger row = indexPath.row;
-	NSManagedObject *objectForRow = [self managedObjectFromRowControllerAtRow:row];
-	
-	
-	NSString *attributeKeyFirstLetterCapitalized = [self.keyForRelationship stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self.keyForRelationship substringToIndex:1] capitalizedString]];
-	
-	NSString *removeFunctionString = [NSString stringWithFormat:@"remove%@Object:", attributeKeyFirstLetterCapitalized];
-	SEL removeFunction = NSSelectorFromString(removeFunctionString); //selector to remove the associated record
-	
-	//Remove the row controller
-	[self.mutableRowControllers removeObjectAtIndex:row];
-	
-	//remove from the Managed Object
-	[[self.delegate managedObjectForSectionController:self] performSelector:removeFunction withObject:objectForRow];
-	
+	if (editingStyle == UITableViewCellEditingStyleDelete) {	
+		NSInteger row = indexPath.row;
+		NSManagedObject *objectForRow = [self managedObjectFromRowControllerAtRow:row];
+		
+		
+		NSString *attributeKeyFirstLetterCapitalized = [self.keyForRelationship stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self.keyForRelationship substringToIndex:1] capitalizedString]];
+		
+		NSString *removeFunctionString = [NSString stringWithFormat:@"remove%@Object:", attributeKeyFirstLetterCapitalized];
+		SEL removeFunction = NSSelectorFromString(removeFunctionString); //selector to remove the associated record
+		
+		//Remove the row controller
+		[self.mutableRowControllers removeObjectAtIndex:row];
+		
+		//remove from the Managed Object
+		[[self.delegate managedObjectForSectionController:self] performSelector:removeFunction withObject:objectForRow];
+		
 
-	
-	//Update tableview	
-	[self.delegate reloadSectionController:self withRowAnimation:UITableViewRowAnimationNone];
+		
+		//Update tableview	
+		[self.delegate reloadSectionController:self withRowAnimation:UITableViewRowAnimationNone];
 
-	
-	if (!self.inAddMode) {
-		[[DataController sharedDataController] saveFromSource:@"to many delete row"];
+		
+		if (!self.inAddMode) {
+			[[DataController sharedDataController] saveFromSource:@"to many delete row"];
+		}
+	} else {
+		id rowController = [self rowControllersForRow:indexPath.row];
+		if ([rowController respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
+			return [rowController tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+		}
 	}
 	
-	
-	//[tableView endUpdates];
 }
 
 

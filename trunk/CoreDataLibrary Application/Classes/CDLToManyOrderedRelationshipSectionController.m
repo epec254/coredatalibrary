@@ -24,6 +24,9 @@
 - (void) _validateAndSetInstanceVariablesFromRowDictionaries:(NSArray *) rowDictionaries;
 
 - (void) _buildRowControllersArray;
+
+- (CDLTableRowController *) rowControllersForRow:(NSInteger) row;
+
 @property (nonatomic, readonly) NSInteger _requiredNumberOfAttributesInKeyPath;
 
 @end
@@ -182,42 +185,46 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	//	[tableView beginUpdates];
-	
-	NSInteger row = indexPath.row;
-	NSManagedObject *objectForRow = [self managedObjectFromRowControllerAtRow:row];
-	
-	
-	NSString *attributeKeyFirstLetterCapitalized = [self.keyForRelationship stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self.keyForRelationship substringToIndex:1] capitalizedString]];
-
-	NSString *removeFunctionString = [NSString stringWithFormat:@"remove%@Object:", attributeKeyFirstLetterCapitalized];
-	SEL removeFunction = NSSelectorFromString(removeFunctionString); //selector to remove the associated record
-	
-	//Remove the row controller
-	[self.mutableRowControllers removeObjectAtIndex:row];
-	
-	//remove from the Managed Object
-	[[self.delegate managedObjectForSectionController:self] performSelector:removeFunction withObject:objectForRow];
-	
-	//Remove from the context
-	//cascade delete takes care of this.
-	//[MANAGED_OBJECT_CONTEXT deleteObject:objectForRow];
-	
-	//Reorder the order property
-	for (int i = 0; i < [self.mutableRowControllers count]; i++) {
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
 		
-		[[self managedObjectFromRowControllerAtRow:i] setValue:[NSNumber numberWithInt:i] forKey:self.sortKeyName];
+		NSInteger row = indexPath.row;
+		NSManagedObject *objectForRow = [self managedObjectFromRowControllerAtRow:row];
+		
+		
+		NSString *attributeKeyFirstLetterCapitalized = [self.keyForRelationship stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self.keyForRelationship substringToIndex:1] capitalizedString]];
+
+		NSString *removeFunctionString = [NSString stringWithFormat:@"remove%@Object:", attributeKeyFirstLetterCapitalized];
+		SEL removeFunction = NSSelectorFromString(removeFunctionString); //selector to remove the associated record
+		
+		//Remove the row controller
+		[self.mutableRowControllers removeObjectAtIndex:row];
+		
+		//remove from the Managed Object
+		[[self.delegate managedObjectForSectionController:self] performSelector:removeFunction withObject:objectForRow];
+		
+		//Remove from the context
+		//cascade delete takes care of this.
+		//[MANAGED_OBJECT_CONTEXT deleteObject:objectForRow];
+		
+		//Reorder the order property
+		for (int i = 0; i < [self.mutableRowControllers count]; i++) {
+			
+			[[self managedObjectFromRowControllerAtRow:i] setValue:[NSNumber numberWithInt:i] forKey:self.sortKeyName];
+		}
+		
+		//Update tableview	
+		[tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
+		
+		if (!self.inAddMode) {
+			[[DataController sharedDataController] saveFromSource:@"to many delete row"];
+		}
+	}  else {
+		id rowController = [self rowControllersForRow:indexPath.row];
+		if ([rowController respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
+			return [rowController tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+		}
 	}
 	
-	//Update tableview	
-	[tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
-	
-	if (!self.inAddMode) {
-		[[DataController sharedDataController] saveFromSource:@"to many delete row"];
-	}
-	
-	
-	//[tableView endUpdates];
 }
 
 #pragma mark -

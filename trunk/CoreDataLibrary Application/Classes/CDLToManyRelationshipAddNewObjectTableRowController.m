@@ -33,4 +33,11 @@
 	[self.sectionController pushViewController:fieldEditController animated:YES];
 	[fieldEditController release];
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (editingStyle == UITableViewCellEditingStyleInsert) { //press of the green plus button
+		[self tableView:tableView didSelectRowAtIndexPath:indexPath];
+	}
+}
 @end

@@ -16,6 +16,9 @@
 
 @interface CDLRelationshipTableRowController(PrivateMethods)
 @property (nonatomic, readonly) BOOL useDrillDown; //not implemented
+
+- (void) _internalInitForDictionary:(NSDictionary *) rowInformation;
+
 @end
 
 @implementation CDLRelationshipTableRowController
