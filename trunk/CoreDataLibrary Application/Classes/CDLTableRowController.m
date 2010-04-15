@@ -54,9 +54,9 @@
 }
 
 
-+ (id<CDLTableRowControllerProtocol>) tableRowControllerForDictionary:(NSDictionary *) rowInformation forSectionController:(CDLTableSectionController *) sectionController
++ (CDLTableRowController *) tableRowControllerForDictionary:(NSDictionary *) rowInformation forSectionController:(CDLTableSectionController *) sectionController
 {
-	id<CDLTableRowControllerProtocol> newRowController = nil;
+	CDLTableRowController * newRowController = nil;
 	
 	CDLTableRowType rowType = [CDLTableRowController cellTypeEnumFromString:[rowInformation valueForKey:@"rowType"]];
 	NSString *customClassName = [rowInformation valueForKey:@"rowCustomControllerClass"];
@@ -180,7 +180,7 @@
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
-	_editing = editing;
+	self.editing = editing;
 }
 
 #pragma mark -

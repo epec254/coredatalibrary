@@ -103,6 +103,21 @@
 			sepNavWindowFrame = "{{15, 203}, {710, 670}}";
 		};
 	};
+	1EDCACF3116D71B00077F121 /* CDLDetailViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {646, 1248}}";
+			sepNavSelRange = "{2702, 0}";
+			sepNavVisRange = "{1082, 2353}";
+			sepNavWindowFrame = "{{15, 79}, {705, 794}}";
+		};
+	};
+	1EDCAD21116D71B10077F121 /* CDLDetailViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {816, 4745}}";
+			sepNavSelRange = "{12177, 0}";
+			sepNavVisRange = "{11531, 651}";
+		};
+	};
 	1EDCC04B11779B110077F121 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 1EDCACE3116D71B00077F121 /* UIColor+MoreColors.h */;
@@ -116,6 +131,25 @@
 		rType = 0;
 		vrLen = 73;
 		vrLoc = 0;
+	};
+	1EDCC05611779C280077F121 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Incomplete implementation of class 'CDLDetailViewController'";
+		fRef = 1EDCAD21116D71B10077F121 /* CDLDetailViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 353;
+		rType = 1;
+	};
+	1EDCC05711779C280077F121 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EDCAD21116D71B10077F121 /* CDLDetailViewController.m */;
+		name = "CDLDetailViewController.m: 354";
+		rLen = 0;
+		rLoc = 12177;
+		rType = 0;
+		vrLen = 651;
+		vrLoc = 11531;
 	};
 	28860B760F44E54D00985440 /* ___PROJECTNAMEASIDENTIFIER___.xcdatamodel */ = {
 		uiCtxt = {
@@ -303,6 +337,8 @@
 		perUserProjectItems = {
 			1EDCC04B11779B110077F121 /* PBXBookmark */ = 1EDCC04B11779B110077F121 /* PBXBookmark */;
 			1EDCC04C11779B110077F121 /* PBXTextBookmark */ = 1EDCC04C11779B110077F121 /* PBXTextBookmark */;
+			1EDCC05611779C280077F121 /* XCBuildMessageTextBookmark */ = 1EDCC05611779C280077F121 /* XCBuildMessageTextBookmark */;
+			1EDCC05711779C280077F121 /* PBXTextBookmark */ = 1EDCC05711779C280077F121 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 1EDCA740116C04A00077F121 /* Source Control */;
 		userBuildSettings = {

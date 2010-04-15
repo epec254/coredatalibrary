@@ -13,8 +13,8 @@
 
 @interface CDLToManyRelationshipSectionController : CDLTableSectionController <CDLFieldEditControllerDelegate> {
 	@protected
-	id<CDLTableRowControllerProtocol> _addExistingObjectsRowController;
-	id<CDLTableRowControllerProtocol> _addNewObjectRowController;
+	CDLTableRowController * _addExistingObjectsRowController;
+	CDLTableRowController * _addNewObjectRowController;
 
 	NSDictionary *_rowInformation;
 

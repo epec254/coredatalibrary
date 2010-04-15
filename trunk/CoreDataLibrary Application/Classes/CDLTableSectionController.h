@@ -37,6 +37,9 @@
 /** Return an autoreleased TableSectionController for this sectionInformation */
 + (CDLTableSectionController *) tableSectionControllerForDictionary:(NSDictionary *) sectionInformation forDelegate:(id<CDLTableSectionControllerDelegate>) delegate;
 
+//** init for the given information */
+- (id) initForRowDictionaries:(NSArray *) rowDictionaries forSectionTitle:(NSString *)sectionTitle forDelegate:(id<CDLTableSectionControllerDelegate>) delegate;
+
 /** return whether this sectionController is being used to add a new object, rather than edit one */
 @property (nonatomic, assign, setter=setInAddMode) BOOL inAddMode;
 
@@ -54,12 +57,19 @@
 
 //Internally used callbacks from the row controller
 
+//present the action sheet in either tabBar or the view, whichever is more appropiate
 - (void) presentActionSheet:(UIActionSheet *) actionSheet;
 
-//From protocol
+//Use if you want the sectionController to tell others about the Object it manages
+- (NSManagedObject *) managedObject;
 
-//** init for the given information */
-- (id) initForRowDictionaries:(NSArray *) rowDictionaries forSectionTitle:(NSString *)sectionTitle forDelegate:(id<CDLTableSectionControllerDelegate>) delegate;
+//allow a row to push a view controller - should pass to DetailView
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+
+
+
+//TableView information
+
 
 /** return number of rows in this section */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -104,17 +114,9 @@
 //- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath;
 
 
-//Use if you want the sectionController to tell others about the Object it manages
-- (NSManagedObject *) managedObject;
-
-//allow a row to push a view controller - should pass to DetailView
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
-
-
 @end
 
 @protocol CDLTableSectionControllerDelegate
-
 
 - (NSManagedObject *) managedObjectForSectionController:(CDLTableSectionController *)sectionController;
 
