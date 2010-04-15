@@ -131,7 +131,7 @@
 
 #pragma mark add row
 
-- (id<CDLTableRowControllerProtocol>) addExistingObjectsRowController
+- (CDLTableRowController *) addExistingObjectsRowController
 {
 	if (_addExistingObjectsRowController != nil) {
 		return _addExistingObjectsRowController;
@@ -171,7 +171,7 @@
 
 #pragma mark row controllers
 
-- (id<CDLTableRowControllerProtocol>) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject
+- (CDLTableRowController *) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject
 {
 	return [[[CDLToManyOrderedRelationshipTableRowController alloc] initForDictionary:self.rowInformation forRelationshipObject:relationshipObject] autorelease];
 }
@@ -248,7 +248,7 @@
 {
 	NSInteger row = fromIndexPath.row;
 	//NSManagedObject *objectForRow = [self managedObjectFromRowControllerAtRow:row];
-	id<CDLTableRowControllerProtocol> controllerForRow = [[self.mutableRowControllers objectAtIndex:row] retain];
+	CDLTableRowController * controllerForRow = [[self.mutableRowControllers objectAtIndex:row] retain];
 	//update row controllers
 	[self.mutableRowControllers removeObjectAtIndex:row];
 	[self.mutableRowControllers insertObject:controllerForRow atIndex:toIndexPath.row];
@@ -275,6 +275,8 @@
 	}
 	
 }
+
+
 
 #pragma mark -
 #pragma mark row editing and section information
@@ -312,7 +314,7 @@
 {
 	_inAddMode = addMode;
 	
-	for (id<CDLTableRowControllerProtocol> rowController in self.mutableRowControllers)
+	for (CDLTableRowController * rowController in self.mutableRowControllers)
 	{
 		if ([rowController respondsToSelector:@selector(setInAddMode:)]) {
 			[rowController setInAddMode:addMode];

@@ -22,13 +22,13 @@
 
 - (void) _buildRowControllersArray;
 
-- (id<CDLTableRowControllerProtocol>) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject;
+- (CDLTableRowController *) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject;
 
 - (void) _discoverAndStoreRelationshipEntities;
 
 /** link to the add row controller */
-@property (nonatomic, readonly) id<CDLTableRowControllerProtocol> addExistingObjectsRowController;
-@property (nonatomic, readonly) id<CDLTableRowControllerProtocol> addNewObjectRowController;
+@property (nonatomic, readonly) CDLTableRowController * addExistingObjectsRowController;
+@property (nonatomic, readonly) CDLTableRowController * addNewObjectRowController;
 
 
 @property (nonatomic, readonly) NSInteger numberOfAddRows;
@@ -224,7 +224,7 @@
 }
 #pragma mark row controllers
 
-- (id<CDLTableRowControllerProtocol>) addExistingObjectsRowController
+- (CDLTableRowController *) addExistingObjectsRowController
 {
 	if (!self.showAddExistingObjects) { //don't want to show this row controller.
 		return nil;
@@ -242,7 +242,7 @@
 	return _addExistingObjectsRowController;
 }
 
-- (id<CDLTableRowControllerProtocol>) addNewObjectRowController
+- (CDLTableRowController *) addNewObjectRowController
 {
 	if (!self.showAddNewObject) { //don't want to show this row controller.
 		return nil;
@@ -276,7 +276,7 @@
 	//Create each row controller
 	for (int i = 0; i < [sortedObjectsAtRelationship count]; i++) {
 		
-		id<CDLTableRowControllerProtocol> aRowController = [self _createRowControllerForRelationshipObject:[sortedObjectsAtRelationship objectAtIndex:i]];
+		CDLTableRowController * aRowController = [self _createRowControllerForRelationshipObject:[sortedObjectsAtRelationship objectAtIndex:i]];
 		
 		aRowController.sectionController = self;
 		
@@ -303,7 +303,7 @@
 }
 
 
-- (id<CDLTableRowControllerProtocol>) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject
+- (CDLTableRowController *) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject
 {
 	return [[[CDLToManyRelationshipTableRowController alloc] initForDictionary:self.rowInformation forRelationshipObject:relationshipObject] autorelease];
 }
@@ -329,9 +329,9 @@
 
 #pragma mark -
 #pragma mark row controllers/table view methods
-- (id<CDLTableRowControllerProtocol>) rowControllersForRow:(NSInteger) row
+- (CDLTableRowController *) rowControllersForRow:(NSInteger) row
 {
-	return (id<CDLTableRowControllerProtocol>) [self.mutableRowControllers objectAtIndex:row];
+	return (CDLTableRowController *) [self.mutableRowControllers objectAtIndex:row];
 }
 
 
@@ -340,14 +340,31 @@
 	return [[self.mutableRowControllers objectAtIndex:row] relationshipObject];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	id rowController = [self rowControllersForRow:indexPath.row];
+//	if ([rowController respondsToSelector:@selector(tableView:editingStyleForRowAtIndexPath:)]) {
+//		return (UITableViewCellEditingStyle) [rowController tableView:tableView editingStyleForRowAtIndexPath:indexPath];
+//	} else {
+//		return UITableViewCellEditingStyleNone;
+//	}
+	
+	if ([rowController respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
+		return [rowController tableView:tableView canMoveRowAtIndexPath:indexPath];
+	} else if ([self respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]) {
+		return YES;
+	} else {
+		return NO;
+	}
+}
 
 #pragma mark -
 #pragma mark row deletion
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+	id rowController = [self rowControllersForRow:indexPath.row];
 	if ([rowController respondsToSelector:@selector(tableView:editingStyleForRowAtIndexPath:)]) {
-		return [rowController tableView:tableView editingStyleForRowAtIndexPath:indexPath];
+		return (UITableViewCellEditingStyle) [rowController tableView:tableView editingStyleForRowAtIndexPath:indexPath];
 	} else {
 		return UITableViewCellEditingStyleNone;
 	}
@@ -422,7 +439,7 @@
 {
 	_inAddMode = addMode;
 	
-	for (id<CDLTableRowControllerProtocol> rowController in self.mutableRowControllers)
+	for (CDLTableRowController * rowController in self.mutableRowControllers)
 	{
 		if ([rowController respondsToSelector:@selector(setInAddMode:)]) {
 			[rowController setInAddMode:addMode];

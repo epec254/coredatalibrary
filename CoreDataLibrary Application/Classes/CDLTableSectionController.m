@@ -17,7 +17,7 @@
 #import "CDLToManyOrderedRelationshipSectionController.h"
 @interface CDLTableSectionController(PrivateMethods)
 + (CDLTableRowType) cellTypeOfRowFromDictionary:(NSDictionary *) rowDictionary;
-- (id<CDLTableRowControllerProtocol>) rowControllersForRow:(NSInteger) row;
+- (CDLTableRowController *) rowControllersForRow:(NSInteger) row;
 
 @end
 
@@ -151,7 +151,7 @@
 				[ex raise];
 			}
 
-			id<CDLTableRowControllerProtocol> aRowController = [CDLTableRowController tableRowControllerForDictionary:rowInformation forSectionController:self];;
+			CDLTableRowController * aRowController = [CDLTableRowController tableRowControllerForDictionary:rowInformation forSectionController:self];;
 
 			
 			//aRowController.delegate = self;
@@ -184,22 +184,22 @@
 #pragma mark -
 #pragma mark tableview delegates to row controllers
 
-- (id<CDLTableRowControllerProtocol>) rowControllersForRow:(NSInteger) row
+- (CDLTableRowController *) rowControllersForRow:(NSInteger) row
 {
-	return (id<CDLTableRowControllerProtocol>) [self.rowControllers objectAtIndex:row];
+	return (CDLTableRowController *) [self.rowControllers objectAtIndex:row];
 }
 
 #pragma mark required methods
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+	CDLTableRowController * rowController = [self rowControllersForRow:indexPath.row];
 	
 	return [rowController tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+	CDLTableRowController * rowController = [self rowControllersForRow:indexPath.row];
 	
 	return [rowController tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
@@ -210,7 +210,7 @@
 //
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+	id rowController = [self rowControllersForRow:indexPath.row];
 	if ([rowController respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
 		return [rowController tableView:tableView heightForRowAtIndexPath:indexPath];
 	} else {
@@ -219,7 +219,7 @@
 }
 //- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	CDLTableRowController * rowController = [self rowControllersForRow:indexPath.row];
 //	if ([rowController respondsToSelector:@selector(tableView:willSelectRowAtIndexPath:)]) {
 //		return [rowController tableView:tableView willSelectRowAtIndexPath:indexPath];
 //	} else {
@@ -229,7 +229,7 @@
 //
 //- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	CDLTableRowController * rowController = [self rowControllersForRow:indexPath.row];
 //	if ([rowController respondsToSelector:@selector(tableView:shouldIndentWhileEditingRowAtIndexPath:)]) {
 //		return [rowController tableView:tableView shouldIndentWhileEditingRowAtIndexPath:indexPath];
 //	} else {
@@ -239,7 +239,7 @@
 //
 //- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	CDLTableRowController * rowController = [self rowControllersForRow:indexPath.row];
 //	if ([rowController respondsToSelector:@selector(tableView:editingStyleForRowAtIndexPath:)]) {
 //		return [rowController tableView:tableView editingStyleForRowAtIndexPath:indexPath];
 //	} else {
@@ -248,7 +248,7 @@
 //}
 //- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	CDLTableRowController * rowController = [self rowControllersForRow:indexPath.row];
 //	if ([rowController respondsToSelector:@selector(tableView:canEditRowAtIndexPath:)]) {
 //		return [rowController tableView:tableView canEditRowAtIndexPath:indexPath];
 //	} else {
@@ -257,7 +257,7 @@
 //}
 //- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	CDLTableRowController * rowController = [self rowControllersForRow:indexPath.row];
 //	if ([rowController respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
 //		return [rowController tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
 //	} else {
@@ -266,7 +266,7 @@
 //}
 //- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	CDLTableRowController * rowController = [self rowControllersForRow:indexPath.row];
 //	if ([rowController respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
 //		return [rowController tableView:tableView canMoveRowAtIndexPath:indexPath];
 //	} else {
@@ -281,7 +281,7 @@
 //
 //- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
 //{
-//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:sourceIndexPath.row];
+//	CDLTableRowController * rowController = [self rowControllersForRow:sourceIndexPath.row];
 //	
 //	if ([rowController respondsToSelector:@selector(tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:)]) {
 //		return [rowController tableView:tableView targetIndexPathForMoveFromRowAtIndexPath:sourceIndexPath toProposedIndexPath:proposedDestinationIndexPath];
@@ -317,7 +317,7 @@
 {
 	_inAddMode = addMode;
 	
-	for (id<CDLTableRowControllerProtocol> rowController in self.rowControllers)
+	for (CDLTableRowController * rowController in self.rowControllers)
 	{
 		if ([rowController respondsToSelector:@selector(setInAddMode:)]) {
 			[rowController setInAddMode:addMode];
@@ -329,7 +329,7 @@
 {
 	_editing = editing; //save
 	
-	for (id<CDLTableRowControllerProtocol> rowController in self.rowControllers)
+	for (CDLTableRowController * rowController in self.rowControllers)
 	{
 		if ([rowController respondsToSelector:@selector(setEditing:animated:)]) {
 			[rowController setEditing:editing animated:animated];
