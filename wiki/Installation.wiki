@@ -1,5 +1,5 @@
 #summary Installation Instructions
-#labels Type-Documentation
+#labels Type-Documentation,Featured
 
  # Download the latest version of the template, currently 0.1: http://coredatalibrary.googlecode.com/files/CoreDataLibrary%200.1.zip
  # Extract the archive.
