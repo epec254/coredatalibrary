@@ -438,8 +438,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>1EDCC03A117799800077F121</string>
-				<string>1EDCC03B117799800077F121</string>
+				<string>1EF5535C1177B773009084E8</string>
+				<string>1EF5535D1177B773009084E8</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -476,7 +476,6 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1EDCC0491177999B0077F121</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataLibrary Application/___PROJECTNAME___.xcodeproj</string>
@@ -640,7 +639,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>&lt;No Editor&gt;</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -657,8 +656,6 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -698,7 +695,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>1EDCC03C117799800077F121</string>
+				<string>1EF5535E1177B773009084E8</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -742,8 +739,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {333, 201}}</string>
-											<string>{{333, 0}, {384, 201}}</string>
+											<string>{{0, 0}, {333, 206}}</string>
+											<string>{{333, 0}, {384, 206}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -758,8 +755,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {717, 201}}</string>
-											<string>{{0, 201}, {717, 195}}</string>
+											<string>{{0, 0}, {717, 206}}</string>
+											<string>{{0, 206}, {717, 190}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -792,7 +789,7 @@
 										<real>154</real>
 									</array>
 									<key>Frame</key>
-									<string>{{333, 0}, {384, 201}}</string>
+									<string>{{333, 0}, {384, 206}}</string>
 									<key>RubberWindowFrame</key>
 									<string>81 389 717 437 0 0 1440 878 </string>
 								</dict>
@@ -820,13 +817,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>1EDCC03D117799800077F121</string>
+				<string>1EF5535F1177B773009084E8</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>1EDCC03E117799800077F121</string>
-				<string>1EDCC03F117799800077F121</string>
-				<string>1EDCC040117799800077F121</string>
-				<string>1EDCC041117799800077F121</string>
-				<string>1EDCC042117799800077F121</string>
+				<string>1EF553601177B773009084E8</string>
+				<string>1EF553611177B773009084E8</string>
+				<string>1EF553621177B773009084E8</string>
+				<string>1EF553631177B773009084E8</string>
+				<string>1EF553641177B773009084E8</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

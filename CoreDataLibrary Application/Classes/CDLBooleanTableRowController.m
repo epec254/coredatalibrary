@@ -38,6 +38,7 @@
 {
 	if (self = [super initForDictionary:rowInformation]) {
 		
+		[self _internalInitForDictionary:rowInformation];
 		//input validation errors
 		NSMutableArray *inputValidationErrors = [[NSMutableArray alloc] init];
 		
