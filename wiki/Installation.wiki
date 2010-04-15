@@ -1,7 +1,7 @@
 #summary Installation Instructions
 #labels Type-Documentation,Featured
 
- # Download the latest version of the template, currently 0.1: http://coredatalibrary.googlecode.com/files/CoreDataLibrary%200.1.zip
+ # Download the latest version of the template.
  # Extract the archive.
  # Drag the `CoreDataLibrary Application` folder onto the `Drag Folder Here to Install` icon.
    * This step will copy the `CoreDataLibrary Application` to `/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Project Templates/Application/`.  If XCode is installed in a different location, manually copy the folder to that location.
