@@ -1,0 +1,5 @@
+#summary One-sentence summary of this page.
+
+- remove row/table protocols - just subclass the base class for simplicity
+- no row delegate, just have a reference to sectioncontroller
+- custom section controllers allowed
