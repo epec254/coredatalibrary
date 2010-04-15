@@ -22,6 +22,7 @@
 - (CGFloat) calculateLabelHeightForMultiLineString: (NSString *)text; //use default system font
 - (CGFloat) calculateCellHeightForMultiLineString: (NSString *)text ofFont:(UIFont *)font;
 - (CGFloat) calculateCellHeightForMultiLineString: (NSString *)text; //use default system font
+- (void) _internalInitForDictionary:(NSDictionary *) rowInformation;
 
 @end
 

@@ -17,6 +17,9 @@
 
 - (void) booleanSwitchChanged:(id) sender;
 
+- (void) _internalInitForDictionary:(NSDictionary *) rowInformation;
+
+
 @end
 
 @implementation CDLBooleanTableRowController
