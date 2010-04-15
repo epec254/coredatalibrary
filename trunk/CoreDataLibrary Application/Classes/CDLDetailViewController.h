@@ -62,10 +62,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath; //Default is to return tableView.rowHeight
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section; //default is tableVIew.sectionHeaderHeight
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section; //default is tableVIew.sectionFooterHeight
-
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath; //Default is to return indexPath if tableView.editing is true, otherwise, return nil.
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath; //Default is to return UITableViewCellEditingStyleNone
