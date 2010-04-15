@@ -118,39 +118,6 @@
 			sepNavVisRange = "{11531, 651}";
 		};
 	};
-	1EDCC04B11779B110077F121 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 1EDCACE3116D71B00077F121 /* UIColor+MoreColors.h */;
-	};
-	1EDCC04C11779B110077F121 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1EDCACE3116D71B00077F121 /* UIColor+MoreColors.h */;
-		name = "UIColor+MoreColors.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 73;
-		vrLoc = 0;
-	};
-	1EDCC05611779C280077F121 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Incomplete implementation of class 'CDLDetailViewController'";
-		fRef = 1EDCAD21116D71B10077F121 /* CDLDetailViewController.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 353;
-		rType = 1;
-	};
-	1EDCC05711779C280077F121 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1EDCAD21116D71B10077F121 /* CDLDetailViewController.m */;
-		name = "CDLDetailViewController.m: 354";
-		rLen = 0;
-		rLoc = 12177;
-		rType = 0;
-		vrLen = 651;
-		vrLoc = 11531;
-	};
 	28860B760F44E54D00985440 /* ___PROJECTNAMEASIDENTIFIER___.xcdatamodel */ = {
 		uiCtxt = {
 			"Xdesign Model Editor Bookmark Key" = {
@@ -331,14 +298,8 @@
 			1EDCA736116C04970077F121 /* ___PROJECTNAME___ */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 293050741;
-			PBXWorkspaceStateSaveDate = 293050741;
-		};
-		perUserProjectItems = {
-			1EDCC04B11779B110077F121 /* PBXBookmark */ = 1EDCC04B11779B110077F121 /* PBXBookmark */;
-			1EDCC04C11779B110077F121 /* PBXTextBookmark */ = 1EDCC04C11779B110077F121 /* PBXTextBookmark */;
-			1EDCC05611779C280077F121 /* XCBuildMessageTextBookmark */ = 1EDCC05611779C280077F121 /* XCBuildMessageTextBookmark */;
-			1EDCC05711779C280077F121 /* PBXTextBookmark */ = 1EDCC05711779C280077F121 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 293058416;
+			PBXWorkspaceStateSaveDate = 293058416;
 		};
 		sourceControlManager = 1EDCA740116C04A00077F121 /* Source Control */;
 		userBuildSettings = {

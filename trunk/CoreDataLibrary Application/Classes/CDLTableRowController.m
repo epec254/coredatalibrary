@@ -23,6 +23,8 @@
 //@property (nonatomic, readonly) BOOL isNumberProperty; //Does the attributeKeyPath represent a NSNumber
 - (void) booleanSwitchChanged:(id) sender;
 
+- (void) _internalInitForDictionary:(NSDictionary *) rowInformation;
+
 //- (NSString *) stringValueForKeyPath:(NSString *) keyPath inObject:(id) object;
 
 @end
@@ -133,29 +135,35 @@
 - (id) initForDictionary:(NSDictionary *) rowInformation
 {
 	if (self = [super init]) {
-		//Load the standard values for a rowController from the given dictionary.
 		
-		//rowLabel - NSString.  If not set, revert to nil.
-		self.rowLabel = [rowInformation valueForKey:@"rowLabel"];
 		
-		if (![CDLUtilityMethods isLoadedStringValid:self.rowLabel]) {
-			self.rowLabel = nil;
-		}
-				
-		//attributeKeyPath - NSString
-		self.attributeKeyPath = [rowInformation valueForKey:@"attributeKeyPath"];
-		
-		if (![CDLUtilityMethods isLoadedStringValid:self.attributeKeyPath]) {
-			[CDLUtilityMethods raiseExceptionWithName:@"invalid input for CDLTableRowController" reason:@"attributeKeyPath can't be empty"];
-		}
-
-		//Will throw an exception if rowType is invalid.
-		self.rowType = [CDLTableRowController cellTypeEnumFromString:[rowInformation valueForKey:@"rowType"]];
 		
 		
 	}
 	
 	return self;
+}
+
+- (void) _internalInitForDictionary:(NSDictionary *) rowInformation
+{
+	//Load the standard values for a rowController from the given dictionary.
+
+	//rowLabel - NSString.  If not set, revert to nil.
+	self.rowLabel = [rowInformation valueForKey:@"rowLabel"];
+	
+	if (![CDLUtilityMethods isLoadedStringValid:self.rowLabel]) {
+		self.rowLabel = nil;
+	}
+	
+	//attributeKeyPath - NSString
+	self.attributeKeyPath = [rowInformation valueForKey:@"attributeKeyPath"];
+	
+	if (![CDLUtilityMethods isLoadedStringValid:self.attributeKeyPath]) {
+		[CDLUtilityMethods raiseExceptionWithName:@"invalid input for CDLTableRowController" reason:@"attributeKeyPath can't be empty"];
+	}
+	
+	//Will throw an exception if rowType is invalid.
+	self.rowType = [CDLTableRowController cellTypeEnumFromString:[rowInformation valueForKey:@"rowType"]];
 }
 
 
