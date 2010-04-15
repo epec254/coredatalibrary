@@ -54,7 +54,7 @@
 		isSCMEnabled = 0;
 		scmConfiguration = {
 			repositoryNamesForRoots = {
-				"" = "";
+				"" = "google - coredatalibrary";
 			};
 		};
 	};
@@ -80,6 +80,13 @@
 			sepNavWindowFrame = "{{61, 150}, {911, 681}}";
 		};
 	};
+	1EDCACE3116D71B00077F121 /* UIColor+MoreColors.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {391, 4186}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 73}";
+		};
+	};
 	1EDCACED116D71B00077F121 /* DataController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {651, 624}}";
@@ -95,6 +102,20 @@
 			sepNavVisRange = "{1591, 1455}";
 			sepNavWindowFrame = "{{15, 203}, {710, 670}}";
 		};
+	};
+	1EDCC04B11779B110077F121 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 1EDCACE3116D71B00077F121 /* UIColor+MoreColors.h */;
+	};
+	1EDCC04C11779B110077F121 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EDCACE3116D71B00077F121 /* UIColor+MoreColors.h */;
+		name = "UIColor+MoreColors.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 73;
+		vrLoc = 0;
 	};
 	28860B760F44E54D00985440 /* ___PROJECTNAMEASIDENTIFIER___.xcdatamodel */ = {
 		uiCtxt = {
@@ -276,8 +297,12 @@
 			1EDCA736116C04970077F121 /* ___PROJECTNAME___ */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 292808477;
-			PBXWorkspaceStateSaveDate = 292808477;
+			PBXPerProjectTemplateStateSaveDate = 293050741;
+			PBXWorkspaceStateSaveDate = 293050741;
+		};
+		perUserProjectItems = {
+			1EDCC04B11779B110077F121 /* PBXBookmark */ = 1EDCC04B11779B110077F121 /* PBXBookmark */;
+			1EDCC04C11779B110077F121 /* PBXTextBookmark */ = 1EDCC04C11779B110077F121 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 1EDCA740116C04A00077F121 /* Source Control */;
 		userBuildSettings = {

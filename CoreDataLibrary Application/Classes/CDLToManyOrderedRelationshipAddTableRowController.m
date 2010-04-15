@@ -16,7 +16,7 @@
 
 @implementation CDLToManyOrderedRelationshipAddTableRowController
 
-@synthesize sectionController = _sectionController;
+//@synthesize sectionController = _sectionController;
 
 
 - (void)dealloc
@@ -42,12 +42,12 @@
 
 - (NSString *) relationshipIntermediateEntityName
 {
-	return self.sectionController.relationshipIntermediateEntityName;
+	return ((CDLToManyOrderedRelationshipSectionController *)self.sectionController).relationshipIntermediateEntityName;
 }
 
 - (NSString *) relationshipEntityName
 {
-	return self.sectionController.relationshipEntityName;
+	return ((CDLToManyOrderedRelationshipSectionController *)self.sectionController).relationshipEntityName;
 }
 
 #pragma mark -
@@ -84,14 +84,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	CDLToManyOrderedRelationshipEditController *fieldEditController = [[CDLToManyOrderedRelationshipEditController alloc] initForManagedObject:[self.delegate managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath forChoicesEntity:self.relationshipEntityName];
+	CDLToManyOrderedRelationshipEditController *fieldEditController = [[CDLToManyOrderedRelationshipEditController alloc] initForManagedObject:[self.sectionController managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath forChoicesEntity:self.relationshipEntityName];
 	
 	[fieldEditController setInAddMode:self.inAddMode];
 	fieldEditController.intermediateEntityName = self.relationshipIntermediateEntityName;
 	
-	fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.delegate; //we know the delegate of this class will be a CDLToManyOrderedRelationshipSectionController which implements this protocol
+	fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.sectionController; //we know the delegate of this class will be a CDLToManyOrderedRelationshipSectionController which implements this protocol
 	
-	[self.delegate pushViewController:fieldEditController animated:YES];
+	[self.sectionController pushViewController:fieldEditController animated:YES];
 	[fieldEditController release];
 }
 

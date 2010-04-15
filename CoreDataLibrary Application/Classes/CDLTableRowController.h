@@ -22,7 +22,7 @@ typedef enum _CDLTableRowType {
 	CDLTableRowTypeCustom //provide a custom implementation of the CDLTableRowControllerProtocol
 } CDLTableRowType;
 
-
+@class CDLTableSectionController;
 @protocol CDLTableRowControllerDelegate;
 
 @protocol CDLTableRowControllerProtocol <NSObject>
@@ -37,7 +37,7 @@ typedef enum _CDLTableRowType {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /** Will be set to the section controller */
-@property (nonatomic, assign) id<CDLTableRowControllerDelegate>	delegate;
+@property (nonatomic, assign) CDLTableSectionController *sectionController;
 
 @optional
 /** Default is to return tableView.rowHeight */
@@ -70,6 +70,7 @@ typedef enum _CDLTableRowType {
 
 @end
 
+
 @interface CDLTableRowController : NSObject <CDLTableRowControllerProtocol> {
 @protected
 	BOOL											_editing;
@@ -79,14 +80,14 @@ typedef enum _CDLTableRowType {
 	NSString										*_rowLabel; 
 	NSString										*_attributeKeyPath; 
 	CDLTableRowType									_rowType; 
-	id<CDLTableRowControllerDelegate>				_delegate;
+	//	id<CDLTableRowControllerDelegate>				_delegate;
 
-
+	CDLTableSectionController			*_sectionController;
 
 }
 
 
-
+@property (nonatomic, readonly, getter=isEditing) BOOL editing;
 
 /**
  Text describing the contents of the keypath (displayed in some styles)
@@ -120,19 +121,19 @@ typedef enum _CDLTableRowType {
 /**
  Return a TableRowController for the given dictionary
  */
-+ (id<CDLTableRowControllerProtocol>) tableRowControllerForDictionary:(NSDictionary *) rowInformation forDelegate:(id<CDLTableRowControllerDelegate>) delegate;
++ (id<CDLTableRowControllerProtocol>) tableRowControllerForDictionary:(NSDictionary *) rowInformation forSectionController:(CDLTableSectionController *) sectionController;
 
 
 
 @end
 
-@protocol CDLTableRowControllerDelegate<NSObject>
-
-- (Class) classOfManagedObject;
-- (NSManagedObject *) managedObject;
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
-
-@end
+//@protocol CDLTableRowControllerDelegate<NSObject>
+//
+//- (Class) classOfManagedObject;
+//- (NSManagedObject *) managedObject;
+//- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+//
+//@end
 
 
 

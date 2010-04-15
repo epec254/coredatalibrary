@@ -12,7 +12,7 @@
 
 #import "CDLMultiLineTableRowController.h"
 #import "CDLMultiLineTextFieldEditController.h"
-
+#import "CDLTableSectionController.h"
 #import "NSManagedObject+TypeOfProperty.h"
 
 @interface CDLMultiLineTableRowController(PrivateMethods)
@@ -38,7 +38,7 @@
 			[inputValidationErrors addObject:[NSString stringWithFormat:@"MultiLineTableRow Controller does not handle keyPaths, please provide a key (You provided %@)", self.attributeKeyPath]];
 		}
 		
-		NSString *classOfKey = [[self.delegate managedObject] classOfKey:self.attributeKeyPath];
+		NSString *classOfKey = [[self.sectionController managedObject] classOfKey:self.attributeKeyPath];
 		
 		if ([classOfKey isEqualToString:@"NSString"]) {
 			[inputValidationErrors addObject:[NSString stringWithFormat:@"MultiLineTableRow Controller only handles NSStrings (You provided a %@)", classOfKey]];
@@ -119,12 +119,12 @@
 {
 	//Push edit controller
 	if (tableView.editing) {
-		CDLMultiLineTextFieldEditController *fieldEditController = [[CDLMultiLineTextFieldEditController alloc] initForManagedObject:[self.delegate managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath];
+		CDLMultiLineTextFieldEditController *fieldEditController = [[CDLMultiLineTextFieldEditController alloc] initForManagedObject:[self.sectionController managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath];
 		
 		[fieldEditController setInAddMode:self.inAddMode];
-		fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.delegate; //we know the delegate of this class will be a CDLTableSectionController which implements this protocol
+		fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.sectionController; //we know the delegate of this class will be a CDLTableSectionController which implements this protocol
 
-		[self.delegate pushViewController:fieldEditController animated:YES];
+		[self.sectionController pushViewController:fieldEditController animated:YES];
 		[fieldEditController release];
 		
 	}
@@ -166,7 +166,7 @@
 {
 	CGSize constrainedSize; 
 	//account for edit accessory size
-	float rowEditingAccessorySize = (_editing) ? 30.0f : 0.0f;
+	float rowEditingAccessorySize = (self.isEditing) ? 30.0f : 0.0f;
 	switch (self.rowType) {
 		case CDLTableRowTypeMultiLineValueSmallLabel:
 			constrainedSize = CGSizeMake(210.0f - rowEditingAccessorySize, MAXFLOAT);

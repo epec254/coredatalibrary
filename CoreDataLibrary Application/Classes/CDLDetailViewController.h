@@ -34,4 +34,44 @@
  */
 - (id) initForPropertyList:(NSString *) fullPathToPropertyListFile managedObject:(NSManagedObject *)managedObject;
 
+
+//TableView Stuff
+
+//implemented here
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+
+//implemented in CDLTableSectionController
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+//will be passed along to sectionController if subclass implements it, otherwise default value
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section; //default nil
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath; //default YES
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath; //default YES if there is an implementation of tableView:moveRowAtIndexPath:toIndexPath: in section controller, otherwise no
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath; //default nothing
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath; //default nothing
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath; //default nothing
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath; //Default is to return tableView.rowHeight
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section; //default is tableVIew.sectionHeaderHeight
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section; //default is tableVIew.sectionFooterHeight
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath; //Default is to return indexPath if tableView.editing is true, otherwise, return nil.
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath; //Default is to return UITableViewCellEditingStyleNone
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath; //default NO
+
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath; //default return proposedDestinationIndexPath
+
 @end

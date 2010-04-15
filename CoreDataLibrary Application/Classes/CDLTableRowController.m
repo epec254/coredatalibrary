@@ -15,6 +15,7 @@
 #import "CDLMultiLineTableRowController.h"
 #import "CDLBooleanTableRowController.h"
 #import "CDLRelationshipTableRowController.h"
+#import "CDLTableSectionController.h"
 
 @interface CDLTableRowController(PrivateMethods)
 
@@ -33,8 +34,10 @@
 @synthesize attributeKeyPath = _attributeKeyPath;
 @synthesize rowType = _rowType;
 @synthesize inAddMode = _inAddMode;
+@synthesize editing = _editing;
+//@synthesize delegate = _delegate;
 
-@synthesize delegate = _delegate;
+@synthesize sectionController = _sectionController;
 
 #pragma mark -
 #pragma mark mem mgt
@@ -51,7 +54,7 @@
 }
 
 
-+ (id<CDLTableRowControllerProtocol>) tableRowControllerForDictionary:(NSDictionary *) rowInformation forDelegate:(id<CDLTableRowControllerDelegate>) delegate
++ (id<CDLTableRowControllerProtocol>) tableRowControllerForDictionary:(NSDictionary *) rowInformation forSectionController:(CDLTableSectionController *) sectionController
 {
 	id<CDLTableRowControllerProtocol> newRowController = nil;
 	
@@ -84,7 +87,10 @@
 		default:
 			break;
 	}
-	newRowController.delegate = delegate;
+	//newRowController.delegate = delegate;
+	if ([newRowController respondsToSelector:@selector(setSectionController:)]) {
+		newRowController.sectionController = sectionController;
+	}
 	return newRowController;
 }
 
@@ -183,12 +189,12 @@
 //default methods only work on string or number values
 - (NSString *) attributeStringValue
 {	
-	return [CDLUtilityMethods stringValueForKeyPath:self.attributeKeyPath inObject:[self.delegate managedObject]];
+	return [CDLUtilityMethods stringValueForKeyPath:self.attributeKeyPath inObject:[self.sectionController managedObject]];
 }
 
 - (id) attributeObjectValue
 {
-	return [[self.delegate managedObject] valueForKeyPath:self.attributeKeyPath];	
+	return [[self.sectionController managedObject] valueForKeyPath:self.attributeKeyPath];	
 }
 
 

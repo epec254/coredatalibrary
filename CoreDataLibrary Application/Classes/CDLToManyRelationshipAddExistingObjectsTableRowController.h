@@ -14,11 +14,11 @@
 
 @interface CDLToManyRelationshipAddExistingObjectsTableRowController : CDLToManyRelationshipTableRowController {
 @private
-	CDLToManyRelationshipSectionController *_sectionController;
+	//	CDLToManyRelationshipSectionController *_sectionController;
 }
 
-@property (nonatomic, assign) CDLToManyRelationshipSectionController *sectionController;
-
+//@property (nonatomic, assign) CDLToManyRelationshipSectionController *sectionController;
+- (void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *) indexPath;
 /** Name of entities at the end of the relationship */
 @property (nonatomic, readonly) NSString *relationshipEntityName;
 @end

@@ -16,6 +16,8 @@
 
 #import "NSManagedObject+TypeOfProperty.h"
 
+#import "CDLTableSectionController.h"
+
 @interface CDLSingleLineTableRowController(PrivateMethods)
 + (NSDateFormatterStyle) dateFormatterStyleFromString:(NSString *)styleString;
 @end
@@ -66,7 +68,7 @@
 			[inputValidationErrors addObject:[NSString stringWithFormat:@"SingleLineTableRow Controller does not handle keyPaths, please provide a key (You provided %@)", self.attributeKeyPath]];
 		}
 		
-		NSString *classOfKey = [[self.delegate managedObject] classOfKey:self.attributeKeyPath];
+		NSString *classOfKey = [[self.sectionController managedObject] classOfKey:self.attributeKeyPath];
 		
 		if ([classOfKey isEqualToString:@"NSString"] || [classOfKey isEqualToString:@"NSNumber"] || [classOfKey isEqualToString:@"NSDate"]) {
 			
@@ -109,7 +111,7 @@
 
 - (NSString *) attributeStringValue
 {
-	return [CDLUtilityMethods stringValueForKeyPath:self.attributeKeyPath inObject:[self.delegate managedObject] withDateFormatter:self.dateFormatter];
+	return [CDLUtilityMethods stringValueForKeyPath:self.attributeKeyPath inObject:[self.sectionController managedObject] withDateFormatter:self.dateFormatter];
 }
 
 #pragma mark -
@@ -170,18 +172,18 @@
 		CDLAbstractFieldEditController *fieldEditController = nil;
 		
 		//Determine the proper type of Edit Controller to push by looking at the class of the key
-		NSString *classOfKey = [[self.delegate managedObject] classOfKey:self.attributeKeyPath];
+		NSString *classOfKey = [[self.sectionController managedObject] classOfKey:self.attributeKeyPath];
 		if ([classOfKey isEqualToString:@"NSString"] || [classOfKey isEqualToString:@"NSNumber"]) {
-			fieldEditController = [[CDLTextFieldEditController alloc] initForManagedObject:[self.delegate managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath];
+			fieldEditController = [[CDLTextFieldEditController alloc] initForManagedObject:[self.sectionController managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath];
 		} else if ([classOfKey isEqualToString:@"NSDate"]) {
 			
-			fieldEditController = [[CDLDateFieldEditController alloc] initForManagedObject:[self.delegate managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath withDateFormatterStyle:self.dateFormatterStyle withTimeFormatterStyle:self.timeFormatterStyle];
+			fieldEditController = [[CDLDateFieldEditController alloc] initForManagedObject:[self.sectionController managedObject] withLabel:self.rowLabel forKeyPath:self.attributeKeyPath withDateFormatterStyle:self.dateFormatterStyle withTimeFormatterStyle:self.timeFormatterStyle];
 		}
 		
 		[fieldEditController setInAddMode:self.inAddMode];
-		fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.delegate; //we know the delegate of this class will be a CDLTableSectionController which implements this protocol
+		fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.sectionController; //we know the delegate of this class will be a CDLTableSectionController which implements this protocol
 
-		[self.delegate pushViewController:fieldEditController animated:YES];
+		[self.sectionController pushViewController:fieldEditController animated:YES];
 		[fieldEditController release];
 		
 	} else {

@@ -12,7 +12,7 @@
 #import "CDLBooleanTableRowController.h"
 #import "DataController.h"
 #import "NSManagedObject+TypeOfProperty.h"
-
+#import "CDLTableSectionController.h"
 @interface CDLBooleanTableRowController(PrivateMethods)
 
 - (void) booleanSwitchChanged:(id) sender;
@@ -46,7 +46,7 @@
 			[inputValidationErrors addObject:[NSString stringWithFormat:@"CDLBooleanTableRowController Controller does not handle keyPaths, please provide a key (You provided %@)", self.attributeKeyPath]];
 		}
 		
-		NSString *classOfKey = [[self.delegate managedObject] classOfKey:self.attributeKeyPath];
+		NSString *classOfKey = [[self.sectionController managedObject] classOfKey:self.attributeKeyPath];
 		
 		if ([classOfKey isEqualToString:@"NSNumber"]) {
 			[inputValidationErrors addObject:[NSString stringWithFormat:@"CDLBooleanTableRowController only handles booleans wrapped in NSNumbers (You provided a %@)", classOfKey]];
@@ -121,7 +121,7 @@
 - (void) booleanSwitchChanged:(id) sender
 {
 	//Update Managed Object and save.
-	[[self.delegate managedObject] setValue:[NSNumber numberWithBool:self.booleanSwitch.isOn] forKey:self.attributeKeyPath];
+	[[self.sectionController managedObject] setValue:[NSNumber numberWithBool:self.booleanSwitch.isOn] forKey:self.attributeKeyPath];
 	
 	if (!self.inAddMode) {
 		[[DataController sharedDataController] saveFromSource:@"boolean switch change"];
@@ -144,7 +144,7 @@
 	
 	//set initial state to NO
 	
-	[[self.delegate managedObject] setValue:[NSNumber numberWithBool:NO] forKey:self.attributeKeyPath];
+	[[self.sectionController managedObject] setValue:[NSNumber numberWithBool:NO] forKey:self.attributeKeyPath];
 }
 
 

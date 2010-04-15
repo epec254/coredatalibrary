@@ -81,10 +81,7 @@
 #pragma mark -
 #pragma mark section controller delegate
 
-- (Class) classOfManagedObject
-{
-	return [self.managedObject class];
-}
+
 
 - (NSManagedObject *) managedObjectForSectionController:(CDLTableSectionController *)sectionController
 {
@@ -104,6 +101,30 @@
 	[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:rowAnimation];
 }
 
+- (UITableView *) theTableView
+{
+	return self.tableView;
+}
+
+- (NSInteger)sectionOfSectionController:(id<CDLTableSectionControllerProtocol>) sectionController
+{
+	return [self.sectionControllers indexOfObject:sectionController];
+}
+
+- (void) presentActionSheet:(UIActionSheet *) actionSheet
+{
+	if (self.tabBarController != nil) {
+		//present in tabBar
+		[actionSheet showFromTabBar:self.tabBarController.tabBar];
+	} else {
+		[actionSheet showInView:self.view];
+	}
+
+}
+
+#pragma mark -
+#pragma mark view lifecycle
+
 - (void)viewWillAppear:(BOOL)animated {	
 
     [super viewWillAppear:animated];
@@ -121,7 +142,7 @@
 	self.navigationItem.hidesBackButton = editing;
 	
 	//call on each section controller
-	for (id<CDLTableSectionControllerProtocol> sectionController in self.sectionControllers) {
+	for (CDLTableSectionController *sectionController in self.sectionControllers) {
 		[sectionController setEditing:editing animated:animated];
 	}
 	
@@ -129,16 +150,14 @@
 }
 
 #pragma mark -
-#pragma mark Table View Methods
+#pragma mark table view data source - implemented here
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.sectionControllers count];
 }
 
 #pragma mark -
-#pragma mark SectionControllerProtocol Methods
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [[self.sectionControllers objectAtIndex:section] tableView:tableView titleForHeaderInSection:section];
-}
+#pragma mark table view data source - required
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -150,18 +169,140 @@
 	return [[self.sectionControllers objectAtIndex:indexPath.section] tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
-#pragma mark height
+#pragma mark table view data source - optional
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[self.sectionControllers objectAtIndex:section] tableView:tableView titleForHeaderInSection:section];
+}
+//default nil
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:titleForFooterInSection:)]) {
+		return [sectionController tableView:tableView titleForFooterInSection:section];
+	} else {
+		return nil;
+	}
+}
 
+#pragma mark editing
+//default YES
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:indexPath.section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:canEditRowAtIndexPath:)]) {
+		return [sectionController tableView:tableView canEditRowAtIndexPath:indexPath];
+	} else {
+		return YES;
+	}
+}
+
+#pragma mark moving/reordering
+//default YES if there is an implementation of tableView:moveRowAtIndexPath:toIndexPath: in section controller, otherwise no
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:indexPath.section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
+		return [sectionController tableView:tableView canMoveRowAtIndexPath:indexPath];
+	} else if ([sectionController respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]) {
+		return YES;
+	} else {
+		return NO;
+	}
+}
+
+#pragma mark data manipulation - insert and delete support
+//default nothing
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:indexPath.section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
+		return [sectionController tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+	} else {
+		return;
+	}
+}
+
+#pragma mark  data manipulation - reorder / moving support
+//default nothing
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:fromIndexPath.section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]) {
+		return [sectionController tableView:tableView moveRowAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
+	} else {
+		return;
+	}
+}
+
+#pragma mark -
+#pragma mark table view delegate 
+
+#pragma mark display customization
+//default nothing
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:indexPath.section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {
+		return [sectionController tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+	} else {
+		return;
+	}
+}
+
+#pragma mark variable height support
+/** Default is to return tableView.rowHeight */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
 	return [[self.sectionControllers objectAtIndex:indexPath.section] tableView:tableView heightForRowAtIndexPath:indexPath];
 }
-#pragma mark selecting rows
+//default is tableVIew.sectionHeaderHeight
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:section];
+//	
+//	if ([sectionController respondsToSelector:@selector(tableView:heightForHeaderInSection:)]) {
+//		return [sectionController tableView:tableView heightForHeaderInSection:section];
+//	} else {
+//		CGFloat test = tableView.sectionHeaderHeight;
+//		return test;
+//	}
+//}
+//default is tableVIew.sectionFooterHeight
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:section];
+//	
+//	if ([sectionController respondsToSelector:@selector(tableView:heightForFooterInSection:)]) {
+//		return [sectionController tableView:tableView heightForFooterInSection:section];
+//	} else {
+//		return tableView.sectionFooterHeight;
+//	}
+//}
+
+#pragma mark header/footer views
+
+//ehh
+
+#pragma mark selection
+/** Default is to return indexPath if tableView.editing is true, otherwise, return nil. */
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return [[self.sectionControllers objectAtIndex:indexPath.section] tableView:tableView willSelectRowAtIndexPath:indexPath];
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:indexPath.section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:willSelectRowAtIndexPath:)]) {
+		return [sectionController tableView:tableView willSelectRowAtIndexPath:indexPath];
+	} else if (tableView.editing) {
+		return indexPath;
+	} else {
+		return nil;
+	}
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -171,39 +312,38 @@
 
 
 #pragma mark editing rows
-- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	return [[self.sectionControllers objectAtIndex:indexPath.section] tableView:tableView shouldIndentWhileEditingRowAtIndexPath:indexPath];
-}
+/** Default is to return UITableViewCellEditingStyleNone */
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return [[self.sectionControllers objectAtIndex:indexPath.section] tableView:tableView editingStyleForRowAtIndexPath:indexPath];
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:indexPath.section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:editingStyleForRowAtIndexPath:)]) {
+		return [sectionController tableView:tableView editingStyleForRowAtIndexPath:indexPath];
+	} else {
+		return UITableViewCellEditingStyleNone;
+	}
 }
+/** Default is to return NO */
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return [[self.sectionControllers objectAtIndex:indexPath.section] tableView:tableView canEditRowAtIndexPath:indexPath];
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	return [[self.sectionControllers objectAtIndex:indexPath.section] tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:indexPath.section];
+	
+	if ([sectionController respondsToSelector:@selector(tableView:shouldIndentWhileEditingRowAtIndexPath:)]) {
+		return [sectionController tableView:tableView shouldIndentWhileEditingRowAtIndexPath:indexPath];
+	} else {
+		return NO;
+	}
 }
 
 #pragma mark moving rows
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	return [[self.sectionControllers objectAtIndex:indexPath.section] tableView:tableView canMoveRowAtIndexPath:indexPath];
-}
 
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-	return [[self.sectionControllers objectAtIndex:fromIndexPath.section] tableView:tableView moveRowAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
-}
+
 - (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
 {
-	id<CDLTableSectionControllerProtocol> sectionController = [self.sectionControllers objectAtIndex:sourceIndexPath.section];
+	CDLTableSectionController *sectionController = [self.sectionControllers objectAtIndex:sourceIndexPath.section];
+	
 	if ([sectionController respondsToSelector:@selector(tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:)]) {
 		return [sectionController tableView:tableView targetIndexPathForMoveFromRowAtIndexPath:sourceIndexPath toProposedIndexPath:proposedDestinationIndexPath];
 	} else {

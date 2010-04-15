@@ -9,12 +9,14 @@
 //  code.google.com/p/coredatalibrary
 #import "CDLToManyRelationshipSectionController.h"
 
+#import <objc/runtime.h>
+#import <objc/message.h>
+
 #import "CDLTableSectionController.h"
 #import "CDLRelationshipTableRowController.h"
 #import "CDLToManyOrderedRelationshipSectionController.h"
 @interface CDLTableSectionController(PrivateMethods)
 + (CDLTableRowType) cellTypeOfRowFromDictionary:(NSDictionary *) rowDictionary;
-- (id) initForRowDictionaries:(NSArray *) rowDictionaries forSectionTitle:(NSString *)sectionTitle forDelegate:(id<CDLTableSectionControllerDelegate>) delegate;
 - (id<CDLTableRowControllerProtocol>) rowControllersForRow:(NSInteger) row;
 
 @end
@@ -25,6 +27,7 @@
 @synthesize sectionTitle = _sectionTitle;
 @synthesize rowControllers = _rowControllers;
 @synthesize delegate = _delegate;
+@synthesize editing = _editing;
 
 #pragma mark -
 #pragma mark mem mgt 
@@ -72,30 +75,52 @@
 		[CDLUtilityMethods raiseExceptionWithName:@"first row in rowInformation not valid" reason:@"first row is not a NSDictionary or has 0 objects"];
 	}
 	
-	/* Now, we need to determine the type of sectionController to create based on the rowType of the first row dictionary:
+	/* OLD: Now, we need to determine the type of sectionController to create based on the rowType of the first row dictionary:
 	 * 1) type CDLTableRowTypeToManyOrderedRelationship = CDLToManyOrderedRelationshipSectionController
 	 * 2) type of CDLTableRowTypeOrderedRelationship = CDLToManyRelationshipSectionController
 	 * 3) everything else = CDLTableSectionController
 	 */
 	
-	// What is the row type?
-	// An exception will be thrown here if this rowType is invalid
-	CDLTableRowType firstRowCellType = [CDLTableSectionController cellTypeOfRowFromDictionary:firstRowDictionary];
+	/* NEW: We first check the customSectionControllerClass property of the sectionInfo dictionary to see if it exists. We then check if that is a valid class, throwing an exception if it isn't.  If it is not set, we proceed to use the old logic */
 	
-	switch (firstRowCellType) {
-		case CDLTableRowTypeToManyOrderedRelationship:
-			// 1) type CDLTableRowTypeToManyOrderedRelationship = CDLToManyOrderedRelationshipSectionController
-			newTableSectionController = [[CDLToManyOrderedRelationshipSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
-			break;
-		case CDLTableRowTypeToManyRelationship:
-			// 2) type of CDLTableRowTypeOrderedRelationship = CDLToManyRelationshipSectionController
-			newTableSectionController = [[CDLToManyRelationshipSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
-			break;
-		default:
-			//3) everything else = CDLTableSectionController
-			newTableSectionController = [[CDLTableSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
-			break;
+	NSString *customSectionControllerClass = [sectionInformation valueForKey:@"customSectionControllerClass"];
+	if (![CDLUtilityMethods isLoadedStringValid:customSectionControllerClass]) { //if empty or not a string, clear it out
+		customSectionControllerClass = nil;
 	}
+	
+	if (customSectionControllerClass != nil) { //they want a custom section controller class
+		Class sectionController = NSClassFromString(customSectionControllerClass);
+		
+		if ([sectionController conformsToProtocol:@protocol(CDLTableSectionControllerProtocol)]) {
+			//if here, this class can be used as a sectionController
+			newTableSectionController = [[sectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
+		} else {
+			[CDLUtilityMethods raiseExceptionWithName:@"invalid class specified in customSectionControllerClass" reason:[NSString stringWithFormat:@"specified class name %@ does not conform to CDLTableSectionControllerProtocol", customSectionControllerClass]];
+		}		
+	} else {
+		//the "OLD" method
+		// What is the row type?
+		// An exception will be thrown here if this rowType is invalid
+		CDLTableRowType firstRowCellType = [CDLTableSectionController cellTypeOfRowFromDictionary:firstRowDictionary];
+		
+		switch (firstRowCellType) {
+			case CDLTableRowTypeToManyOrderedRelationship:
+				// 1) type CDLTableRowTypeToManyOrderedRelationship = CDLToManyOrderedRelationshipSectionController
+				newTableSectionController = [[CDLToManyOrderedRelationshipSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
+				break;
+			case CDLTableRowTypeToManyRelationship:
+				// 2) type of CDLTableRowTypeOrderedRelationship = CDLToManyRelationshipSectionController
+				newTableSectionController = [[CDLToManyRelationshipSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
+				break;
+			default:
+				//3) everything else = CDLTableSectionController
+				newTableSectionController = [[CDLTableSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
+				break;
+		}
+	}
+
+	
+	
 	
 	return [newTableSectionController autorelease];
 }
@@ -126,7 +151,7 @@
 				[ex raise];
 			}
 
-			id<CDLTableRowControllerProtocol> aRowController = [CDLTableRowController tableRowControllerForDictionary:rowInformation forDelegate:self];;
+			id<CDLTableRowControllerProtocol> aRowController = [CDLTableRowController tableRowControllerForDictionary:rowInformation forSectionController:self];;
 
 			
 			//aRowController.delegate = self;
@@ -179,8 +204,10 @@
 	return [rowController tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
-#pragma mark optional methods
 
+
+#pragma mark optional methods
+//
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
@@ -190,84 +217,84 @@
 		return tableView.rowHeight;
 	}
 }
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
-	if ([rowController respondsToSelector:@selector(tableView:willSelectRowAtIndexPath:)]) {
-		return [rowController tableView:tableView willSelectRowAtIndexPath:indexPath];
-	} else {
-		return (tableView.editing) ? indexPath : nil;
-	}
-}
+//- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	if ([rowController respondsToSelector:@selector(tableView:willSelectRowAtIndexPath:)]) {
+//		return [rowController tableView:tableView willSelectRowAtIndexPath:indexPath];
+//	} else {
+//		return (tableView.editing) ? indexPath : nil;
+//	}
+//}
+//
+//- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	if ([rowController respondsToSelector:@selector(tableView:shouldIndentWhileEditingRowAtIndexPath:)]) {
+//		return [rowController tableView:tableView shouldIndentWhileEditingRowAtIndexPath:indexPath];
+//	} else {
+//		return NO;
+//	}
+//}
+//
+//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	if ([rowController respondsToSelector:@selector(tableView:editingStyleForRowAtIndexPath:)]) {
+//		return [rowController tableView:tableView editingStyleForRowAtIndexPath:indexPath];
+//	} else {
+//		return UITableViewCellEditingStyleNone;
+//	}
+//}
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	if ([rowController respondsToSelector:@selector(tableView:canEditRowAtIndexPath:)]) {
+//		return [rowController tableView:tableView canEditRowAtIndexPath:indexPath];
+//	} else {
+//		return YES;
+//	}
+//}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	if ([rowController respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
+//		return [rowController tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+//	} else {
+//		return;
+//	}
+//}
+//- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+//	if ([rowController respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
+//		return [rowController tableView:tableView canMoveRowAtIndexPath:indexPath];
+//	} else {
+//		return NO;
+//	}
+//}
+//
+//- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+//{
+//	return;
+//}
+//
+//- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
+//{
+//	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:sourceIndexPath.row];
+//	
+//	if ([rowController respondsToSelector:@selector(tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:)]) {
+//		return [rowController tableView:tableView targetIndexPathForMoveFromRowAtIndexPath:sourceIndexPath toProposedIndexPath:proposedDestinationIndexPath];
+//	} else {
+//		return proposedDestinationIndexPath;
+//	}
+//}
 
-- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
-	if ([rowController respondsToSelector:@selector(tableView:shouldIndentWhileEditingRowAtIndexPath:)]) {
-		return [rowController tableView:tableView shouldIndentWhileEditingRowAtIndexPath:indexPath];
-	} else {
-		return NO;
-	}
-}
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
-	if ([rowController respondsToSelector:@selector(tableView:editingStyleForRowAtIndexPath:)]) {
-		return [rowController tableView:tableView editingStyleForRowAtIndexPath:indexPath];
-	} else {
-		return UITableViewCellEditingStyleNone;
-	}
-}
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
-	if ([rowController respondsToSelector:@selector(tableView:canEditRowAtIndexPath:)]) {
-		return [rowController tableView:tableView canEditRowAtIndexPath:indexPath];
-	} else {
-		return YES;
-	}
-}
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
-	if ([rowController respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
-		return [rowController tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
-	} else {
-		return;
-	}
-}
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
-	if ([rowController respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
-		return [rowController tableView:tableView canMoveRowAtIndexPath:indexPath];
-	} else {
-		return NO;
-	}
-}
-
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-	return;
-}
-
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated
-{
-	for (id<CDLTableRowControllerProtocol> rowController in self.rowControllers)
-	{
-		if ([rowController respondsToSelector:@selector(setEditing:animated:)]) {
-			[rowController setEditing:editing animated:animated];
-		}
-	}
-}
 #pragma mark -
 #pragma mark row controller delegate
 
-- (Class) classOfManagedObject
-{
-	return [self.delegate classOfManagedObject];
-}
+
 - (NSManagedObject *) managedObject
 {
 	return [self.delegate managedObjectForSectionController:self];
@@ -278,8 +305,13 @@
 	[self.delegate pushViewController:viewController animated:animated];
 }
 
+- (void) presentActionSheet:(UIActionSheet *) actionSheet
+{
+	[self.delegate presentActionSheet:actionSheet];
+}
+
 #pragma mark -
-#pragma mark add mode
+#pragma mark add and edit modes
 
 - (void) setInAddMode:(BOOL) addMode
 {
@@ -289,6 +321,18 @@
 	{
 		if ([rowController respondsToSelector:@selector(setInAddMode:)]) {
 			[rowController setInAddMode:addMode];
+		}
+	}
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+	_editing = editing; //save
+	
+	for (id<CDLTableRowControllerProtocol> rowController in self.rowControllers)
+	{
+		if ([rowController respondsToSelector:@selector(setEditing:animated:)]) {
+			[rowController setEditing:editing animated:animated];
 		}
 	}
 }

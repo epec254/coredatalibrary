@@ -15,25 +15,22 @@
 @implementation CDLToManyRelationshipAddNewObjectTableRowController
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-
+- (void) configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *) indexPath
 {
-	UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-	
 	cell.textLabel.text = [NSString stringWithFormat:@"Add New %@", self.rowLabel];
-	return cell;
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	
-	CDLToManyRelationshipAddNewObjectEditController *fieldEditController = [[CDLToManyRelationshipAddNewObjectEditController alloc] initForPropertyList:[[NSBundle mainBundle] pathForResource:((CDLToManyRelationshipSectionController *)self.sectionController).addNewObjectPropertyListFile ofType:@"plist"] editingObject:[self.delegate managedObject] relationshipEntityName:self.relationshipEntityName relationshipKey:self.sectionController.keyForRelationship label:self.rowLabel];
+	CDLToManyRelationshipAddNewObjectEditController *fieldEditController = [[CDLToManyRelationshipAddNewObjectEditController alloc] initForPropertyList:[[NSBundle mainBundle] pathForResource:((CDLToManyRelationshipSectionController *)self.sectionController).addNewObjectPropertyListFile ofType:@"plist"] editingObject:[self.sectionController managedObject] relationshipEntityName:self.relationshipEntityName relationshipKey:((CDLToManyRelationshipSectionController *)self.sectionController).keyForRelationship label:self.rowLabel];
 	
 	
 	
-	fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.delegate; //we know the delegate of this class will be a CDLToManyOrderedRelationshipSectionController which implements this protocol
+	fieldEditController.delegate = (id<CDLFieldEditControllerDelegate>) self.sectionController; //we know the sectionController of this class will be a CDLToManyOrderedRelationshipSectionController which implements this protocol
 	
-	[self.delegate pushViewController:fieldEditController animated:YES];
+	[self.sectionController pushViewController:fieldEditController animated:YES];
 	[fieldEditController release];
 }
 @end

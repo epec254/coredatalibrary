@@ -216,7 +216,7 @@
 		return _rowInformation;
 	}
 	
-	NSDictionary *modifiedRowDictionary = [NSDictionary dictionaryWithObjectsAndKeys:self.rowLabel, @"rowLabel", self.userProvidedFullKeyPath, @"attributeKeyPath", @"CDLTableRowTypeToManyRelationship", @"rowType", self.relationshipEntityName, @"relationshipEntityName", nil];
+	NSDictionary *modifiedRowDictionary = [NSDictionary dictionaryWithObjectsAndKeys:self.userProvidedFullKeyPath, @"attributeKeyPath", @"CDLTableRowTypeToManyRelationship", @"rowType", self.relationshipEntityName, @"relationshipEntityName", self.rowLabel, @"rowLabel", nil];
 	
 	_rowInformation = [modifiedRowDictionary retain];
 	
@@ -234,7 +234,7 @@
 		return _addExistingObjectsRowController;
 	}
 	CDLToManyRelationshipAddExistingObjectsTableRowController *aAddRowController = [[CDLToManyRelationshipAddExistingObjectsTableRowController alloc] initForDictionary:self.rowInformation];
-	aAddRowController.delegate = self;
+	//aAddRowController.delegate = self;
 	aAddRowController.sectionController = self;
 
 	_addExistingObjectsRowController = aAddRowController;
@@ -252,7 +252,7 @@
 		return _addNewObjectRowController;
 	}
 	CDLToManyRelationshipAddNewObjectTableRowController *aAddRowController = [[CDLToManyRelationshipAddNewObjectTableRowController alloc] initForDictionary:self.rowInformation];
-	aAddRowController.delegate = self;
+	//aAddRowController.delegate = self;
 	aAddRowController.sectionController = self;
 	
 	_addNewObjectRowController = aAddRowController;
@@ -278,7 +278,7 @@
 		
 		id<CDLTableRowControllerProtocol> aRowController = [self _createRowControllerForRelationshipObject:[sortedObjectsAtRelationship objectAtIndex:i]];
 		
-		aRowController.delegate = self;
+		aRowController.sectionController = self;
 		
 		[theRowControllers insertObject:aRowController atIndex:i];
 			
@@ -343,6 +343,15 @@
 
 #pragma mark -
 #pragma mark row deletion
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	id<CDLTableRowControllerProtocol> rowController = [self rowControllersForRow:indexPath.row];
+	if ([rowController respondsToSelector:@selector(tableView:editingStyleForRowAtIndexPath:)]) {
+		return [rowController tableView:tableView editingStyleForRowAtIndexPath:indexPath];
+	} else {
+		return UITableViewCellEditingStyleNone;
+	}
+}
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
