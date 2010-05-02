@@ -4,7 +4,7 @@
 //
 //  
 //  Copyright 2010 Eric Peter. 
-//  Released under the GPL v3 License
+//  Released under the BSD License
 //
 //  code.google.com/p/coredatalibrary
 #import "NSArray+Set.h"
