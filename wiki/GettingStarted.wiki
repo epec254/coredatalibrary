@@ -154,6 +154,10 @@ This guide walks you through the basic steps necessary to create an application 
 		
 }
 
+- (void) setEditing:(BOOL)editing animated:(BOOL)animated
+{
+       [self setInAddMode:editing];
+}
 
 
 
