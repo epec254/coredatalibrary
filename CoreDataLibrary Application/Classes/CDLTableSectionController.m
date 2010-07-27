@@ -8,14 +8,17 @@
 //
 //  code.google.com/p/coredatalibrary
 #import "CDLToManyRelationshipSectionController.h"
+#import "CDLDetailViewController.h"
 
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+#import "CDLDetailViewController.h"
+
 #import "CDLTableSectionController.h"
 #import "CDLRelationshipTableRowController.h"
 #import "CDLToManyOrderedRelationshipSectionController.h"
-@interface CDLTableSectionController(PrivateMethods)
+@interface CDLTableSectionController(CDLTableSectionControllerPrivateMethods)
 + (CDLTableRowType) cellTypeOfRowFromDictionary:(NSDictionary *) rowDictionary;
 - (id<CDLTableRowControllerProtocol>) rowControllersForRow:(NSInteger) row;
 
@@ -26,7 +29,7 @@
 @synthesize inAddMode = _inAddMode;
 @synthesize sectionTitle = _sectionTitle;
 @synthesize rowControllers = _rowControllers;
-@synthesize delegate = _delegate;
+@synthesize detailView = _detailView;
 @synthesize editing = _editing;
 
 #pragma mark -
@@ -47,13 +50,12 @@
 #pragma mark -
 #pragma mark init
 
-+ (id<CDLTableSectionControllerProtocol>) tableSectionControllerForDictionary:(NSDictionary *) sectionInformation forDelegate:(id<CDLTableSectionControllerDelegate>) delegate
++ (CDLTableSectionController *) tableSectionControllerForDictionary:(NSDictionary *) sectionInformation forDetailView:(CDLDetailViewController *) owner
 {
 	CDLTableSectionController *newTableSectionController = nil;
 	
 	/* Verify the following:
 	 * 1) rowInformation is an NSDictionary with more than 0 objects
-	 * 2) if aSectionTitle is zero-length, replace it with nil.
 	 * 3) verify the first row dictionary is of type NSDictionary and not empty
 	 */
 	
@@ -63,11 +65,11 @@
 		[CDLUtilityMethods raiseExceptionWithName:@"rowInformation not valid" reason:@"rowInformation is not a NSArray or has 0 objects"];
 	}
 
-	// 2) if aSectionTitle is zero-length, replace it with nil.
-	NSString *aSectionTitle = [sectionInformation valueForKey:@"sectionTitle"];
-	if (![CDLUtilityMethods isLoadedStringValid:aSectionTitle]) {
-		aSectionTitle = nil;
-	}
+//	// 2) if aSectionTitle is zero-length, replace it with nil.
+//	NSString *aSectionTitle = [sectionInformation valueForKey:@"sectionTitle"];
+//	if (![CDLUtilityMethods isLoadedStringValid:aSectionTitle]) {
+//		aSectionTitle = nil;
+//	}
 	
 	// 3) verify the first row dictionary is of type NSDictionary and not empty
 	id firstRowDictionary = [rowDictionaries objectAtIndex:0];
@@ -93,7 +95,7 @@
 		
 		if ([sectionController conformsToProtocol:@protocol(CDLTableSectionControllerProtocol)]) {
 			//if here, this class can be used as a sectionController
-			newTableSectionController = [[sectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
+			newTableSectionController = [[sectionController alloc] initForDictionary:sectionInformation forDetailView:owner];
 		} else {
 			[CDLUtilityMethods raiseExceptionWithName:@"invalid class specified in customSectionControllerClass" reason:[NSString stringWithFormat:@"specified class name %@ does not conform to CDLTableSectionControllerProtocol", customSectionControllerClass]];
 		}		
@@ -106,15 +108,15 @@
 		switch (firstRowCellType) {
 			case CDLTableRowTypeToManyOrderedRelationship:
 				// 1) type CDLTableRowTypeToManyOrderedRelationship = CDLToManyOrderedRelationshipSectionController
-				newTableSectionController = [[CDLToManyOrderedRelationshipSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
+				newTableSectionController = [[CDLToManyOrderedRelationshipSectionController alloc] initForDictionary:sectionInformation forDetailView:owner];
 				break;
 			case CDLTableRowTypeToManyRelationship:
 				// 2) type of CDLTableRowTypeOrderedRelationship = CDLToManyRelationshipSectionController
-				newTableSectionController = [[CDLToManyRelationshipSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
+				newTableSectionController = [[CDLToManyRelationshipSectionController alloc] initForDictionary:sectionInformation forDetailView:owner];
 				break;
 			default:
 				//3) everything else = CDLTableSectionController
-				newTableSectionController = [[CDLTableSectionController alloc] initForRowDictionaries:rowDictionaries forSectionTitle:aSectionTitle forDelegate:delegate];
+				newTableSectionController = [[CDLTableSectionController alloc] initForDictionary:sectionInformation forDetailView:owner];
 				break;
 		}
 	}
@@ -132,11 +134,20 @@
 	return [CDLTableRowController cellTypeEnumFromString:rowCellTypeString];
 }
 
-- (id) initForRowDictionaries:(NSArray *) rowDictionaries forSectionTitle:(NSString *)sectionTitle forDelegate:(id<CDLTableSectionControllerDelegate>) delegate
+- (id) initForDictionary:(NSDictionary *) sectionInformation forDetailView:(CDLDetailViewController *)owner
 {
 	if (self = [super init]) {
-		self.sectionTitle = sectionTitle;
-		self.delegate = delegate;
+		
+		//Grab row dictionaries - known to be valid b/c checked in the class method before this init is called.
+		NSArray *rowDictionaries = [sectionInformation valueForKey:@"rowInformation"];
+		
+		//Grab sectionTitle from dictionary
+		self.sectionTitle = [sectionInformation valueForKey:@"sectionTitle"];
+		if (![CDLUtilityMethods isLoadedStringValid:self.sectionTitle]) {
+			self.sectionTitle = nil;
+		}
+		
+		self.detailView = owner;
 		
 		NSMutableArray *theRowControllers = [[NSMutableArray alloc] init];
 		
@@ -151,11 +162,8 @@
 				[ex raise];
 			}
 
-			id<CDLTableRowControllerProtocol>  aRowController = [CDLTableRowController tableRowControllerForDictionary:rowInformation forSectionController:self];;
-			
-			aRowController.sectionController = self;
-			
-			//aRowController.delegate = self;
+			id<CDLTableRowControllerProtocol> aRowController = [CDLTableRowController tableRowControllerForDictionary:rowInformation forSectionController:self];
+
 			
 			[theRowControllers insertObject:aRowController atIndex:i];
 			
@@ -210,8 +218,6 @@
 	
 	return;
 }
-
-
 
 //
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -303,17 +309,17 @@
 
 - (NSManagedObject *) managedObject
 {
-	return [self.delegate managedObjectForSectionController:self];
+	return [self.detailView managedObjectForSectionController:self];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-	[self.delegate pushViewController:viewController animated:animated];
+	[self.detailView pushViewController:viewController animated:animated];
 }
 
 - (void) presentActionSheet:(UIActionSheet *) actionSheet
 {
-	[self.delegate presentActionSheet:actionSheet];
+	[self.detailView presentActionSheet:actionSheet];
 }
 
 #pragma mark -
@@ -347,7 +353,7 @@
 #pragma mark field edit view delegates
 - (void) fieldEditController:(CDLAbstractFieldEditController *) controller didEndEditingCanceled: (BOOL) wasCancelled
 {	
-	[self.delegate reloadSectionController:self withRowAnimation:UITableViewRowAnimationFade];
+	[self.detailView reloadSectionController:self withRowAnimation:UITableViewRowAnimationFade];
 }
 
 
