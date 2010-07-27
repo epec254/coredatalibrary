@@ -25,7 +25,7 @@
 
 - (void) _buildRowControllersArray;
 
-- (CDLTableRowController *) rowControllersForRow:(NSInteger) row;
+- (id<CDLTableRowControllerProtocol>) rowControllersForRow:(NSInteger) row;
 
 @property (nonatomic, readonly) NSInteger _requiredNumberOfAttributesInKeyPath;
 
@@ -134,7 +134,7 @@
 
 #pragma mark add row
 
-- (CDLTableRowController *) addExistingObjectsRowController
+- (id<CDLTableRowControllerProtocol>) addExistingObjectsRowController
 {
 	if (_addExistingObjectsRowController != nil) {
 		return _addExistingObjectsRowController;
@@ -174,7 +174,7 @@
 
 #pragma mark row controllers
 
-- (CDLTableRowController *) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject
+- (id<CDLTableRowControllerProtocol>) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject
 {
 	return [[[CDLToManyOrderedRelationshipTableRowController alloc] initForDictionary:self.rowInformation forRelationshipObject:relationshipObject] autorelease];
 }
@@ -255,7 +255,7 @@
 {
 	NSInteger row = fromIndexPath.row;
 	//NSManagedObject *objectForRow = [self managedObjectFromRowControllerAtRow:row];
-	CDLTableRowController * controllerForRow = [[self.mutableRowControllers objectAtIndex:row] retain];
+	id<CDLTableRowControllerProtocol> controllerForRow = [[self.mutableRowControllers objectAtIndex:row] retain];
 	//update row controllers
 	[self.mutableRowControllers removeObjectAtIndex:row];
 	[self.mutableRowControllers insertObject:controllerForRow atIndex:toIndexPath.row];
@@ -321,7 +321,7 @@
 {
 	_inAddMode = addMode;
 	
-	for (CDLTableRowController * rowController in self.mutableRowControllers)
+	for (id<CDLTableRowControllerProtocol> rowController in self.mutableRowControllers)
 	{
 		if ([rowController respondsToSelector:@selector(setInAddMode:)]) {
 			[rowController setInAddMode:addMode];

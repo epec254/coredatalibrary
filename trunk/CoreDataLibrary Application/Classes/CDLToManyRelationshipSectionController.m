@@ -20,15 +20,17 @@
 
 - (void) _validateAndSetInstanceVariablesFromRowDictionaries:(NSArray *) rowDictionaries;
 
+//will set sectionController property of rowController
 - (void) _buildRowControllersArray;
 
-- (CDLTableRowController *) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject;
+//return a row controller for the given object
+- (id<CDLTableRowControllerProtocol>) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject;
 
 - (void) _discoverAndStoreRelationshipEntities;
 
 /** link to the add row controller */
-@property (nonatomic, retain, readonly) CDLTableRowController * addExistingObjectsRowController;
-@property (nonatomic, retain, readonly) CDLTableRowController * addNewObjectRowController;
+@property (nonatomic, retain, readonly) id<CDLTableRowControllerProtocol>  addExistingObjectsRowController;
+@property (nonatomic, retain, readonly) id<CDLTableRowControllerProtocol>  addNewObjectRowController;
 
 
 @property (nonatomic, readonly) NSInteger numberOfAddRows;
@@ -224,7 +226,7 @@
 }
 #pragma mark row controllers
 
-- (CDLTableRowController *) addExistingObjectsRowController
+- (id<CDLTableRowControllerProtocol>) addExistingObjectsRowController
 {
 	if (!self.showAddExistingObjects) { //don't want to show this row controller.
 		return nil;
@@ -242,7 +244,7 @@
 	return _addExistingObjectsRowController;
 }
 
-- (CDLTableRowController *) addNewObjectRowController
+- (id<CDLTableRowControllerProtocol>) addNewObjectRowController
 {
 	if (!self.showAddNewObject) { //don't want to show this row controller.
 		return nil;
@@ -276,7 +278,7 @@
 	//Create each row controller
 	for (int i = 0; i < [sortedObjectsAtRelationship count]; i++) {
 		
-		CDLTableRowController * aRowController = [self _createRowControllerForRelationshipObject:[sortedObjectsAtRelationship objectAtIndex:i]];
+		id<CDLTableRowControllerProtocol> aRowController = [self _createRowControllerForRelationshipObject:[sortedObjectsAtRelationship objectAtIndex:i]];
 		
 		aRowController.sectionController = self;
 		
@@ -303,7 +305,7 @@
 }
 
 
-- (CDLTableRowController *) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject
+- (id<CDLTableRowControllerProtocol>) _createRowControllerForRelationshipObject:(NSManagedObject *)relationshipObject
 {
 	return [[[CDLToManyRelationshipTableRowController alloc] initForDictionary:self.rowInformation forRelationshipObject:relationshipObject] autorelease];
 }
@@ -329,9 +331,9 @@
 
 #pragma mark -
 #pragma mark row controllers/table view methods
-- (CDLTableRowController *) rowControllersForRow:(NSInteger) row
+- (id<CDLTableRowControllerProtocol>) rowControllersForRow:(NSInteger) row
 {
-	return (CDLTableRowController *) [self.mutableRowControllers objectAtIndex:row];
+	return (id<CDLTableRowControllerProtocol>) [self.mutableRowControllers objectAtIndex:row];
 }
 
 
@@ -437,18 +439,19 @@
 
 #pragma mark -
 #pragma mark add mode
+//DONE IN SUPERCLASS
+//- (void) setInAddMode:(BOOL) addMode
+//{
+//	_inAddMode = addMode;
+//	
+//	for (id<CDLTableRowControllerProtocol> rowController in self.mutableRowControllers)
+//	{
+//		if ([rowController respondsToSelector:@selector(setInAddMode:)]) {
+//			[rowController setInAddMode:addMode];
+//		}
+//	}
+//}
 
-- (void) setInAddMode:(BOOL) addMode
-{
-	_inAddMode = addMode;
-	
-	for (CDLTableRowController * rowController in self.mutableRowControllers)
-	{
-		if ([rowController respondsToSelector:@selector(setInAddMode:)]) {
-			[rowController setInAddMode:addMode];
-		}
-	}
-}
 
 
 @end
