@@ -25,66 +25,21 @@ typedef enum _CDLTableRowType {
 @class CDLTableSectionController;
 @protocol CDLTableRowControllerDelegate;
 
-//@protocol CDLTableRowControllerProtocol <NSObject>
-//
-///** Initialize the RowController with the given dictionary */
-//- (id) initForDictionary:(NSDictionary *) rowInformation;
-//
-///** Provide a UITableViewCell for this row. */
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-///** Provide action if the UITableViewCell for this row is selected. */
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-///** Will be set to the section controller */
-//@property (nonatomic, assign) CDLTableSectionController *sectionController;
-//
-//@optional
-///** Default is to return tableView.rowHeight */
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-///** Default is to return indexPath if tableView.editing is true, otherwise, return nil. */
-//- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-///** Default is to return NO */
-//- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-///** Default is to return UITableViewCellEditingStyleNone */
-//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-///** Default is to return YES */
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-///** Default is to do nothing and simply return */
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-///** Default is to return NO */
-//- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
-//
-//
-//
-///** Implement if custom actions are needed to use the row controller for adding, rather than editing */
-//@property (nonatomic, assign, setter=setInAddMode) BOOL inAddMode;
-//
-//
-//@end
-
-
-@interface CDLTableRowController : NSObject  {
-@protected
-	BOOL											_inAddMode;
-@private
-	BOOL											_editing;
-	NSString										*_rowLabel; 
-	NSString										*_attributeKeyPath; 
-	CDLTableRowType									_rowType; 
-
-	CDLTableSectionController						*_sectionController;
-
-}
+@protocol CDLTableRowControllerProtocol <NSObject>
 
 /** Initialize the RowController with the given dictionary */
 - (id) initForDictionary:(NSDictionary *) rowInformation;
+
+/** section controller owning this row */
+@property (nonatomic, assign) CDLTableSectionController *sectionController;
+
+/**
+ type of cell to use
+ */
+@property (nonatomic, assign) CDLTableRowType rowType;
+
+
+// TableView methods
 
 /** Provide a UITableViewCell for this row. */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -92,18 +47,8 @@ typedef enum _CDLTableRowType {
 /** Provide action if the UITableViewCell for this row is selected. */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
-/** Will be set to the section controller */
-@property (nonatomic, assign) CDLTableSectionController *sectionController;
-
-/** is the row in edit mode? */
-@property (nonatomic, getter=isEditing) BOOL editing;
-
-/** update our editing property. */
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated;
-
-/** Implement if custom actions are needed to use the row controller for adding, rather than editing */
-@property (nonatomic, assign, setter=setInAddMode) BOOL inAddMode;
-
+@optional
+//The attribute
 
 /**
  Text describing the contents of the keypath (displayed in some styles)
@@ -123,10 +68,53 @@ typedef enum _CDLTableRowType {
 // - works with keyPaths
 @property (nonatomic, readonly) id attributeObjectValue;
 
-/**
- type of cell to use
- */
-@property (nonatomic, assign) CDLTableRowType rowType;
+/** Default is to return tableView.rowHeight */
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/** Default is to return indexPath if tableView.editing is true, otherwise, return nil. */
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/** Default is to return NO */
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/** Default is to return UITableViewCellEditingStyleNone */
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/** Default is to return YES */
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/** Default is to do nothing and simply return */
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/** Default is to return NO */
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/** Implement if custom actions are needed to use the row controller for adding, rather than editing */
+@property (nonatomic, assign, setter=setInAddMode) BOOL inAddMode;
+
+/** is the row in edit mode? */
+@property (nonatomic, getter=isEditing) BOOL editing;
+
+/** update our editing property. */
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated;
+
+@end
+
+
+@interface CDLTableRowController : NSObject <CDLTableRowControllerProtocol>  {
+@protected
+	BOOL											_inAddMode;
+@private
+	BOOL											_editing;
+	NSString										*_rowLabel; 
+	NSString										*_attributeKeyPath; 
+	CDLTableRowType									_rowType; 
+
+	CDLTableSectionController						*_sectionController;
+
+}
+
+
 
 /**
  Return the enum value of the string, throwing an exception if invalid
