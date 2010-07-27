@@ -22,6 +22,8 @@
 + (CDLTableRowType) cellTypeOfRowFromDictionary:(NSDictionary *) rowDictionary;
 - (id<CDLTableRowControllerProtocol>) rowControllersForRow:(NSInteger) row;
 
+//process the row information however needed
+- (void) _processRowDictionaries:(NSArray *) rowDictionaries;
 @end
 
 @implementation CDLTableSectionController
@@ -138,9 +140,6 @@
 {
 	if (self = [super init]) {
 		
-		//Grab row dictionaries - known to be valid b/c checked in the class method before this init is called.
-		NSArray *rowDictionaries = [sectionInformation valueForKey:@"rowInformation"];
-		
 		//Grab sectionTitle from dictionary
 		self.sectionTitle = [sectionInformation valueForKey:@"sectionTitle"];
 		if (![CDLUtilityMethods isLoadedStringValid:self.sectionTitle]) {
@@ -149,32 +148,39 @@
 		
 		self.detailView = owner;
 		
-		NSMutableArray *theRowControllers = [[NSMutableArray alloc] init];
+		//Process row dictionaries - known to be valid b/c checked in the class method before this init is called.
+		[self _processRowDictionaries:[sectionInformation valueForKey:@"rowInformation"]];
 		
-		//Create a row controller for each row
-		for (int i = 0; i < [rowDictionaries count]; i++) {
-			
-			
-			id rowInformation = [rowDictionaries objectAtIndex:i];
-			
-			if (![rowInformation isKindOfClass:[NSDictionary class]]) {
-				NSException *ex = [NSException exceptionWithName:@"Loaded row info not valid" reason:NSLocalizedString(@"Base class is not a dictionary", @"Base class is not a dictionary") userInfo:nil];
-				[ex raise];
-			}
-
-			id<CDLTableRowControllerProtocol> aRowController = [CDLTableRowController tableRowControllerForDictionary:rowInformation forSectionController:self];
-
-			
-			[theRowControllers insertObject:aRowController atIndex:i];
-			
-		}
-		
-		self.rowControllers = [NSArray arrayWithArray:theRowControllers];
-		[theRowControllers release];
 	}
 	
 	return self;
 	
+}
+
+- (void) _processRowDictionaries:(NSArray *) rowDictionaries
+{
+	NSMutableArray *theRowControllers = [[NSMutableArray alloc] init];
+	
+	//Create a row controller for each row
+	for (int i = 0; i < [rowDictionaries count]; i++) {
+		
+		
+		id rowInformation = [rowDictionaries objectAtIndex:i];
+		
+		if (![rowInformation isKindOfClass:[NSDictionary class]]) {
+			NSException *ex = [NSException exceptionWithName:@"Loaded row info not valid" reason:NSLocalizedString(@"Base class is not a dictionary", @"Base class is not a dictionary") userInfo:nil];
+			[ex raise];
+		}
+		
+		id<CDLTableRowControllerProtocol> aRowController = [CDLTableRowController tableRowControllerForDictionary:rowInformation forSectionController:self];
+		
+		
+		[theRowControllers insertObject:aRowController atIndex:i];
+		
+	}
+	
+	self.rowControllers = [NSArray arrayWithArray:theRowControllers];
+	[theRowControllers release];
 }
 
 #pragma mark -

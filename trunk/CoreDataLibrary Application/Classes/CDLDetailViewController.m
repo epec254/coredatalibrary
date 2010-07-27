@@ -48,7 +48,6 @@
 		//temporary storage of the sectionControllers
 		NSMutableArray *theSectionControllers = [[NSMutableArray alloc] init];
 		
-		
 		for (int i = 0; i < [loadedStructure count]; i++) //loop through each section 
 		{
 			NSDictionary *sectionInfo = [loadedStructure objectAtIndex:i];
@@ -59,7 +58,8 @@
 			}
 			
 			//Create the controller
-			id<CDLTableSectionControllerProtocol> aSectionController = [CDLTableSectionController tableSectionControllerForDictionary:sectionInfo forDelegate:self];
+			id<CDLTableSectionControllerProtocol> aSectionController = [CDLTableSectionController tableSectionControllerForDictionary:sectionInfo forDetailView:self];
+						
 			//Store it
 			[theSectionControllers insertObject:aSectionController atIndex:i];
 		}
