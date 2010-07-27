@@ -31,7 +31,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-initForListViewControllerStructure:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -41,20 +41,6 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1E2CEEB6116099B200B25F4D /* CDLAddViewController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLAddViewController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLAddViewController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 1014}}";
-			sepNavSelRange = "{2301, 0}";
-			sepNavVisRange = "{1987, 322}";
-			sepNavWindowFrame = "{{534, 134}, {934, 741}}";
-		};
-	};
 	1E2CEEEA11609B2800B25F4D /* CDLDetailViewController.m:9 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -63,7 +49,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942BE0115947A700E97D4E /* CDLDetailViewController.m */;
+		fileReference = 1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */;
 		functionName = "-tableView:didSelectRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -89,7 +75,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-initForRowDictionaries:forSectionTitle:forDelegate:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -107,7 +93,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-initForRowDictionaries:forSectionTitle:forDelegate:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -125,7 +111,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-rowControllers";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -143,7 +129,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */;
+		fileReference = 1EDCB3681173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m */;
 		functionName = "-initForManagedObject:withLabel:forKeyPath:forRelationshipEntity:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -161,7 +147,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */;
+		fileReference = 1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */;
 		functionName = "-tableView:cellForRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -179,7 +165,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */;
+		fileReference = 1EDCB36C1173E77D0077F121 /* CDLTextFieldEditController.m */;
 		functionName = "-updateObjectWithValues";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -197,7 +183,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */;
+		fileReference = 1EDCB36B1173E77D0077F121 /* CDLAbstractFieldEditController.m */;
 		functionName = "-viewWillAppear";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -215,7 +201,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E2CEEB6116099B200B25F4D /* CDLAddViewController.m */;
+		fileReference = 1EDCB36E1173E77D0077F121 /* CDLAddViewController.m */;
 		functionName = "-validateAddAndPop";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -233,7 +219,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */;
+		fileReference = 1EDCB36B1173E77D0077F121 /* CDLAbstractFieldEditController.m */;
 		functionName = "-validateAndPop";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -251,7 +237,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */;
+		fileReference = 1EDCB36C1173E77D0077F121 /* CDLTextFieldEditController.m */;
 		functionName = "-attributeValue";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -269,7 +255,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */;
+		fileReference = 1EDCB36C1173E77D0077F121 /* CDLTextFieldEditController.m */;
 		functionName = "-updateObjectWithValues";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -287,7 +273,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-calculateLabelHeightForMultiLineString:ofFont:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -297,20 +283,6 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1E36EA62116055D600EF4D70 /* CDLSingleLineTableRowController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLSingleLineTableRowController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLSingleLineTableRowController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {557, 2730}}";
-			sepNavSelRange = "{828, 0}";
-			sepNavVisRange = "{0, 1503}";
-			sepNavWindowFrame = "{{46, 69}, {616, 809}}";
-		};
-	};
 	1E36EB0711605FEF00EF4D70 /* CDLTableRowController.m:56 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -319,7 +291,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "+tableRowControllerForDictionary:forDelegate:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -337,7 +309,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E36EA62116055D600EF4D70 /* CDLSingleLineTableRowController.m */;
+		fileReference = 1EDCB3711173E77D0077F121 /* CDLSingleLineTableRowController.m */;
 		functionName = "-tableView:didSelectRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -355,7 +327,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */;
+		fileReference = 1EDCB3691173E77D0077F121 /* CDLToOneRelationshipEditController.m */;
 		functionName = "-initForManagedObject:withLabel:forKeyPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -373,7 +345,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */;
+		fileReference = 1EDCB3691173E77D0077F121 /* CDLToOneRelationshipEditController.m */;
 		functionName = "-viewWillAppear:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -396,7 +368,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */;
+		fileReference = 1EDCB3681173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m */;
 		functionName = "-initForManagedObject:withLabel:forKeyPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -414,7 +386,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */;
+		fileReference = 1EDCB3681173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m */;
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 23;
@@ -431,7 +403,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */;
+		fileReference = 1EDCB3691173E77D0077F121 /* CDLToOneRelationshipEditController.m */;
 		functionName = "-viewWillAppear:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -449,7 +421,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */;
+		fileReference = 1EDCB3681173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m */;
 		functionName = "-tableView:didSelectRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -612,20 +584,6 @@
 			sepNavWindowFrame = "{{695, 77}, {740, 790}}";
 		};
 	};
-	1E4446631155839900E4DC6C /* CDLRootViewController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLRootViewController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLRootViewController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {966, 8333}}";
-			sepNavSelRange = "{7819, 87}";
-			sepNavVisRange = "{7026, 1971}";
-			sepNavWindowFrame = "{{111, -81}, {1025, 735}}";
-		};
-	};
 	1E44481A1155E14500E4DC6C /* WidgetListView.plist */ = {
 		uiCtxt = {
 			sepNavWindowFrame = "{{186, 133}, {573, 703}}";
@@ -655,7 +613,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-initForListViewControllerStructure:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -673,7 +631,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-sectionIndexTitlesForTableView:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -691,7 +649,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-reloadSectionIndexTitlesForced:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -709,7 +667,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-sectionIndexTitlesForTableView:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -727,7 +685,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-reloadSectionIndexTitlesForced:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -745,7 +703,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-tableView:commitEditingStyle:forRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -763,7 +721,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-controllerWillChangeContent:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -781,7 +739,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -799,7 +757,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -817,7 +775,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-controllerDidChangeContent:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -871,7 +829,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-tableView:sectionForSectionIndexTitle:atIndex:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -889,7 +847,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942BE0115947A700E97D4E /* CDLDetailViewController.m */;
+		fileReference = 1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */;
 		functionName = "-managedObject";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -907,7 +865,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-initForDictionary:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -925,7 +883,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-tableView:cellForRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -943,7 +901,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-initForDictionary:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -961,7 +919,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-initForDictionary:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -981,7 +939,7 @@
 		currentMultipleMatches = (
 		);
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 31;
@@ -998,7 +956,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942BE0115947A700E97D4E /* CDLDetailViewController.m */;
+		fileReference = 1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */;
 		functionName = "-initForPropertyList:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1016,7 +974,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-initForDictionary:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1034,7 +992,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */;
+		fileReference = 1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */;
 		functionName = "-initForDictionary:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1052,7 +1010,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-tableView:cellForRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1070,7 +1028,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-tableView:cellForRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1088,7 +1046,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-tableView:heightForRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1098,48 +1056,6 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1E6F06B1115AAAAA00C260D9 /* CDLRelationshipTableRowController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLRelationshipTableRowController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLRelationshipTableRowController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {776, 1820}}";
-			sepNavSelRange = "{683, 0}";
-			sepNavVisRange = "{0, 1343}";
-			sepNavWindowFrame = "{{38, 69}, {835, 783}}";
-		};
-	};
-	1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLToManyOrderedRelationshipSectionController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyOrderedRelationshipSectionController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {696, 4589}}";
-			sepNavSelRange = "{1219, 15}";
-			sepNavVisRange = "{5254, 211}";
-			sepNavWindowFrame = "{{651, 140}, {787, 738}}";
-		};
-	};
-	1E6F0A14115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLToManyOrderedRelationshipTableRowController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyOrderedRelationshipTableRowController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {940, 1261}}";
-			sepNavSelRange = "{2334, 0}";
-			sepNavVisRange = "{1126, 1639}";
-			sepNavWindowFrame = "{{69, 77}, {999, 776}}";
-		};
-	};
 	1E6F0A7E115C08DC00C260D9 /* CDLToManyOrderedRelationshipSectionController.m:219 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -1148,7 +1064,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-tableView:commitEditingStyle:forRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1166,7 +1082,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-setEditing:animated:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1184,7 +1100,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-setEditing:animated:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1202,7 +1118,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942C5311594E5400E97D4E /* CDLTableRowController.m */;
+		fileReference = 1EDCB3781173E77D0077F121 /* CDLTableRowController.m */;
 		functionName = "-tableView:cellForRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1220,7 +1136,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */;
+		fileReference = 1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */;
 		functionName = "-setEditing:animated:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1238,7 +1154,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-initForRowDictionaries:forSectionTitle:forDelegate:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1256,7 +1172,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-initForRowDictionaries:forSectionTitle:forDelegate:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1274,7 +1190,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-tableView:didSelectRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1292,7 +1208,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F0A14115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m */;
+		fileReference = 1EDCB3741173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.m */;
 		functionName = "-configureCell:forRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1310,7 +1226,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */;
+		fileReference = 1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */;
 		functionName = "-tableView:shouldIndentWhileEditingRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1328,7 +1244,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F0A14115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m */;
+		fileReference = 1EDCB3741173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.m */;
 		functionName = "-tableView:didSelectRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1346,7 +1262,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F0A14115BF7EF00C260D9 /* CDLToManyOrderedRelationshipTableRowController.m */;
+		fileReference = 1EDCB3741173E77D0077F121 /* CDLToManyOrderedRelationshipTableRowController.m */;
 		functionName = "-tableView:shouldIndentWhileEditingRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1364,7 +1280,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-tableView:shouldIndentWhileEditingRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1387,7 +1303,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-tableView:numberOfRowsInSection:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1405,7 +1321,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */;
+		fileReference = 1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */;
 		functionName = "-tableView:numberOfRowsInSection:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1423,7 +1339,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942BE0115947A700E97D4E /* CDLDetailViewController.m */;
+		fileReference = 1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */;
 		functionName = "-tableView:numberOfRowsInSection:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1441,7 +1357,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F06B1115AAAAA00C260D9 /* CDLRelationshipTableRowController.m */;
+		fileReference = 1EDCB3761173E77D0077F121 /* CDLRelationshipTableRowController.m */;
 		functionName = "-keyForRelationshipDisplayProperty";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1459,7 +1375,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-tableView:commitEditingStyle:forRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1477,7 +1393,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-tableView:commitEditingStyle:forRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1495,7 +1411,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-tableView:moveRowAtIndexPath:toIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1513,7 +1429,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */;
+		fileReference = 1EDCB36C1173E77D0077F121 /* CDLTextFieldEditController.m */;
 		functionName = "-initForManagedObject:withTitle:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1531,7 +1447,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */;
+		fileReference = 1EDCB3771173E77D0077F121 /* CDLTableSectionController.m */;
 		functionName = "-tableView:willSelectRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1549,7 +1465,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */;
+		fileReference = 1EDCB36B1173E77D0077F121 /* CDLAbstractFieldEditController.m */;
 		functionName = "-viewDidLoad";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1567,7 +1483,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942BE0115947A700E97D4E /* CDLDetailViewController.m */;
+		fileReference = 1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */;
 		functionName = "-pushViewController:animated:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1585,7 +1501,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-tableView:sectionForSectionIndexTitle:atIndex:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1598,104 +1514,6 @@
 	1E942AC01158110F00E97D4E /* DETAIL_VIEW_TEMPLATE.plist */ = {
 		uiCtxt = {
 			sepNavWindowFrame = "{{762, 116}, {560, 713}}";
-		};
-	};
-	1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLAbstractFieldEditController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLAbstractFieldEditController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {855, 2314}}";
-			sepNavSelRange = "{825, 0}";
-			sepNavVisRange = "{1536, 1874}";
-			sepNavWindowFrame = "{{78, 87}, {914, 791}}";
-		};
-	};
-	1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLToOneRelationshipEditController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToOneRelationshipEditController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {730, 2899}}";
-			sepNavSelRange = "{998, 0}";
-			sepNavVisRange = "{0, 1546}";
-			sepNavWindowFrame = "{{51, 69}, {789, 794}}";
-		};
-	};
-	1E942AE811593A4900E97D4E /* CDLTextFieldEditController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLTextFieldEditController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLTextFieldEditController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {606, 1976}}";
-			sepNavSelRange = "{307, 12}";
-			sepNavVisRange = "{0, 1137}";
-			sepNavWindowFrame = "{{689, 60}, {665, 795}}";
-		};
-	};
-	1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLToManyOrderedRelationshipEditController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyOrderedRelationshipEditController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {681, 1521}}";
-			sepNavSelRange = "{806, 0}";
-			sepNavVisRange = "{0, 1436}";
-			sepNavWindowFrame = "{{40, 72}, {740, 803}}";
-		};
-	};
-	1E942BE0115947A700E97D4E /* CDLDetailViewController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLDetailViewController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLDetailViewController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {835, 2964}}";
-			sepNavSelRange = "{600, 0}";
-			sepNavVisRange = "{0, 1365}";
-			sepNavWindowFrame = "{{582, 89}, {894, 789}}";
-		};
-	};
-	1E942C5311594E5400E97D4E /* CDLTableRowController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLTableRowController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLTableRowController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1157, 2665}}";
-			sepNavSelRange = "{63, 27}";
-			sepNavVisRange = "{0, 424}";
-			sepNavWindowFrame = "{{214, 83}, {810, 790}}";
-		};
-	};
-	1E942D7E1159BB2900E97D4E /* CDLTableSectionController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLTableSectionController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLTableSectionController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {725, 4121}}";
-			sepNavSelRange = "{1128, 0}";
-			sepNavVisRange = "{225, 1626}";
-			sepNavWindowFrame = "{{575, 109}, {784, 769}}";
 		};
 	};
 	1E942E5A1159C78B00E97D4E /* WidgetDetailView.plist */ = {
@@ -1719,20 +1537,6 @@
 		state = 1;
 		symbolName = objc_exception_throw;
 	};
-	1ED3F2DF116A538700E08205 /* CDLToManyRelationshipSectionController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLToManyRelationshipSectionController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyRelationshipSectionController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {696, 5694}}";
-			sepNavSelRange = "{14368, 0}";
-			sepNavVisRange = "{10016, 318}";
-			sepNavWindowFrame = "{{708, 91}, {833, 743}}";
-		};
-	};
 	1ED3F41D116ACD8D00E08205 /* CDLToManyOrderedRelationshipSectionController.m:136 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -1741,7 +1545,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-addRowController";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1759,7 +1563,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-rowInformation";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1777,7 +1581,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E6F092B115B0A2500C260D9 /* CDLToManyOrderedRelationshipSectionController.m */;
+		fileReference = 1EDCB3791173E77D0077F121 /* CDLToManyOrderedRelationshipSectionController.m */;
 		functionName = "-_createRowControllerForRelationshipObject:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1795,7 +1599,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942BE0115947A700E97D4E /* CDLDetailViewController.m */;
+		fileReference = 1EDCB3701173E77D0077F121 /* CDLDetailViewController.m */;
 		functionName = "-dealloc";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1818,7 +1622,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-initForListViewControllerStructure:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1841,7 +1645,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1ED3F2DF116A538700E08205 /* CDLToManyRelationshipSectionController.m */;
+		fileReference = 1EDCB3671173E77D0077F121 /* CDLToManyRelationshipSectionController.m */;
 		functionName = "-rowInformation";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1859,7 +1663,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 454;
@@ -1875,7 +1679,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-viewDidLoad";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1908,7 +1712,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AEA11593A4900E97D4E /* CDLToManyOrderedRelationshipEditController.m */;
+		fileReference = 1EDCB3681173E77D0077F121 /* CDLToManyOrderedRelationshipEditController.m */;
 		functionName = "-initForManagedObject:withLabel:forKeyPath:forChoicesEntity:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1926,7 +1730,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942AE611593A4900E97D4E /* CDLToOneRelationshipEditController.m */;
+		fileReference = 1EDCB3691173E77D0077F121 /* CDLToOneRelationshipEditController.m */;
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 24;
@@ -1934,20 +1738,6 @@
 		modificationTime = 292382620.182191;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
-	};
-	1EDCAAE2116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLToManyRelationshipAddNewObjectEditController.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLToManyRelationshipAddNewObjectEditController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1083, 1612}}";
-			sepNavSelRange = "{4837, 0}";
-			sepNavVisRange = "{3185, 770}";
-			sepNavWindowFrame = "{{487, 135}, {833, 743}}";
-		};
 	};
 	1EDCAC0F116D63CF0077F121 /* WidgetAddView-FromType.plist */ = {
 		uiCtxt = {
@@ -1962,7 +1752,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1EDCAAE2116D4DBA0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */;
+		fileReference = 1EDCB3631173E77D0077F121 /* CDLToManyRelationshipAddNewObjectEditController.m */;
 		functionName = "-addNewRelatedObject";
 		hitCount = 1;
 		ignoreCount = 0;
@@ -1980,7 +1770,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-initForListViewControllerStructure:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -1998,7 +1788,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-initForListViewControllerStructure:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -2016,7 +1806,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E4446631155839900E4DC6C /* CDLRootViewController.m */;
+		fileReference = 1EDCB36F1173E77D0077F121 /* CDLRootViewController.m */;
 		functionName = "-viewDidLoad";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -2026,20 +1816,6 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
-	1EFE050C11692AAB00E03518 /* CDLUtilityMethods.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CDLUtilityMethods.m;
-		path = "/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataSampleFor436/Classes/CDLUtilityMethods.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {484, 1144}}";
-			sepNavSelRange = "{2053, 0}";
-			sepNavVisRange = "{1493, 560}";
-			sepNavWindowFrame = "{{0, 126}, {789, 743}}";
-		};
-	};
 	1EFE054511692F6D00E03518 /* CDLUtilityMethods.m:37 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -2048,7 +1824,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1EFE050C11692AAB00E03518 /* CDLUtilityMethods.m */;
+		fileReference = 1EDCB3461173E77D0077F121 /* CDLUtilityMethods.m */;
 		functionName = "+isLoadedDictionaryValid:";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -2066,7 +1842,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E942ADB11593A4100E97D4E /* CDLAbstractFieldEditController.m */;
+		fileReference = 1EDCB36B1173E77D0077F121 /* CDLAbstractFieldEditController.m */;
 		functionName = "-validateSaveAndPop";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -2084,7 +1860,7 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 1E36EA62116055D600EF4D70 /* CDLSingleLineTableRowController.m */;
+		fileReference = 1EDCB3711173E77D0077F121 /* CDLSingleLineTableRowController.m */;
 		functionName = "-dateFormatter";
 		hitCount = 0;
 		ignoreCount = 0;
@@ -2264,7 +2040,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 1E444512115573F400E4DC6C /* CoreDataSampleFor436 */;
-		activeSDKPreference = iphonesimulator3.1.3;
+		activeSDKPreference = iphoneos4.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* CoreDataSampleFor436 */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* CoreDataSampleFor436 */,
@@ -2415,8 +2191,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 292808472;
-			PBXWorkspaceStateSaveDate = 292808472;
+			PBXPerProjectTemplateStateSaveDate = 301949871;
+			PBXWorkspaceStateSaveDate = 301949871;
 		};
 		sourceControlManager = 1E4445A91155740600E4DC6C /* Source Control */;
 		userBuildSettings = {
