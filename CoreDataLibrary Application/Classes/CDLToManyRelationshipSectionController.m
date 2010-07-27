@@ -27,8 +27,8 @@
 - (void) _discoverAndStoreRelationshipEntities;
 
 /** link to the add row controller */
-@property (nonatomic, readonly) CDLTableRowController * addExistingObjectsRowController;
-@property (nonatomic, readonly) CDLTableRowController * addNewObjectRowController;
+@property (nonatomic, retain, readonly) CDLTableRowController * addExistingObjectsRowController;
+@property (nonatomic, retain, readonly) CDLTableRowController * addNewObjectRowController;
 
 
 @property (nonatomic, readonly) NSInteger numberOfAddRows;
@@ -233,7 +233,7 @@
 	if (_addExistingObjectsRowController != nil) {
 		return _addExistingObjectsRowController;
 	}
-	CDLToManyRelationshipAddExistingObjectsTableRowController *aAddRowController = [[CDLToManyRelationshipAddExistingObjectsTableRowController alloc] initForDictionary:self.rowInformation];
+	CDLToManyRelationshipAddExistingObjectsTableRowController *aAddRowController = [[CDLToManyRelationshipAddExistingObjectsTableRowController alloc] initForDictionary:self.rowInformation]; //not a memory leak, we are allocating this object on-demand
 	//aAddRowController.delegate = self;
 	aAddRowController.sectionController = self;
 
@@ -251,7 +251,7 @@
 	if (_addNewObjectRowController != nil) {
 		return _addNewObjectRowController;
 	}
-	CDLToManyRelationshipAddNewObjectTableRowController *aAddRowController = [[CDLToManyRelationshipAddNewObjectTableRowController alloc] initForDictionary:self.rowInformation];
+	CDLToManyRelationshipAddNewObjectTableRowController *aAddRowController = [[CDLToManyRelationshipAddNewObjectTableRowController alloc] initForDictionary:self.rowInformation]; //not a memory leak, we are allocating this object on-demand
 	//aAddRowController.delegate = self;
 	aAddRowController.sectionController = self;
 	
