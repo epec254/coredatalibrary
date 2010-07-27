@@ -20,12 +20,8 @@
 @interface CDLTableRowController(PrivateMethods)
 
 + (NSDateFormatterStyle) dateFormatterStyleFromString:(NSString *)styleString;
-//@property (nonatomic, readonly) BOOL isNumberProperty; //Does the attributeKeyPath represent a NSNumber
-- (void) booleanSwitchChanged:(id) sender;
 
 - (void) _internalInitForDictionary:(NSDictionary *) rowInformation;
-
-//- (NSString *) stringValueForKeyPath:(NSString *) keyPath inObject:(id) object;
 
 @end
 
@@ -56,9 +52,9 @@
 }
 
 
-+ (CDLTableRowController *) tableRowControllerForDictionary:(NSDictionary *) rowInformation forSectionController:(CDLTableSectionController *) sectionController
++ (id<CDLTableRowControllerProtocol>) tableRowControllerForDictionary:(NSDictionary *) rowInformation forSectionController:(CDLTableSectionController *) sectionController
 {
-	CDLTableRowController * newRowController = nil;
+	id<CDLTableRowControllerProtocol> newRowController = nil;
 	
 	CDLTableRowType rowType = [CDLTableRowController cellTypeEnumFromString:[rowInformation valueForKey:@"rowType"]];
 	NSString *customClassName = [rowInformation valueForKey:@"rowCustomControllerClass"];

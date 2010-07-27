@@ -23,50 +23,34 @@ typedef enum _CDLTableRowType {
 } CDLTableRowType;
 
 @class CDLTableSectionController;
-@protocol CDLTableRowControllerDelegate;
 
+/** Implement this protocol if you wish to create a custom row controller */
 @protocol CDLTableRowControllerProtocol <NSObject>
 
-/** Initialize the RowController with the given dictionary */
+/** Initialize the RowController with the given dictionary, called upon creation of the row controller.  Process/save any information you need from the rowInformation dictionary. */
 - (id) initForDictionary:(NSDictionary *) rowInformation;
 
-/** section controller owning this row */
+/** section controller owning this row, weak reference, set upon init by the section controller */
 @property (nonatomic, assign) CDLTableSectionController *sectionController;
 
-/**
- type of cell to use
- */
-@property (nonatomic, assign) CDLTableRowType rowType;
-
-
-// TableView methods
+// TableView methods, required
 
 /** Provide a UITableViewCell for this row. */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
-/** Provide action if the UITableViewCell for this row is selected. */
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-
 @optional
-//The attribute
 
-/**
- Text describing the contents of the keypath (displayed in some styles)
- */
-@property (nonatomic, copy) NSString *rowLabel;
+/** Implement if custom actions are needed to use the row controller for adding, rather than editing, set by the section controller  */
+@property (nonatomic, assign, setter=setInAddMode) BOOL inAddMode;
 
-/**
- The KVC-compliant keypath of a NSManagedObject property (displayed)
- */
-@property (nonatomic, copy) NSString *attributeKeyPath;
+/** update our editing property, done by the section controller.  Implement this method and store the result if you need access to this information. */
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated;
 
-/**
- Asks the delegate for the string value of the attributeKeyPath - works with keyPaths
- */
-@property (nonatomic, readonly) NSString *attributeStringValue;
 
-// - works with keyPaths
-@property (nonatomic, readonly) id attributeObjectValue;
+//Optional table view methods, generally default to the uitableView default response if not implemented here or in section controller.
+
+/** Provide action if the UITableViewCell for this row is selected, default is to do nothing */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /** Default is to return tableView.rowHeight */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -89,14 +73,6 @@ typedef enum _CDLTableRowType {
 /** Default is to return NO */
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
 
-/** Implement if custom actions are needed to use the row controller for adding, rather than editing */
-@property (nonatomic, assign, setter=setInAddMode) BOOL inAddMode;
-
-/** is the row in edit mode? */
-@property (nonatomic, getter=isEditing) BOOL editing;
-
-/** update our editing property. */
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated;
 
 @end
 
@@ -114,7 +90,32 @@ typedef enum _CDLTableRowType {
 
 }
 
+/**
+ type of cell to use
+ */
+@property (nonatomic, assign) CDLTableRowType rowType;
 
+/**
+ Text describing the contents of the keypath (displayed in some styles)
+ */
+@property (nonatomic, copy) NSString *rowLabel;
+
+/**
+ The KVC-compliant keypath of a NSManagedObject property (displayed)
+ */
+@property (nonatomic, copy) NSString *attributeKeyPath;
+
+/**
+ Asks the delegate for the string value of the attributeKeyPath - works with keyPaths
+ */
+@property (nonatomic, readonly) NSString *attributeStringValue;
+
+// - works with keyPaths
+@property (nonatomic, readonly) id attributeObjectValue;
+
+
+/** is the row in edit mode? */
+@property (nonatomic, getter=isEditing) BOOL editing;
 
 /**
  Return the enum value of the string, throwing an exception if invalid
@@ -125,9 +126,7 @@ typedef enum _CDLTableRowType {
 /**
  Return a TableRowController for the given dictionary
  */
-+ (CDLTableRowController *) tableRowControllerForDictionary:(NSDictionary *) rowInformation forSectionController:(CDLTableSectionController *) sectionController;
-
-
++ (id<CDLTableRowControllerProtocol>) tableRowControllerForDictionary:(NSDictionary *) rowInformation forSectionController:(CDLTableSectionController *) sectionController;
 
 @end
 
