@@ -230,6 +230,8 @@
 					<key>Tabs</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBottomSmartGroupGIDs</key>
@@ -274,14 +276,15 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>4</integer>
+											<integer>17</integer>
+											<integer>16</integer>
 											<integer>2</integer>
 											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 67}, {498, 307}}</string>
+									<string>{{0, 0}, {498, 307}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -303,6 +306,8 @@
 									<string>WarningsColumn</string>
 									<real>43</real>
 								</array>
+								<key>RubberWindowFrame</key>
+								<string>861 474 515 393 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXSmartGroupTreeModule</string>
@@ -364,8 +369,6 @@
 							<string>PBXSmartGroupTreeModule</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBottomSmartGroupGIDs</key>
@@ -421,8 +424,6 @@
 									<string>MainColumn</string>
 									<real>498</real>
 								</array>
-								<key>RubberWindowFrame</key>
-								<string>924 446 515 393 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXSmartGroupTreeModule</string>
@@ -485,7 +486,7 @@
 		<string>/Users/epeter/Dropbox/iPhone Projects/436 core data/trunk/CoreDataLibrary Application/___PROJECTNAME___.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>924 446 515 393 0 0 1440 878 </string>
+	<string>861 474 515 393 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -660,6 +661,8 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
