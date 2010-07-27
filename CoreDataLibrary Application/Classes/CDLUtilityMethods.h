@@ -10,7 +10,6 @@
 
 
 
-
 @interface CDLUtilityMethods : NSObject 
 
 + (BOOL) isLoadedStringValid:(NSString *) loadedString;
@@ -20,4 +19,5 @@
 + (NSString *) stringValueForKeyPath:(NSString *) keyPath inObject:(id) object;
 + (NSString *) stringValueForKeyPath:(NSString *) keyPath inObject:(id) object withDateFormatter:(NSDateFormatter *) dateFormatter;
 + (void) raiseExceptionWithName:(NSString *) name reason:(NSString *) reason;
+
 @end

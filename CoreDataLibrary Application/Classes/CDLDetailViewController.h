@@ -10,13 +10,34 @@
 
 #import "CDLTableSectionController.h"
 
-@interface CDLDetailViewController : UITableViewController <CDLTableSectionControllerDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface CDLDetailViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
 
 @private
 	NSManagedObject									*_managedObject;
 	NSArray											*_sectionControllers;
     
 }
+
+#pragma mark -
+#pragma mark old sectioncontroller delegate methods
+
+- (NSManagedObject *) managedObjectForSectionController:(CDLTableSectionController *)sectionController;
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+
+- (void)reloadSectionController:(CDLTableSectionController *) sectionController withRowAnimation:(UITableViewRowAnimation) rowAnimation;
+
+@property (nonatomic, readonly) UITableView *theTableView;
+
+/** return the section of this section controller */
+- (NSInteger)sectionOfSectionController:(id<CDLTableSectionControllerProtocol>) sectionController;
+
+/** present the given UIActionSheet.  Presents in tabbar controller if present, otherwise in view */
+- (void) presentActionSheet:(UIActionSheet *) actionSheet;
+
+#pragma mark -
+#pragma mark end
+
 
 /**
  NSManagedObject this detailViewController is handling.

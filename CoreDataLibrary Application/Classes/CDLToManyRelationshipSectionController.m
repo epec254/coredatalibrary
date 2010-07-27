@@ -7,6 +7,8 @@
 //  Released under the GPL v3 License
 //
 //  code.google.com/p/coredatalibrary
+
+#import "CDLDetailViewController.h"
 #import "NSArray+Set.h"
 #import "CDLToManyRelationshipTableRowController.h"
 #import "CDLToManyRelationshipAddExistingObjectsTableRowController.h"
@@ -81,36 +83,19 @@
 }
 
 #pragma mark -
-#pragma mark init method
+#pragma mark init
 
-- (id) initForRowDictionaries:(NSArray *) rowDictionaries forSectionTitle:(NSString *)sectionTitle forDelegate:(id<CDLTableSectionControllerDelegate>) delegate 
+- (void) _processRowDictionaries:(NSArray *) rowDictionaries
 {
-	if (self = [super init]) {
-		
-		/* At this point we know:
-		 * 1) rowType is CDLTableRowTypeToManyRelationship
-		 * 2) there is at least one element in rowDictionaries
-		 * 3) the first element of rowDictionaries is valid.
-		 * 4) sectionTitle is nil or has a non-zero length string
-		 */
-		
-		self.sectionTitle = sectionTitle;
-		self.delegate = delegate;
-		
-		/* Now we verify our input data */
-		
-		[self _validateAndSetInstanceVariablesFromRowDictionaries:rowDictionaries];
-		
-		[self _discoverAndStoreRelationshipEntities];
-		
-		//At this point, everything is valid or an exception was thrown.
-		
-		//Build the row controllers
-		[self _buildRowControllersArray];
-		
-	}
+	[self _validateAndSetInstanceVariablesFromRowDictionaries:rowDictionaries];
 	
-	return self;
+	[self _discoverAndStoreRelationshipEntities];
+	
+	//At this point, everything is valid or an exception was thrown.
+	
+	//Build the row controllers
+	[self _buildRowControllersArray];
+	
 }
 
 #pragma mark -
@@ -120,7 +105,7 @@
 
 - (void) _discoverAndStoreRelationshipEntities
 {
-	NSManagedObject *theObject = [self.delegate managedObjectForSectionController:self];
+	NSManagedObject *theObject = [self.detailView managedObjectForSectionController:self];
 	
 	NSEntityDescription *theDescription = [theObject entity];
 	
@@ -266,8 +251,9 @@
 
 - (void) _buildRowControllersArray
 {
+
 	//Create the sorted set of relationship objects
-	NSManagedObject *theManagedObject = [self.delegate managedObjectForSectionController:self];
+	NSManagedObject *theManagedObject = [self.detailView managedObjectForSectionController:self];
 	NSSet *unsortedObjectsAtRelationship = [theManagedObject valueForKey:self.keyForRelationship];
 	
 	NSArray *sortedObjectsAtRelationship = [NSArray arrayByOrderingSet:unsortedObjectsAtRelationship byKey:self.sortKeyName ascending:YES];
@@ -388,12 +374,12 @@
 		[self.mutableRowControllers removeObjectAtIndex:row];
 		
 		//remove from the Managed Object
-		[[self.delegate managedObjectForSectionController:self] performSelector:removeFunction withObject:objectForRow];
+		[[self.detailView managedObjectForSectionController:self] performSelector:removeFunction withObject:objectForRow];
 		
 
 		
 		//Update tableview	
-		[self.delegate reloadSectionController:self withRowAnimation:UITableViewRowAnimationNone];
+		[self.detailView reloadSectionController:self withRowAnimation:UITableViewRowAnimationNone];
 
 		
 		if (!self.inAddMode) {
@@ -434,7 +420,7 @@
 {
 	[self _buildRowControllersArray];
 	
-	[self.delegate reloadSectionController:self withRowAnimation:UITableViewRowAnimationFade];
+	[self.detailView reloadSectionController:self withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark -

@@ -85,10 +85,11 @@
 		default:
 			break;
 	}
-	//newRowController.delegate = delegate;
+
 	if ([newRowController respondsToSelector:@selector(setSectionController:)]) {
 		newRowController.sectionController = sectionController;
 	}
+	
 	return newRowController;
 }
 
@@ -173,11 +174,12 @@
 	return nil;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	NSException *ex = [NSException exceptionWithName:@"Calling abstract method of CDLTableRowController" reason:NSLocalizedString(@"Create subclass.", @"Create subclass.") userInfo:nil];
-	[ex raise];
-}
+//NO LONGER REQUIRED
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	NSException *ex = [NSException exceptionWithName:@"Calling abstract method of CDLTableRowController" reason:NSLocalizedString(@"Create subclass.", @"Create subclass.") userInfo:nil];
+//	[ex raise];
+//}
 
 
 #pragma mark optional protocol methods

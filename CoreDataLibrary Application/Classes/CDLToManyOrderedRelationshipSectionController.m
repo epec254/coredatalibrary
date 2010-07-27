@@ -8,7 +8,7 @@
 //
 //  code.google.com/p/coredatalibrary
 
-
+#import "CDLDetailViewController.h"
 #import "CDLToManyOrderedRelationshipSectionController.h"
 #import "CDLToManyOrderedRelationshipAddTableRowController.h"
 #import "CDLToManyOrderedRelationshipTableRowController.h"
@@ -18,7 +18,8 @@
 #import "NSManagedObject+TypeOfProperty.h"
 
 @interface CDLToManyOrderedRelationshipSectionController(PrivateMethods)
-- (id) initForRowDictionaries:(NSArray *) rowDictionaries forSectionTitle:(NSString *)sectionTitle forDelegate:(id<CDLTableSectionControllerDelegate>) delegate;
+//- (id) initForRowDictionaries:(NSArray *) rowDictionaries forSectionTitle:(NSString *)sectionTitle forDetailView:(CDLDetailViewController *) owner;
+- (id) initForDictionary:(NSDictionary *) sectionInformation forDetailView:(CDLDetailViewController *)owner;
 
 - (NSManagedObject *) managedObjectFromRowControllerAtRow:(NSInteger) row;
 - (void) _validateAndSetInstanceVariablesFromRowDictionaries:(NSArray *) rowDictionaries;
@@ -55,7 +56,7 @@
 
 - (void) _discoverAndStoreRelationshipEntities
 {
-	NSManagedObject *theObject = [self.delegate managedObjectForSectionController:self];
+	NSManagedObject *theObject = [self.detailView managedObjectForSectionController:self];
 	
 	//1) should be toMany and cascade delete
 	NSRelationshipDescription *theObjectToIntermediateObjectRelationship = nil;
@@ -200,7 +201,7 @@
 		[self.mutableRowControllers removeObjectAtIndex:row];
 		
 		//remove from the Managed Object
-		[[self.delegate managedObjectForSectionController:self] performSelector:removeFunction withObject:objectForRow];
+		[[self.detailView managedObjectForSectionController:self] performSelector:removeFunction withObject:objectForRow];
 		
 		//Remove from the context
 		//cascade delete takes care of this.
@@ -311,7 +312,7 @@
 	
 	[self _buildRowControllersArray];
 	
-	[self.delegate reloadSectionController:self withRowAnimation:UITableViewRowAnimationFade];
+	[self.detailView reloadSectionController:self withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark -
