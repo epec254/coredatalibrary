@@ -9,7 +9,7 @@ Core Data Library is an XCode template that helps you quickly create a tableview
 3. Define the views through a set of Property List (plist) files.
 4. Customize as needed.
 
-The template will give you a customizable Plain-Style TableView? that displays all entities of a given type. Each row of this table, upon selection, will display a customizable Grouped-Style TableView? for the object at the row. Upon selecting a row, you will be presented with a view that allows you to make changes to that value.
+The template will give you a customizable Plain-Style TableView that displays all entities of a given type. Each row of this table, upon selection, will display a customizable Grouped-Style TableView for the object at the row. Upon selecting a row, you will be presented with a view that allows you to make changes to that value.
 
 * CoreDataLibrary was developed with XCode 3.2.1 and tested on iPhone OS 3.1.3.
 * We welcome (and encourage) bug reports, feedback, comments, complaints, etc. You can submit through the issues tracker, as well as viewing existing bug/enhancement requests. I still consider this code (and the accompanying documentation) to be beta quality, so any feedback would be awesome.
@@ -31,14 +31,14 @@ Additionally, the how to guides below walk you through several common configurat
 
 ## Library Overview
 
-CoreDataLibrary? provides you "for free" the following features:
+CoreDataLibrary provides you "for free" the following features:
 
-* UITableView-based "RootView?" capable of displaying all entities of a certain type with the ability to:
+* UITableView-based "RootView" capable of displaying all entities of a certain type with the ability to:
   * Sort based on any number of keys
   * Create sections based on a key path
   * Display section index titles, in either address book style or based on your section key path
 
-* UITableView-based "DetailView?" capable of displaying and editing any number of attributes or relationships in a given entity:
+* UITableView-based "DetailView" capable of displaying and editing any number of attributes or relationships in a given entity:
   * to-many (ordered or non-ordered) relationship
   * to-one relationship
   * date/time
