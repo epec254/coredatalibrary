@@ -1,0 +1,13 @@
+{
+	entityName = required;
+	"detailViewPropertyListFile" = required;
+	cellTextLabelKeyPath = required;
+	sortKeyPaths = (
+		"at least 1 required",
+	);
+	"cellDetailTextLabelKeyPath" = optional;
+	controllerTitle = optional;
+	sectionNameKeyPath = optional;
+	"sectionIndexTitlesEnabled" = NO;
+	"sectionIndexTitlesAlphabetical" = NO;
+}

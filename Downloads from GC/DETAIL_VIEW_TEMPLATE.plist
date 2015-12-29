@@ -1,0 +1,57 @@
+(
+	{
+		sectionTitle = "lots of samples";
+		rowInformation = (
+			{
+				rowLabel = "SingleLineValue* sample";
+				attributeKeyPath = required;
+				rowType = required;
+				dateFormatterStyle = optional;
+				timeFormatterStyle = optional;
+			},
+			{
+				rowLabel = "MultiLineValue* sample";
+				attributeKeyPath = required;
+				rowType = required;
+			},
+			{
+				rowLabel = "BooleanSwitch sample";
+				attributeKeyPath = required;
+				rowType = "CDLTableRowTypeBooleanSwitch";
+			},
+			{
+				rowLabel = "Relationship sample";
+				attributeKeyPath = "nameOfRelationship.displayAttribute";
+				rowType = required;
+			},
+			{
+				rowLabel = "CDLTableRowTypeCustom sample";
+				rowType = "CDLTableRowTypeCustom";
+				"rowCustomControllerClass" = required;
+			},
+		);
+	},
+	{
+		sectionTitle = "toMany sample";
+		rowInformation = (
+			{
+				rowLabel = "sample toMany";
+				attributeKeyPath = "nameOfRelationship.displayAttribute";
+				rowType = "CDLTableRowTypeToManyRelationship";
+				showAddNewObject = YES;
+				"showAddExistingObjects" = YES;
+				"addNewObjectPropertyListFile" = required;
+			},
+		);
+	},
+	{
+		sectionTitle = "toMany ordered sample";
+		rowInformation = (
+			{
+				rowLabel = "sample toMany";
+				attributeKeyPath = "ameOfRelationshipToIntermediate.nameOfRelationshipToRealObject.displayProperty";
+				rowType = "CDLTableRowTypeToManyOrderedRelationship";
+			},
+		);
+	},
+)
