@@ -51,7 +51,7 @@ CoreDataLibrary is configured completely through property list files (plist) and
 ## Howto Guides
 
 * [Installation](https://github.com/epec254/coredatalibrary/blob/master/Documentation/HowToGuides/Installation.wiki.md)
-* [Getting Started Guide](https://github.com/epec254/coredatalibrary/blob/master/Documentation/HowToGuides/GettingStarted.wiki.md))
+* [Getting Started Guide](https://github.com/epec254/coredatalibrary/blob/master/Documentation/HowToGuides/GettingStarted.wiki.md)
 * [Providing Initial Data for your application](https://github.com/epec254/coredatalibrary/blob/master/Documentation/HowToGuides/LoadingInitialData.wiki.md)
 * [Creating alphabetical section index titles](https://github.com/epec254/coredatalibrary/blob/master/Documentation/HowToGuides/CreatingAlphabeticalSections.wiki.md)
 * [Creating to many ordered Core Data relationships](https://github.com/epec254/coredatalibrary/blob/master/Documentation/HowToGuides/ModelingToManyOrderedRelationships.wiki.md)
